@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %}
+{% block title %} Home {% endblock %}
+{% block body %}
+
+<body class="slides horizontal simplifiedMobile animated">
+
+<!-- Panel Top #05 -->
+
+<!-- Slide 1 (#34) -->
+<section class="slide fade-6 kenBurns home">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-12-12">
+          <ul class="flex fixedSpaces verticalCenter reverse"> 
+            <li class="col-6-10 ">
+              <h1 class="ae-1 fromLeft name "><span class="space">S</span>acha <span class="space">D</span>urand</h1>
+              <p class="ae-2 fromLeft description"><span class="opacity-8">
+                I'm a Back-end web developers. PHP is my speciality with Symfony. </span></p>
+
+
+              <a class="button gradient ae-3 fromCenter cropLeft myButton" id="ResponseAPI"> Repositories : </a>
+                <script>
+                    setTimeout(500)
+                    $.ajax({
+                        url: "https://api.github.com/users/DurandSacha",
+                        success: function(data){
+                            //console.log(data);
+                            var div = document.getElementById('ResponseAPI');
+                            var number = data.public_repos;
+                            div.append(number);
+                        }
+                    });
+                </script>
+
+            </li>
+            <li class="col-6-12">
+              
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(image/0.jpg)"></div>
+</section>
+
+<!-- Slide 2 (#60) -->
+<section class="slide fade-6 kenBurns services">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+          
+        <div class="fix-12-12">
+
+          <div class="grid service center-block skill">
+
+            <div class="row">
+              <div class="col-lg-4 ae-1 single-skill">
+                <p class="service-title">PHP</p>
+                <p class="service-description">my specialty, I use PHP  with standards such as OOP and MVC</p>
+                <a class="service-button" href="#">Read More</a>
+              </div>
+
+              <div class="col-lg-4 ae-2 single-skill">
+                  <p class="service-title">Symfony</p>
+                  <p class="service-description"> the agile and powerful symfony PHP framework. To create great things ..</p>
+                  <a class="service-button" href="#">Read More</a>
+              </div>
+
+              <div class="col-lg-4 ae-3 single-skill">
+                  <p class="service-title">Data</p>
+                  <p class="service-description">Data management with SQL or ORMs such as doctrine</p>
+                  <a class="service-button" href="#">Read More</a>
+              </div>
+            </div>
+
+            <br/><br/><br/><br/><br/><br/>
+            <div class="row">
+                <div class="col-lg-4 ae-4 single-skill">
+                  <p class="service-title">Javascript</p>
+                  <p class="service-description">Front-end management and some framework like react.js</p>
+                  <a class="service-button" href="#">Read More</a>
+                </div>
+  
+                <div class="col-lg-4 ae-5 single-skill">
+                    <p class="service-title">deployment and server</p>
+                    <p class="service-description">Web server management by hand or with tools like ansible</p>
+                    <a class="service-button" href="#">Read More</a>
+                </div>
+  
+                <div class="col-lg-4 ae-6 single-skill">
+                    <p class="service-title">API REST</p>
+                    <p class="service-description">building and using REST APIs in the different project</p>
+                    <a class="service-button" href="#">Read More</a>
+                </div>
+              </div>
+            
+          </div>
+            
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(image/1.jpg)"></div>
+</section>
+
+
+<!-- Slide 3 (#27) -->
+<section class="slide fade-6 kenBurns projects">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card"> <!--style="width: 25rem; height: 15rem;"-->
+                                <img src="image/project/snowtricks.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Community Snowtricks</h5>
+                                    <p class="card-text">Community web application for snowboard</p>
+                                    <ul class="list-label">
+                                        <li class="label"> Symfony</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary card-button">View project</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- Symfony Snowtricks -->
+                    <!-- Express Food -->
+                    <!-- Todoo List -->
+                    <!-- Chalets et caviar  -->
+
+            </div>
+        </div>
+    </div>
+  <div class="background" style="background-image:url(image/2.jpg)"></div>
+</section>
+
+
+
+<!-- Slide 4 (#26) -->
+<section class="slide fade-6 kenBurns laboratory">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+        
+        <div class="fix-12-12">
+          <ul class="flex reverse verticalCenter">
+            <li class="col-7-12 left cell-26">
+
+              <h1 class="ae-1 fromLeft">How we work</h1>
+              <div class="ae-2 fromLeft">
+                <p class="opacity-8">An electrician isn't an opinion former, but a graphic designer is. My argument is that all graphic designers hold high levels of responsibility in&nbsp;society.</p>
+              </div>
+              <div class="relative">
+                <img src="assets/img/icon-1.png" class="ae-3 fromCenter app-26" alt="app"/>
+                <div class="text-26">
+                  <h3 class="ae-3 fromRight">Ember for Apple Watch</h3>
+                  <div class="ae-5 fromRight">
+                    <p class="tiny opacity-6">People don&rsquo;t use a product<br>because of the great&nbsp;design.</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="col-5-12">
+              <div class="fix-4-12 center">
+                <ul class="slider clickable ae-1 fromAbove" data-slider-id="26-3">
+                  <li class="selected"><img src="assets/img/watch-26-1.png" alt="Apple Watch Thumbnail"/></li>
+                  <li><img src="assets/img/watch-26-2.png" alt="Apple Watch Thumbnail"/></li>
+                  <li><img src="assets/img/watch-26-1.png" alt="Apple Watch Thumbnail"/></li>
+                  <li><img src="assets/img/watch-26-2.png" alt="Apple Watch Thumbnail"/></li>
+                </ul>
+                <ul class="controller dots ae-3 fromCenter margin-top-3" data-slider-id="26-3">
+                  <li class="dot selected"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                  <li class="dot"></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(image/3.jpg)"></div>
+</section>
+
+
+
+
+<!-- Slide 7 (#95) -->
+<section class="slide fade-6 kenBurns autre">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-6-12">
+          
+                
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(image/1.jpg)"></div>
+</section>
+
+<!-- Panel Bottom #01 -->
+<nav class="panel bottom forceMobileView">
+  <div class="sections desktop">
+    
+    <div class="right"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
+    <div class="right"><span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
+  </div>
+  <div class="sections compact hidden">
+    <div class="right">
+      <span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span>
+    </div>
+  </div>
+</nav>
+
+<!-- Share Window -->
+<div class="dropdown share bottom right" data-dropdown-id="2" data-text="Take a look at this" data-url="https://designmodo.com" data-pinterest-image="https://designmodo.com/wp-content/uploads/2015/10/Presentation.jpg">
+  <div class="center padding-2">
+    <div class="title">Share</div>
+    <a href="#">Contact us</a>
+  </div>
+  
+</div>
+
+<!-- Loading Progress Bar -->
+<div class="progress-bar blue"></div>
+
+{% endblock %}
+
