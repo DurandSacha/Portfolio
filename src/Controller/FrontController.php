@@ -33,4 +33,13 @@ class FrontController extends AbstractController
         return $this->render('laboratory.html.twig', [
         ]);
     }
+
+    /**
+     * @Route("/moreProject", name="moreProject")
+     */
+    public function moreProject()
+    {
+        return $this->render('moreProject.html.twig', [
+        ]);
+    }
 }

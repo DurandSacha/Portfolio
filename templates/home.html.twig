@@ -20,7 +20,7 @@
                 I'm a Back-end web developers. PHP is my speciality with Symfony. </span></p>
 
 
-              <a class="button gradient ae-3 fromCenter cropLeft myButton" id="ResponseAPI"> Repositories : </a>
+              <a class="button gradient ae-3 fromCenter cropLeft myButton" id="ResponseAPI"> <i class="fab fa-github"></i> </a>
                 <script>
                     setTimeout(500)
                     $.ajax({
@@ -30,6 +30,7 @@
                             var div = document.getElementById('ResponseAPI');
                             var number = data.public_repos;
                             div.append(number);
+                            /*div.append('see on github ');*/
                         }
                     });
                 </script>
@@ -116,7 +117,49 @@
             <div class="wrap">
 
                     <div class="row">
-                        <div class="col-lg-3">
+                        <div class="col-lg-3 ae-1 FromLeft">
+                            <div class="card"> <!--style="width: 25rem; height: 15rem;"-->
+                                <img src="image/project/snowtricks.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Community Snowtricks</h5>
+                                    <p class="card-text">Community web application for snowboard</p>
+                                    <ul class="list-label">
+                                        <li class="label"> Symfony</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary card-button">View project</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 ae-2 FromLeft">
+                            <div class="card"> <!--style="width: 25rem; height: 15rem;"-->
+                                <img src="image/project/snowtricks.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Community Snowtricks</h5>
+                                    <p class="card-text">Community web application for snowboard</p>
+                                    <ul class="list-label">
+                                        <li class="label"> Symfony</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary card-button">View project</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 ae-3 FromLeft">
+                            <div class="card"> <!--style="width: 25rem; height: 15rem;"-->
+                                <img src="image/project/snowtricks.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Community Snowtricks</h5>
+                                    <p class="card-text">Community web application for snowboard</p>
+                                    <ul class="list-label">
+                                        <li class="label"> Symfony</li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary card-button">View project</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 ae-4 FromLeft">
                             <div class="card"> <!--style="width: 25rem; height: 15rem;"-->
                                 <img src="image/project/snowtricks.jpg" class="card-img-top" alt="...">
                                 <div class="card-body">
@@ -131,6 +174,12 @@
                         </div>
 
                     </div>
+
+
+                        <div class="center-block box ">
+                            <a class="service-button" href="{{ path('moreProject') }}">More Project</a>
+                        </div>
+
 
 
 
@@ -202,6 +251,7 @@
 
 
 <!-- Slide 7 (#95) -->
+<!--
 <section class="slide fade-6 kenBurns autre">
   <div class="content">
     <div class="container">
@@ -215,6 +265,7 @@
   </div>
   <div class="background" style="background-image:url(image/1.jpg)"></div>
 </section>
+-->
 
 <!-- Panel Bottom #01 -->
 <nav class="panel bottom forceMobileView">

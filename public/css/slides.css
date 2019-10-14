@@ -12412,6 +12412,11 @@ a:hover,.panel .sections .menu li a:hover{
     display: block;
     background-color: rgba(0,0,0,0);
 }
+.box{
+  font-size:12px;
+  padding:4px;
+  margin-top: 3%;
+}
 /* Projects */
 
 .projects{
