@@ -33,4 +33,58 @@ class FrontController extends AbstractController
         return $this->render('laboratory.html.twig', [
         ]);
     }
+
+    /**
+     * @Route("/service", name="service")
+     */
+    public function service()
+    {
+        return $this->render('services.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function about()
+    {
+        return $this->render('about.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/blog", name="blog")
+     */
+    public function blog()
+    {
+        return $this->render('blog.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/portfolio", name="portfolio")
+     */
+    public function portfolio()
+    {
+        return $this->render('portfolio.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/blogID", name="blog-single")
+     */
+    public function blogSingle()
+    {
+        return $this->render('single-blog.html.twig', [
+        ]);
+    }
+
+    /**
+     * @Route("/portfolioID}", name="portfolio-single")
+     */
+    public function portfolioSingle()
+    {
+        return $this->render('portfolio-details.html.twig', [
+        ]);
+    }
 }
