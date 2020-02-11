@@ -2654,13 +2654,13 @@ html.no-csstransitions .home-content__main {
 .s-services {
   padding-top: 18rem;
   padding-bottom: 18rem;
-  background-color: #151515;
+  background-color: ;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url(../images/services-bg.jpg);
+  /*background-image: url(../images/services-bg.jpg);*/
   background-size: cover;
   position: relative;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .s-services::before {
@@ -3232,8 +3232,9 @@ html.no-csstransitions .home-content__main {
  * clients
  * ------------------------------------------------------------------- */
 @media only screen and (max-width:1200px) {
-  padding-top: 16.2rem;
+  /*padding-top: 16.2rem;
   padding-bottom: 16.2rem;
+  */
 }
 
 @media only screen and (max-width:1000px) {
@@ -3807,3 +3808,12 @@ footer a:visited {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+/** ADD CSS **/
+.working{
+  padding: 3%;
+}
+.item-folio{
+  padding: 2%;
+}
