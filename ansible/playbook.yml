@@ -115,8 +115,9 @@
         recurse: yes
 
 
-    #- name: Remove Symfony directory
-      #command: 'rm -r {{ symfony_root_dir }}'
+    #- name: Remove old Symfony directory
+      #become: true
+      #command: 'rm -Rf {{ symfony_root_dir }}'
 
     - name: Checkout Git repository
       git:
@@ -185,7 +186,7 @@
         no_dev: no
       when: code_changed | bool
 
-    - name: Add Symfony config template to the Apache available sites
+    - name: Add Symfony config template to the nginx available sites
       become: true
       template:
         src: templates/symfony.conf
@@ -232,6 +233,9 @@
       file:
         path: "{{symfony_console_path}}"
         mode: "a+x"
+
+    #- name: Composer install mannualy
+      #command: 'composer install'
 
     # Symfony console commands
     #- name: Create DB if not exists
