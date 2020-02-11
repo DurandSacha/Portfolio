@@ -263,3 +263,10 @@
       service:
         name: php7.2-fpm
         state: restarted
+
+
+# if you need help
+# make sure you have try : composer install in project
+# rm default.conf
+# test in dev or prod
+# remake vault with "ansible-vault rekey vault.yml"
