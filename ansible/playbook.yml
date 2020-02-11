@@ -234,8 +234,8 @@
         mode: "a+x"
 
     # Symfony console commands
-    - name: Create DB if not exists
-      command: '{{ symfony_console_path }} doctrine:database:create --if-not-exists --no-interaction'
+    #- name: Create DB if not exists
+    #  command: '{{ symfony_console_path }} doctrine:database:create --if-not-exists --no-interaction'
 
     #- name: Execute migrations
       #command: '{{ symfony_console_path }} doctrine:migrations:migrate --no-interaction'
@@ -245,7 +245,7 @@
       #command: '{{ symfony_console_path }} doctrine:fixtures:load --no-interaction'
       #when: symfony_env != "prod"
 
-    - name: Clear cache
+    - name: Clear cache and test Symfony console
       command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
       changed_when: false
       when: code_changed
