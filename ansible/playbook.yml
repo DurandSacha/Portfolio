@@ -218,7 +218,7 @@
         dest: "{{ symfony_root_dir }}/.env"
         regexp: ''
         insertafter: ''
-        line: "DATABASE_URL=mysql://user1:{{ sql_pass }}@127.0.0.1:3306/portfolio"
+        line: "#DATABASE_URL=mysql://user1:{{ sql_pass }}@127.0.0.1:3306/portfolio"
 
 
     - name: remove cache in var/cache
@@ -249,10 +249,14 @@
       #command: '{{ symfony_console_path }} doctrine:fixtures:load --no-interaction'
       #when: symfony_env != "prod"
 
+    #- name: Composer install manuall
+      #command: 'composer.phar install'
+
     - name: Clear cache and test Symfony console
       command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
       changed_when: false
       when: code_changed
+
 
   handlers:
 
