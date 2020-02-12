@@ -234,8 +234,6 @@
         path: "{{symfony_console_path}}"
         mode: "a+x"
 
-    #- name: Composer install mannualy
-      #command: 'composer install'
 
     # Symfony console commands
     #- name: Create DB if not exists
