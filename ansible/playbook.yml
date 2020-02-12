@@ -218,8 +218,7 @@
         dest: "{{ symfony_root_dir }}/.env"
         regexp: ''
         insertafter: ''
-        line: "#DATABASE_URL=mysql://user1:{{ sql_pass }}@127.0.0.1:3306/portfolio"
-
+        line: "DATABASE_URL=mysql://user1:{{ sql_pass }}@127.0.0.1:3306/portfolio"
 
     - name: remove cache in var/cache
       command: 'rm -rf var/cache/*'
