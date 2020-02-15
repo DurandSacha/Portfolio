@@ -81,26 +81,27 @@
       become: true
       apt:
         name:
-          - php7.3-cli
-          - php7.3-curl
-          - php7.3-fpm
-          - php7.3-intl
-          - php7.3-mysql
-          - php7.3-xml
+          - php7.4-cli
+          - php7.4-curl
+          - php7.4-fpm
+          - php7.4-intl
+          - php7.4-mbstring
+          - php7.4-mysql
+          - php7.4-xml
         state: latest
       notify: Restart PHP-FPM
 
     - name: Set date.timezone for CLI
       become: true
       lineinfile:
-        dest: /etc/php/7.3/cli/php.ini
+        dest: /etc/php/7.4/cli/php.ini
         regexp: "date.timezone ="
         line: "date.timezone = UTC"
 
     - name: Set date.timezone for FPM
       become: true
       lineinfile:
-        dest: /etc/php/7.3/fpm/php.ini
+        dest: /etc/php/7.4/fpm/php.ini
         regexp: "date.timezone ="
         line: "date.timezone = UTC"
       notify: Restart PHP-FPM
@@ -246,15 +247,10 @@
       #command: '{{ symfony_console_path }} doctrine:fixtures:load --no-interaction'
       #when: symfony_env != "prod"
 
-    - composer:
-        command: install
-        working_dir: "{{ symfony_root_dir }}"
-
     - name: Clear cache and test Symfony console
       command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
       changed_when: false
       when: code_changed
-
 
   handlers:
 
@@ -267,10 +263,10 @@
     - name: Restart PHP-FPM
       become: true
       service:
-        name: php7.3-fpm
+        name: php7.4-fpm
         state: restarted
 
-
+#deploy with : ansible-playbook ansible/playbook.yml -i ansible/hosts.ini --ask-vault-pass
 # if you need help
 # make sure you have try : composer install in project
 # rm default.conf
