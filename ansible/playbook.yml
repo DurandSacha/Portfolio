@@ -247,6 +247,11 @@
       #command: '{{ symfony_console_path }} doctrine:fixtures:load --no-interaction'
       #when: symfony_env != "prod"
 
+    - name: Composer update
+      command : composer update
+      args:
+        chdir: '{{ symfony_root_dir }}'
+
     - name: Clear cache and test Symfony console
       command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
       changed_when: false
