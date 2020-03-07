@@ -221,9 +221,6 @@
         insertafter: ''
         line: "DATABASE_URL=mysql://user1:{{ sql_pass }}@127.0.0.1:3306/portfolio"
 
-    - name: remove cache in var/cache
-      command: 'rm -rf var/cache/*'
-
     - name: install acl package
       become: yes
       apt: pkg=acl
@@ -233,7 +230,21 @@
       file:
         path: "{{symfony_console_path}}"
         mode: "a+x"
+        
 
+    - name: Fix Var cache permissions
+      file:
+        path: "{{ symfony_var_cache }}"
+        state: directory
+        mode: 0777
+        recurse: yes
+        
+    - name: Fix var log permissions
+      file:
+        path: "{{ symfony_var_log }}"
+        state: directory
+        mode: 0777
+        recurse: yes
 
     # Symfony console commands
     #- name: Create DB if not exists
@@ -253,7 +264,7 @@
         chdir: '{{ symfony_root_dir }}'
 
     - name: Clear cache and test Symfony console
-      command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
+      command: '{{ symfony_console_path }} cache:clear'
       changed_when: false
       when: code_changed
 

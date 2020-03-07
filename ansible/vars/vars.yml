@@ -2,8 +2,10 @@
 symfony_root_dir: "/var/www/html/Portfolio"
 symfony_web_dir: "{{ symfony_root_dir }}/public"
 symfony_var_dir: "{{ symfony_root_dir }}/var"
+symfony_var_cache: "{{ symfony_root_dir }}/var/cache"
+symfony_var_log: "{{ symfony_root_dir }}/var/log"
 symfony_console_path: "{{ symfony_root_dir }}/bin/console"
-server_name: vps
+server_name: sachadurand.fr
 installer: /tmp/installer.php
 
 symfony_secret: "{{ vault_symfony_secret }}"
