@@ -10,7 +10,6 @@ jobs:
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           MYSQL_ROOT_PASSWORD: root
-  ​
 steps:
   - checkout
   ​
