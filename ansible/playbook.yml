@@ -17,7 +17,7 @@
   pre_tasks:
 
     #roles:
-      #- nginx
+    #- nginx
 
     - ping: ~
 
@@ -27,10 +27,10 @@
       tags:
         - always
 
-    #- name: Update APT package manager repositories cache
-      #become: true
-      #apt:
-        #update_cache: yes
+    - name: Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
 
     - name: Upgrade installed packages
       become: true
@@ -115,14 +115,20 @@
         group: "{{ ansible_user }}"
         recurse: yes
 
+
+      #- name: Remove Symfony directory
+      #command: 'rm -r {{ symfony_root_dir }}'
+
     - name: rm old website
       file:
         state: absent
         path: "{{ symfony_root_dir }}/"
 
+    #- shell: /bin/rm -rf /var/www/html/BileMo-API/*
+
     - name: Checkout Git repository
       git:
-        repo: https://github.com/DurandSacha/Portfolio
+        repo: https://github.com/DurandSacha/BileMo-API
         dest: "{{ symfony_root_dir }}"
         force: yes
         clone: yes
@@ -176,7 +182,7 @@
     - name: Set permissions on Composer
       become: true
       file:
-        path: /usr/local/bin/composer
+        path: /usr/bin/composer
         mode: "a+x"
       when: not composer_stat.stat.exists
 
@@ -185,16 +191,16 @@
       composer:
         working_dir: "{{ symfony_root_dir }}"
         no_dev: no
-      when: code_changed | bool
+      #when: code_changed | bool
 
-    - name: Add Symfony config template to the nginx available sites
+    - name: Add Symfony config template to the Apache available sites
       become: true
       template:
         src: templates/symfony.conf
         dest: "/etc/nginx/sites-available/{{ server_name }}.conf"
       notify: Restart Nginx
 
-    #- name: rm default.conf ( added )
+      #- name: rm default.conf ( added )
       #become: true
       #command: "rm /etc/nginx/sites-enabled/default"
       #notify: Restart Nginx
@@ -219,52 +225,95 @@
         dest: "{{ symfony_root_dir }}/.env"
         regexp: ''
         insertafter: ''
-        line: "DATABASE_URL=mysql://user1:{{ sql_pass }}@127.0.0.1:3306/portfolio"
+        line: "{{ database_url }}"
+
+
+    - name: remove cache in var/cache
+      command: 'rm -rf var/cache/*'
 
     - name: install acl package
       become: yes
       apt: pkg=acl
+
+    - name: install PhpMyAdmin
+      become: true
+      apt: pkg=phpmyadmin state=present
 
     - name: Set permissions on bin/console
       become: true
       file:
         path: "{{symfony_console_path}}"
         mode: "a+x"
-        
 
-    - name: Fix Var cache permissions
-      file:
-        path: "{{ symfony_var_cache }}"
-        state: directory
-        mode: 0777
-        recurse: yes
-        
-    - name: Fix var log permissions
-      file:
-        path: "{{ symfony_var_log }}"
-        state: directory
-        mode: 0777
-        recurse: yes
+
+    - name: Delete old Database
+      command: '{{ symfony_console_path }} doctrine:database:drop --force'
 
     # Symfony console commands
-    #- name: Create DB if not exists
-      #command: '{{ symfony_console_path }} doctrine:database:create --if-not-exists --no-interaction'
+    - name: Create DB if not exists
+      command: '{{ symfony_console_path }} doctrine:database:create --if-not-exists --no-interaction'
 
-    #- name: Execute migrations
-      #command: '{{ symfony_console_path }} doctrine:migrations:migrate --no-interaction'
+    - name: make migration
+      command: '{{ symfony_console_path }} make:migration'
       #when: code_changed
 
-    #- name: Load data fixtures
-      #command: '{{ symfony_console_path }} doctrine:fixtures:load --no-interaction'
+    - name: Execute migrations
+      command: '{{ symfony_console_path }} doctrine:migrations:migrate --no-interaction'
+      #when: code_changed
+
+    - name: Load data fixtures
+      command: '{{ symfony_console_path }} doctrine:fixtures:load --no-interaction'
       #when: symfony_env != "prod"
 
-    - name: Composer update
-      command : composer update
+    # Yarn
+    - name: Add Yarn APT key
+      become: true
+      apt_key:
+        url: 'https://dl.yarnpkg.com/debian/pubkey.gpg'
+        state: present
+
+    - name: Add Yarn to the source lists
+      become: true
+      lineinfile:
+        path: '/etc/apt/sources.list.d/yarn.list'
+        regexp: 'deb https://dl.yarnpkg.com/debian/ stable main'
+        line: 'deb https://dl.yarnpkg.com/debian/ stable main'
+        create: yes
+
+    - name: "Yarn | Install"
+      package:
+        name: yarn
+        state: present
+
+    - name: Install NodeJS / yarn
+      become: true
+      apt:
+        name:
+          - nodejs
+          - yarn
+        update_cache: yes
+
+    - name: Install packages based on package.json.
+      yarn:
+        path: "{{ symfony_root_dir }}"
+        state: latest
+
+    - name: Install bundle assets
+      command: '{{ symfony_console_path }} assets:install {{ symfony_web_dir }} --symlink --no-debug --env=prod'
+
+    - name: Install Node dependencies
+      command: yarn install
       args:
         chdir: '{{ symfony_root_dir }}'
 
-    - name: Clear cache and test Symfony console
-      command: '{{ symfony_console_path }} cache:clear'
+    #build all code in public/build // Launch yarn encore dev
+    - name: Build Yarn Dependencies
+      command: yarn encore dev
+      args:
+        chdir: '{{ symfony_root_dir }}'
+
+    - name: Clear cache and finish deploy
+      command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
       changed_when: false
       when: code_changed
 
@@ -281,10 +330,3 @@
       service:
         name: php7.4-fpm
         state: restarted
-
-#deploy with : ansible-playbook ansible/playbook.yml -i ansible/hosts.ini --ask-vault-pass
-# if you need help
-# make sure you have try : composer install in project
-# rm default.conf
-# test in dev or prod
-# remake vault with "ansible-vault rekey vault.yml"
