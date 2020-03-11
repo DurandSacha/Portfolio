@@ -5,7 +5,7 @@ jobs:
   build_and_test:
     docker:
       # Specify the version you desire here
-      - image: circleci/php:7.3-node-browsers
+      - image: circleci/php:7.4-node-browsers
       - image: circleci/mysql:5.7-ram
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
@@ -34,7 +34,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - portfolio-v1-dependencies-
 
-      - run: composer install -n --prefer-dist
+      - run: composer install
 
       - save_cache:
           key: portfolio-v1-dependencies-{{ checksum "composer.json" }}
