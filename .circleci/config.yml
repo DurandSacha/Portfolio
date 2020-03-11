@@ -10,89 +10,89 @@ jobs:
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           MYSQL_ROOT_PASSWORD: root
-steps:
-  - checkout
-  ​
-- run:
-    name: Install System Packages
-    command: sudo apt update && sudo apt -y install git unzip libxml2 libjpeg-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev libxslt-dev libzip-dev zlib1g-dev libsqlite3-dev libwebp-dev wget # PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
-- run:
-    name: Install PHP Extensions
-    command: sudo docker-php-ext-install pdo pdo_mysql xsl zip
-- run:
-    name: Configure gd
-    command: sudo docker-php-ext-configure gd --with-freetype-dir --with-gd --with-jpeg-dir --with-png-dir --with-webp-dir --with-zlib-dir
-- run:
-    name: Install PHP gd
-    command: sudo -E docker-php-ext-install -j$(nproc) gd
-  ​
-# Download and cache dependencies
-- restore_cache:
-    keys:
-      # "composer.lock" can be used if it is committed to the repo
-      - portfolio-v1-dependencies-{{ checksum "composer.json" }}
-      # fallback to using the latest cache if no exact match is found
-      - portfolio-v1-dependencies-
-  ​
-- run: composer install -n --prefer-dist
-  ​
-- save_cache:
-    key: portfolio-v1-dependencies-{{ checksum "composer.json" }}
-    paths:
-      - ./vendor
-  ​
-- run: bin/console cache:clear --env=test
-- run: bin/console cache:warmup --env=test
-  ​
-- restore_cache:
-    keys:
-      - portfolio-node-v1-{{ checksum "package.json" }}
-      - portfolio-node-v1-
-  ​
-- run: yarn install
-- save_cache:
-    key: portfolio-node-v1-{{ checksum "package.json" }}
-    paths:
-      - node_modules
-  ​
-- run: yarn build
-  ​
-# Database
-- run: ./bin/console doctrine:database:create --env=test
-- run: ./bin/console doctrine:schema:create --env=test
-- run: ./bin/console doctrine:fixtures:load --env=test --no-interaction
-  ​
-# Launch tests
-- run: bin/phpunit
-  ​
-configure_and_deploy:
-  docker:
-    - image: ubuntu:18.04
-      environment:
-        ANSIBLE_HOST_KEY_CHECKING: no
   steps:
-    # Install PIP
-    - run:
-        name: Install System packages
-        command: apt update && apt -y install python3-pip ssh
-    # Installation
-    - run:
-        name: Install Ansible
-        command: pip3 install ansible
-    # Dependencies
     - checkout
+
+    - run:
+        name: Install System Packages
+        command: sudo apt update && sudo apt -y install git unzip libxml2 libjpeg-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev libxslt-dev libzip-dev zlib1g-dev libsqlite3-dev libwebp-dev wget # PHP CircleCI 2.0 Configuration File sudo apt install zlib1g-dev libsqlite3-dev
+    - run:
+        name: Install PHP Extensions
+        command: sudo docker-php-ext-install pdo pdo_mysql xsl zip
+    - run:
+        name: Configure gd
+        command: sudo docker-php-ext-configure gd --with-freetype-dir --with-gd --with-jpeg-dir --with-png-dir --with-webp-dir --with-zlib-dir
+    - run:
+        name: Install PHP gd
+        command: sudo -E docker-php-ext-install -j$(nproc) gd
+    ​
+    # Download and cache dependencies
     - restore_cache:
-        key: portfolio-${CIRCLE_BRANCH}-{{ checksum "./ansible/requirements.yaml" }}-v1
-    - run: ansible-galaxy install -r ansible/requirements.yaml
+        keys:
+          # "composer.lock" can be used if it is committed to the repo
+          - portfolio-v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - portfolio-v1-dependencies-
+      ​
+    - run: composer install -n --prefer-dist
+      ​
     - save_cache:
-        key: portfolio-${CIRCLE_BRANCH}-{{ checksum "./ansible/requirements.yaml" }}-v1
+        key: portfolio-v1-dependencies-{{ checksum "composer.json" }}
         paths:
-          - '/root/.ansible/roles'
-    # Configure and deploy server
-    - run: echo $ANSIBLE_VAULT_PASS > ansible/.vault-pass.txt
-    - run: ansible-playbook ansible/configure/playbook.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
-    - run: ansible-playbook ansible/deploy/deploy.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
-    - run: rm ansible/.vault-pass.txt
+          - ./vendor
+      ​
+    - run: bin/console cache:clear --env=test
+    - run: bin/console cache:warmup --env=test
+      ​
+    - restore_cache:
+        keys:
+          - portfolio-node-v1-{{ checksum "package.json" }}
+          - portfolio-node-v1-
+      ​
+    - run: yarn install
+    - save_cache:
+        key: portfolio-node-v1-{{ checksum "package.json" }}
+        paths:
+          - node_modules
+      ​
+    - run: yarn build
+      ​
+    # Database
+    - run: ./bin/console doctrine:database:create --env=test
+    - run: ./bin/console doctrine:schema:create --env=test
+    - run: ./bin/console doctrine:fixtures:load --env=test --no-interaction
+      ​
+    # Launch tests
+    - run: bin/phpunit
+  ​
+  configure_and_deploy:
+    docker:
+      - image: ubuntu:18.04
+        environment:
+          ANSIBLE_HOST_KEY_CHECKING: no
+    steps:
+      # Install PIP
+      - run:
+          name: Install System packages
+          command: apt update && apt -y install python3-pip ssh
+      # Installation
+      - run:
+          name: Install Ansible
+          command: pip3 install ansible
+      # Dependencies
+      - checkout
+      - restore_cache:
+          key: portfolio-${CIRCLE_BRANCH}-{{ checksum "./ansible/requirements.yaml" }}-v1
+      - run: ansible-galaxy install -r ansible/requirements.yaml
+      - save_cache:
+          key: portfolio-${CIRCLE_BRANCH}-{{ checksum "./ansible/requirements.yaml" }}-v1
+          paths:
+            - '/root/.ansible/roles'
+      # Configure and deploy server
+      - run: echo $ANSIBLE_VAULT_PASS > ansible/.vault-pass.txt
+      - run: ansible-playbook ansible/configure/playbook.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
+      - run: ansible-playbook ansible/deploy/deploy.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
+      - run: rm ansible/.vault-pass.txt
   ​
 workflows:
   version: 2
