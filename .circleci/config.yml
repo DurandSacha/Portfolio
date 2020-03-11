@@ -5,8 +5,9 @@ jobs:
   build_and_test:
     docker:
       # Specify the version you desire here
-      - image: circleci/php:7.4-node-browsers
+      - image: circleci/php:7.4-fpm-buster-node-browsers-legacy
       - image: circleci/mysql:5.7-ram
+
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
           MYSQL_ROOT_PASSWORD: root
