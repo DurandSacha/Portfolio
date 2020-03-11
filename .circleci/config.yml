@@ -25,7 +25,7 @@ jobs:
     - run:
         name: Install PHP gd
         command: sudo -E docker-php-ext-install -j$(nproc) gd
-    ​
+
     # Download and cache dependencies
     - restore_cache:
         keys:
@@ -33,38 +33,38 @@ jobs:
           - portfolio-v1-dependencies-{{ checksum "composer.json" }}
           # fallback to using the latest cache if no exact match is found
           - portfolio-v1-dependencies-
-      ​
+
     - run: composer install -n --prefer-dist
-      ​
+
     - save_cache:
         key: portfolio-v1-dependencies-{{ checksum "composer.json" }}
         paths:
           - ./vendor
-      ​
+
     - run: bin/console cache:clear --env=test
     - run: bin/console cache:warmup --env=test
-      ​
+
     - restore_cache:
         keys:
           - portfolio-node-v1-{{ checksum "package.json" }}
           - portfolio-node-v1-
-      ​
+
     - run: yarn install
     - save_cache:
         key: portfolio-node-v1-{{ checksum "package.json" }}
         paths:
           - node_modules
-      ​
+
     - run: yarn build
-      ​
+
     # Database
     - run: ./bin/console doctrine:database:create --env=test
     - run: ./bin/console doctrine:schema:create --env=test
     - run: ./bin/console doctrine:fixtures:load --env=test --no-interaction
-      ​
+
     # Launch tests
     - run: bin/phpunit
-  ​
+
   configure_and_deploy:
     docker:
       - image: ubuntu:18.04
@@ -93,7 +93,7 @@ jobs:
       - run: ansible-playbook ansible/configure/playbook.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
       - run: ansible-playbook ansible/deploy/deploy.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
       - run: rm ansible/.vault-pass.txt
-  ​
+
 workflows:
   version: 2
   build_test_configure_and_deploy:
