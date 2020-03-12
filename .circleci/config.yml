@@ -43,9 +43,9 @@ jobs:
           paths:
             - ./vendor
 
-      - run: chmod -x 777 bin/console
-      - run: bin/console cache:clear --env=test
-      - run: bin/console cache:warmup --env=test
+      #- run: chmod -x 777 bin/console
+      # run: bin/console cache:clear --env=test
+      #- run: bin/console cache:warmup --env=test
 
       - restore_cache:
           keys:
@@ -61,9 +61,9 @@ jobs:
       - run: yarn build
 
       # Database
-      - run: ./bin/console doctrine:database:create --env=test
-      - run: ./bin/console doctrine:schema:create --env=test
-      - run: ./bin/console doctrine:fixtures:load --env=test --no-interaction
+      #- run: ./bin/console doctrine:database:create --env=test
+      #- run: ./bin/console doctrine:schema:create --env=test
+      #- run: ./bin/console doctrine:fixtures:load --env=test --no-interaction
 
       # Launch tests
       - run: bin/phpunit
