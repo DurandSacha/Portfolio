@@ -22,7 +22,7 @@ jobs:
           command: sudo docker-php-ext-install pdo pdo_mysql xsl zip
       - run:
           name: Configure gd
-          command: sudo docker-php-ext-configure gd --with-freetype-dir --with-gd --with-jpeg-dir --with-png-dir --with-webp-dir --with-zlib-dir
+          command: sudo docker-php-ext-configure gd --with-freetype-dir=/usr --with-gd=/usr --with-jpeg-dir=/usr --with-png-dir=/usr --with-webp-dir=/usr --with-zlib-dir=/usr
       - run:
           name: Install PHP gd
           command: sudo -E docker-php-ext-install -j$(nproc) gd
