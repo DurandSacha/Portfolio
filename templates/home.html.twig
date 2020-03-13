@@ -3,6 +3,7 @@
 {% block title %} Home {% endblock %}
 
 {% block body %}
+    {{ parent() }}
 
   <!--/ Nav Star /-->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
@@ -24,6 +25,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#service">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#formation">Formation</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#work">Work</a>
@@ -243,6 +247,125 @@
   </section>
   <!--/ Section Services End /-->
 
+
+  <!--/ Section Formation /-->
+  <section id="formation" class="blog-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Formation
+            </h3>
+            <p class="subtitle-a">
+              Here, I present my formation in university
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="img/post-1.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">BAC</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">STI2D SIN</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Morgan Freeman</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="img/post-2.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">BAC+2</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">BTS Science Numerique</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Morgan Freeman</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-blog">
+            <div class="card-img">
+              <a href="blog-single.html"><img src="img/post-3.jpg" alt="" class="img-fluid"></a>
+            </div>
+            <div class="card-body">
+              <div class="card-category-box">
+                <div class="card-category">
+                  <h6 class="category">BAC+3</h6>
+                </div>
+              </div>
+              <h3 class="card-title"><a href="blog-single.html">Licence at Openclassromms</a></h3>
+              <p class="card-description">
+                Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis
+                a pellentesque nec,
+                egestas non nisi.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="post-author">
+                <a href="#">
+                  <img src="img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
+                  <span class="author">Morgan Freeman</span>
+                </a>
+              </div>
+              <div class="post-date">
+                <span class="ion-ios-clock-outline"></span> 10 min
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Section formation End /-->
+
+
+
+
   <div class="section-counter paralax-mf bg-image" style="background-image: url(img/counters-bg.jpg)">
     <div class="overlay-mf"></div>
     <div class="container">
@@ -314,9 +437,9 @@
       <div class="row">
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-1.jpg" data-lightbox="gallery-mf">
+            <a href="img/work-01.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-1.jpg" alt="" class="img-fluid">
+                <img src="img/work-01.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -338,16 +461,16 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-2.jpg" data-lightbox="gallery-mf">
+            <a href="img/work-02.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-2.jpg" alt="" class="img-fluid">
+                <img src="img/work-02.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
                     <h2 class="w-title">Bilemo Smartphone API</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Symfony / React.js / API platform</span> / <span class="w-date">18 Sep. 2018</span>
+                      <span class="w-ctegory">Symfony / React.js</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -362,9 +485,9 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-3.jpg" data-lightbox="gallery-mf">
+            <a href="img/work-03.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-3.jpg" alt="" class="img-fluid">
+                <img src="img/work-03.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -386,14 +509,14 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-4.jpg" data-lightbox="gallery-mf">
+            <a href="img/work-04.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-4.jpg" alt="" class="img-fluid">
+                <img src="img/work-04.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Festival de Film en plein Air</h2>
+                    <h2 class="w-title">Film de plein air</h2>
                     <div class="w-more">
                       <span class="w-ctegory">Wordpress</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
@@ -410,9 +533,9 @@
         </div>
         <div class="col-md-4">
           <div class="work-box">
-            <a href="img/work-5.jpg" data-lightbox="gallery-mf">
+            <a href="img/work-05.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-5.jpg" alt="" class="img-fluid">
+                <img src="img/work-05.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -434,9 +557,9 @@
         </div>
         <div class="col-md-4">
           <div class="work-box work-container">
-            <a href="img/work-6.jpg" data-lightbox="gallery-mf">
+            <a href="img/work-06.jpg" data-lightbox="gallery-mf">
               <div class="work-img">
-                <img src="img/work-6.jpg" alt="" class="img-fluid">
+                <img src="img/work-06.jpg" alt="" class="img-fluid">
               </div>
               <div class="work-content">
                 <div class="row">
@@ -723,7 +846,7 @@
   <!--/ Section Contact-footer End /-->
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <div id="preloader"></div>
+  <!--<div id="preloader"></div>-->
 
 {% endblock %}
 

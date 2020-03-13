@@ -1,0 +1,1 @@
+assets folder is used for build a react.js files

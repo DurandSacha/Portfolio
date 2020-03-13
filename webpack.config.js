@@ -10,8 +10,8 @@ Encore
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
     .copyFiles({
-        from: './assets/images',
-        to: 'images/[path][name].[hash:8].[ext]'
+        from: './assets/img',
+        to: 'img/[path][name].[hash:8].[ext]'
     })
     .splitEntryChunks()
     .autoProvidejQuery()
@@ -20,5 +20,6 @@ Encore
 
     //react-Options
     .enableReactPreset()
+    //.configureCssLoader()
 ;
 module.exports = Encore.getWebpackConfig();

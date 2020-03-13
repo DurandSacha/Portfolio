@@ -13,10 +13,11 @@
 	   <link rel="stylesheet" href="{{ asset('css/style-green.css') }}" type="text/css"/>
 	   <!--<link rel="stylesheet" href="{ { asset('css/style-red.css') }}" type="text/css"/>-->
 
-	   <link rel="icon" href="{{ asset('img/favicon.png') }}"/>
+	   <link rel="icon" href="{{ asset('img/favicon01.png') }}"/>
 	   <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}"/>
 
 	   <link rel="stylesheet" href="{{ asset('lib/bootstrap/css/bootstrap.min.css') }}" type="text/css"/>
+	   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
 
 	   <link rel="stylesheet" href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" type="text/css"/>
 	   <link rel="stylesheet" href="{{ asset('lib/animate/animate.min.css') }}" type="text/css"/>
@@ -28,7 +29,9 @@
 	</head>
     <body id="top page-top">
 	<!--================ Body Area  =================-->
-	{% block body %}{% endblock %}
+	{% block body %}
+		<div id="react-section"></div>
+	{% endblock %}
 	<!--================ End Body Area  =================-->
 
         {% block javascripts %}
@@ -50,7 +53,9 @@
 
 			<script src="{{ asset('js/contactform.js') }}"></script>
 			<script src="{{ asset('js/main.js') }}"></script>
-			
+
+			{{ encore_entry_script_tags('main')}}
+
 		{% endblock %}
     </body>
 </html>
