@@ -38,19 +38,19 @@ jobs:
 
       - run: composer install -n --prefer-dist
 
-      - save_cache:
-          key: portfolio-v1-dependencies-{{ checksum "composer.json" }}
-          paths:
-            - ./vendor
+      #- save_cache:
+          #key: portfolio-v1-dependencies-{{ checksum "composer.json" }}
+          #paths:
+            #- ./vendor
 
       #- run: chmod -x 777 bin/console
       # run: bin/console cache:clear --env=test
       #- run: bin/console cache:warmup --env=test
 
-      - restore_cache:
-          keys:
-            - portfolio-node-v1-{{ checksum "package.json" }}
-            - portfolio-node-v1-
+      #- restore_cache:
+          #keys:
+            #- portfolio-node-v1-{{ checksum "package.json" }}
+            #- portfolio-node-v1-
 
       - run: yarn install
       - save_cache:
