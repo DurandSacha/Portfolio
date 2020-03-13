@@ -93,7 +93,7 @@ jobs:
           #key: portfolio-${CIRCLE_BRANCH}-{{ checksum "./ansible/requirements.yaml" }}-v1
       # Configure and deploy server
       - run: echo $ANSIBLE_VAULT_PASS > ansible/.vault-pass.txt
-      - run: ansible-playbook ansible/playbook.yaml -i ansible/hosts.ini -e "git_branch=${CIRCLE_BRANCH}" --vault-password-file=ansible/.vault-pass.txt
+      - run: ansible-playbook ./ansible/playbook.yaml -i ./ansible/hosts.ini -e "git_branch=master" --vault-password-file=ansible/.vault-pass.txt
       - run: rm ansible/.vault-pass.txt
 
 workflows:
