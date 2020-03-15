@@ -21,11 +21,11 @@
 
     - ping: ~
 
-    - name: Convert entered Symfony environment to lowercase
-      set_fact:
-        symfony_env: "{{ symfony_env|lower }}"
-      tags:
-        - always
+    #- name: Convert entered Symfony environment to lowercase
+      #set_fact:
+        #symfony_env: "{{ symfony_env|lower }}"
+      #tags:
+        #- always
 
     - name: Update APT package manager repositories cache
       become: true
