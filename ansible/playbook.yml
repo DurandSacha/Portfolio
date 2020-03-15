@@ -179,11 +179,11 @@
       notify: Restart Nginx
       #when: not composer_stat.stat.exists
 
-    - name: Set permissions on Composer
-      become: true
-      file:
-        path: /usr/bin/composer
-        mode: "a+x"
+    #- name: Set permissions on Composer
+      #become: true
+      #file:
+        #path: /usr/bin/composer
+        #mode: "a+x"
       #when: not composer_stat.stat.exists
 
     - name: Install Composer's dependencies
