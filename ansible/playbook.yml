@@ -157,19 +157,19 @@
         path: /usr/local/bin/composer
       register: composer_stat
 
-    - name: Make sure composer is at its latest version
-      composer:
-        working_dir: "{{ symfony_root_dir }}"
-        command: self-update
-      register: composer_self_update
-      changed_when: "not composer_self_update.stdout|search('You are already using composer version')"
-      when: composer_stat.stat.exists
+    #- name: Make sure composer is at its latest version
+      #composer:
+        #working_dir: "{{ symfony_root_dir }}"
+        #command: self-update
+      #register: composer_self_update
+      #changed_when: "not composer_self_update.stdout|search('You are already using composer version')"
+      #when: composer_stat.stat.exists
 
     - name: Download composer
       get_url:
         url: https://getcomposer.org/installer
         dest: "{{ installer }}"
-      when: not composer_stat.stat.exists
+      #when: not composer_stat.stat.exists
 
     - name: Install composer
       command: "{{ item }}"
@@ -177,14 +177,14 @@
         - "php {{ installer }}"
         - mv composer.phar /usr/local/bin/composer
       notify: Restart Nginx
-      when: not composer_stat.stat.exists
+      #when: not composer_stat.stat.exists
 
     - name: Set permissions on Composer
       become: true
       file:
         path: /usr/bin/composer
         mode: "a+x"
-      when: not composer_stat.stat.exists
+      #when: not composer_stat.stat.exists
 
     - name: Install Composer's dependencies
       become: true

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0560cc86-2e59-491c-831e-9408e6bd3c82" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ansible/playbook.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ansible/playbook.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style-green.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style-green.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,10 +21,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="367" column="34" selection-start-line="367" selection-start-column="34" selection-end-line="367" selection-end-column="34" />
+            <state relative-caret-position="306">
+              <caret line="372" column="24" selection-start-line="372" selection-start-column="24" selection-end-line="372" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#section#4;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,8 +43,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ansible/playbook.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            <state relative-caret-position="377">
+              <caret line="185" column="19" lean-forward="true" selection-start-line="185" selection-start-column="19" selection-end-line="185" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style-green.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="757" column="19" lean-forward="true" selection-start-line="757" selection-start-column="19" selection-end-line="757" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -113,6 +125,8 @@
       <find>big bang</find>
       <find>main</find>
       <find>wzw</find>
+      <find>overl</find>
+      <find>count</find>
     </findStrings>
     <replaceStrings>
       <replace>portfolio</replace>
@@ -142,7 +156,6 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/ansible/templates/symfony.conf" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/css/style-green.css" />
         <option value="$PROJECT_DIR$/ansible/vars/vars.yml" />
         <option value="$PROJECT_DIR$/tests/Controller/frontTest.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
@@ -153,6 +166,7 @@
         <option value="$PROJECT_DIR$/ansible/hosts.ini" />
         <option value="$PROJECT_DIR$/.circleci/config.yml" />
         <option value="$PROJECT_DIR$/templates/home.html.twig" />
+        <option value="$PROJECT_DIR$/public/css/style-green.css" />
         <option value="$PROJECT_DIR$/ansible/playbook.yml" />
       </list>
     </option>
@@ -311,6 +325,17 @@
             <path>
               <item name="Portfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="Portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -362,12 +387,12 @@
       <workItem from="1581726145058" duration="21318000" />
       <workItem from="1583267594382" duration="7744000" />
       <workItem from="1583452346765" duration="6532000" />
-      <workItem from="1583935729202" duration="34528000" />
+      <workItem from="1583935729202" duration="35269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114780000" />
+    <option name="totallyTimeSpent" value="115521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -496,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style-green.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21488">
-          <caret line="1264" column="1" selection-start-line="1264" selection-start-column="1" selection-end-line="1264" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/FrontController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -614,6 +632,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/hosts.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/vars/vault.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -621,10 +646,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/hosts.ini">
+    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="306">
+          <caret line="372" column="24" selection-start-line="372" selection-start-column="24" selection-end-line="372" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#4;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style-green.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="757" column="19" lean-forward="true" selection-start-line="757" selection-start-column="19" selection-end-line="757" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -635,20 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="367" column="34" selection-start-line="367" selection-start-column="34" selection-end-line="367" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/playbook.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="12" lean-forward="true" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        <state relative-caret-position="377">
+          <caret line="185" column="19" lean-forward="true" selection-start-line="185" selection-start-column="19" selection-end-line="185" selection-end-column="19" />
         </state>
       </provider>
     </entry>
