@@ -246,8 +246,8 @@
         mode: "a+x"
 
 
-    - name: Delete old Database
-      command: '{{ symfony_console_path }} doctrine:database:drop --force'
+    #- name: Delete old Database
+      #command: '{{ symfony_console_path }} doctrine:database:drop --force'
 
     # Symfony console commands
     - name: Create DB if not exists
