@@ -29,5 +29,12 @@ Several solutions to deploy this project :
 
 More additional files and functionality of the application are hidden from the public
 
+## Installation 
+
+- composer install
+- yarn install
+- yarn build
+
+
 
 
