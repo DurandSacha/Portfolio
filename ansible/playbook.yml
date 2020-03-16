@@ -313,9 +313,9 @@
         chdir: '{{ symfony_root_dir }}'
 
     - name: Clear cache and finish deploy
-      command: '{{ symfony_console_path }} cache:clear --env={{ symfony_env }}'
-      changed_when: false
-      when: code_changed
+      command: '{{ symfony_console_path }} cache:clear'
+      #changed_when: false
+      #when: code_changed
 
   handlers:
 
