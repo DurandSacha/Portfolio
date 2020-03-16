@@ -308,7 +308,7 @@
 
     #build all code in public/build // Launch yarn encore dev
     - name: Build Yarn Dependencies
-      command: yarn encore dev
+      command: yarn build
       args:
         chdir: '{{ symfony_root_dir }}'
 
