@@ -1,13 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-//import Components from './Components/xxxx';
+//import CommitLastYear from './Components/commit-last-year';
+import PublicRepoGithub from './Components/publicRepoGithub';
 
-//render(<components />, document.getElementById('react-section'));
-
-
-
-
+//render(<CommitLastYear />, document.getElementById('commit-last-year'));
+render(<PublicRepoGithub />, document.getElementById('public-repo-github'));
 
 
 

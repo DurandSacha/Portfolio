@@ -1281,3 +1281,12 @@ footer .credits a {
 .w-title,.card-title a,.author{
   color: black;
 }
+
+.modal-content{
+  padding: 40px;
+
+}
+.modal-content h3,.modal-content p,.modal-content li{
+  margin-left:5%;
+
+}

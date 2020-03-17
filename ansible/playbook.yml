@@ -227,6 +227,13 @@
         insertafter: ''
         line: "{{ database_url }}"
 
+    -  name: Add mailer_pass variable
+       become: true
+       lineinfile:
+        dest: "{{ symfony_root_dir }}/.env"
+        regexp: ''
+        insertafter: ''
+        line: "MAILER_PASS={{ mailer_pass }}"
 
     - name: remove cache in var/cache
       command: 'rm -rf var/cache/*'
