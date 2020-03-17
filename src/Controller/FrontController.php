@@ -19,8 +19,8 @@ class FrontController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $message = (new \Swift_Message('Portfolio'))
-                ->setFrom('sacha6623@gmail.com')
-                ->setTo($form->get('Email')->getData())
+                ->setFrom($form->get('Email')->getData())
+                ->setTo('sacha6623@gmail.com')
                 ->setBody(
                     $this->renderView(
                         'Emails/contact.html.twig',
