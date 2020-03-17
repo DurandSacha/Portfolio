@@ -36,7 +36,7 @@ class frontTest extends webTestCase
         // Asserting email data
         $this->assertInstanceOf('Swift_Message', $message);
         $this->assertSame('Hello Email', $message->getSubject());
-        $this->assertSame('send@example.com', key($message->getFrom()));
+        $this->assertSame('sacha6623@gmail.com', key($message->getFrom()));
         $this->assertSame('recipient@example.com', key($message->getTo()));
         $this->assertSame(
             'You should see me from the profiler!',
