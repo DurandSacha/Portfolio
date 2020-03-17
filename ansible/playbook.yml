@@ -227,7 +227,7 @@
         insertafter: ''
         line: "{{ database_url }}"
 
-    -  name: Add mailer_pass variable
+    -  name: Add mailer_pass variable in .env file ( with a gmail mailer password )
        become: true
        lineinfile:
         dest: "{{ symfony_root_dir }}/.env"
