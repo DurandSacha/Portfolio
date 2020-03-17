@@ -250,8 +250,8 @@
       #command: '{{ symfony_console_path }} doctrine:database:drop --force'
 
     # Symfony console commands
-    - name: Create DB if not exists
-      command: '{{ symfony_console_path }} doctrine:database:create --if-not-exists --no-interaction'
+    #- name: Create DB if not exists
+      #command: '{{ symfony_console_path }} doctrine:database:create --if-not-exists --no-interaction'
 
     #- name: make migration
       #command: '{{ symfony_console_path }} make:migration'

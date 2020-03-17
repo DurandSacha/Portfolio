@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Form\contactForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class FrontController extends AbstractController
@@ -10,9 +12,36 @@ class FrontController extends AbstractController
     /**
      * @Route("/", name="home")
      */
-    public function home()
+    public function home(Request $request, \Swift_Mailer $mailer)
     {
+        $form = $this->createForm(contactForm::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $message = (new \Swift_Message('Portfolio'))
+                ->setFrom('sacha6623@gmail.com')
+                ->setTo($form->get('Email')->getData())
+                ->setBody(
+                    $this->renderView(
+                        'Emails/contact.html.twig',
+                        [
+                            'name' => $form->get('Name')->getData(),
+                            'message' => $form->get('Message')->getData(),
+                            'subject' => $form->get('Subject')->getData(),
+                            'mail' => $form->get('Email')->getData(),
+                        ]), 'text/html');
+            $mailer->send($message);
+
+            $this->addFlash('info', "Email has been send");
+
+            return $this->render('home.html.twig', [
+                'contactForm' => $form->createView(),
+            ]);
+        }
         return $this->render('home.html.twig', [
+            'contactForm' => $form->createView(),
+
+            //$this->redirectToRoute('home#contact')
         ]);
     }
 
