@@ -16,6 +16,7 @@ class frontTest extends webTestCase
 
     }
 
+    /*
     public function testSendEmail()
     {
         $client = static::createClient();
@@ -43,4 +44,5 @@ class frontTest extends webTestCase
             $message->getBody()
         );
     }
+    */
 }
