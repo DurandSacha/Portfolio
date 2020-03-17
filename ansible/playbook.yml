@@ -12,7 +12,7 @@
       #private: no
 
   environment:
-    SYMFONY_ENV: prod
+    SYMFONY_ENV: dev
 
   pre_tasks:
 
