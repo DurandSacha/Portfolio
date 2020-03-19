@@ -1,16 +1,12 @@
-/*
-  Theme Name: DevFolio
-  Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
+/* SCSS File */ 
 
-/*======================================
-//--//-->   STYLES GENERALES
-======================================*/
+$flashColor: '#24b67e';
+$blackColorTypo: 'black';
+$whiteColor: '#fff';
+$whiteColorTypo: 'whitesmoke';
 
 body {
-  background-color: #f5f5f5;
+  background-color: $whiteColor;
   color: #4e4e4e;
 }
 
@@ -24,12 +20,12 @@ h6 {
 }
 
 a {
-  color: #1e1e1e;
+  color: $blackColorTypo;
   transition: all 0.5s ease-in-out;
 }
 
 a:hover {
-  color: #8400ff;
+  color: dimgrey;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -39,11 +35,11 @@ a:hover {
 }
 
 .color-a {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .color-d {
-  color: #f5f5f5;
+  color: $whiteColor;
 }
 
 .color-text-a {
@@ -60,7 +56,7 @@ a:hover {
 
 .box-shadow-a,
 .button:hover {
-  box-shadow: 0 0 0 4px #e3c5ff;
+  box-shadow: 0 0 0 4px #bbf5df;
 }
 
 .display-5 {
@@ -90,7 +86,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #8400ff;
+  background-color: $blackColorTypo; /* $flashColor */
 }
 
 .overlay-mf {
@@ -160,7 +156,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #8400ff;
+  background-color: $flashColor;
   margin: 0 auto;
 }
 
@@ -179,7 +175,7 @@ a:hover {
   content: '';
   position: absolute;
   height: 3px;
-  background-color: #8400ff;
+  background-color: $flashColor;
   width: 100px;
   bottom: -12px;
 }
@@ -193,7 +189,7 @@ a:hover {
 .box-shadow-full {
   padding: 3rem 1.25rem;
   position: relative;
-  background-color: #fff;
+  background-color: $whiteColor;
   margin-bottom: 3rem;
   z-index: 2;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
@@ -216,14 +212,14 @@ a:hover {
   border-radius: 50%;
   line-height: 1.4;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #8400ff;
+  box-shadow: 0 0 0 3px $flashColor;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #8400ff;
-  color: #fff;
-  box-shadow: 0 0 0 3px #e3c5ff;
+  background-color: $flashColor;
+  color: $whiteColor;
+  box-shadow: 0 0 0 3px #bbf5df;
   transition: all 500ms ease;
 }
 
@@ -246,7 +242,7 @@ a:hover {
 }
 
 .list-ico span {
-  color: #8400ff;
+  color: $flashColor;
   margin-right: 10px;
 }
 
@@ -260,7 +256,7 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #8400ff;
+  box-shadow: 0 0 0 10px $flashColor;
   display: block;
 }
 
@@ -279,15 +275,15 @@ a:hover {
   width: 18px;
   height: 7px;
   margin: 5px 5px;
-  background: #e3c5ff;
-  border: 0px solid #e3c5ff;
+  background: #bbf5df;
+  border: 0px solid #bbf5df;
   display: block;
   transition: all 0.6s ease-in-out;
   cursor: pointer;
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #e3c5ff;
+  background-color: #bbf5df;
 }
 
 .owl-theme .owl-dots .owl-dot.active span {
@@ -307,12 +303,12 @@ a:hover {
   position: fixed;
   width: 42px;
   height: 42px;
-  background-color: #8400ff;
+  background-color: $flashColor;
   opacity: .7;
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
-  color: #fff;
+  color: $whiteColor;
   top: auto;
   left: auto;
   right: 30px;
@@ -326,8 +322,8 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #8400ff;
-  color: #fff;
+  background: $flashColor;
+  color: $whiteColor;
   width: 44px;
   height: 44px;
   text-align: center;
@@ -342,7 +338,7 @@ a:hover {
 
 .back-to-top i {
   padding-top: 12px;
-  color: #fff;
+  color: $whiteColor;
 }
 
 /* Prelaoder */
@@ -355,7 +351,7 @@ a:hover {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: $whiteColor;
 }
 
 #preloader:before {
@@ -364,7 +360,7 @@ a:hover {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #f2f2f2;
-  border-top: 6px solid #8400ff;
+  border-top: 6px solid $flashColor;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -420,7 +416,7 @@ a:hover {
 
 .navbar-b.navbar-trans .nav-link,
 .navbar-b.navbar-reduce .nav-link {
-  color: #fff;
+  color: $whiteColor;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -459,48 +455,48 @@ a:hover {
 }
 
 .navbar-b.navbar-trans .nav-link:before {
-  background-color: #fff;
+  background-color: $whiteColor;
 }
 
 .navbar-b.navbar-trans .nav-link:hover {
-  color: #fff;
+  color: $whiteColor;
 }
 
 .navbar-b.navbar-trans .show > .nav-link,
 .navbar-b.navbar-trans .active > .nav-link,
 .navbar-b.navbar-trans .nav-link.show,
 .navbar-b.navbar-trans .nav-link.active {
-  color: #fff;
+  color: $whiteColor;
 }
 
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
-  background-color: #fff;
+  background-color: $whiteColor;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #8400ff;
+  background-color: $flashColor;
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
@@ -508,7 +504,7 @@ a:hover {
 }
 
 .navbar-b .navbar-brand {
-  color: #fff;
+  color: $whiteColor;
   font-size: 1.6rem;
   font-weight: 600;
 }
@@ -532,13 +528,13 @@ a:hover {
 }
 
 .navbar-b .dropdown-menu .dropdown-item:hover {
-  background-color: #8400ff;
-  color: #fff;
+  background-color: $flashColor;
+  color: $whiteColor;
   transition: all 500ms ease;
 }
 
 .navbar-b .dropdown-menu .dropdown-item.active {
-  background-color: #8400ff;
+  background-color: $flashColor;
 }
 
 /*--/ Hamburger Navbar /--*/
@@ -554,7 +550,7 @@ a:hover {
 
 .navbar-toggler span {
   display: block;
-  background-color: #fff;
+  background-color: $whiteColor;
   height: 3px;
   width: 25px;
   margin-top: 4px;
@@ -603,7 +599,7 @@ a:hover {
 .intro {
   height: 100vh;
   position: relative;
-  color: #fff;
+  color: $whiteColor;
 }
 
 .intro .intro-content {
@@ -623,7 +619,7 @@ a:hover {
 }
 
 .intro .intro-title {
-  color: #fff;
+  color: $whiteColor;
   font-weight: 600;
   font-size: 3rem;
 }
@@ -652,19 +648,19 @@ a:hover {
 
 .intro-single .breadcrumb {
   background-color: transparent;
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .intro-single .breadcrumb .breadcrumb-item:before {
-  color: #e3c5ff;
+  color: #bbf5df;
 }
 
 .intro-single .breadcrumb .breadcrumb-item.active {
-  color: #e3c5ff;
+  color: #bbf5df;
 }
 
 .intro-single .breadcrumb a {
-  color: #fff;
+  color: $whiteColor;
 }
 
 /*======================================
@@ -689,7 +685,7 @@ a:hover {
 }
 
 .skill-mf .progress {
-  background-color: #e3c5ff;
+  background-color: #bbf5df;
   margin: .5rem 0 1.2rem 0;
   border-radius: 0;
   height: .7rem;
@@ -697,7 +693,7 @@ a:hover {
 
 .skill-mf .progress .progress-bar {
   height: .7rem;
-  background-color: #8400ff;
+  background-color: $flashColor;
 }
 
 /*======================================
@@ -705,7 +701,7 @@ a:hover {
 ======================================*/
 
 .service-box {
-  background-color: #fff;
+  background-color: $whiteColor;
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
@@ -713,9 +709,9 @@ a:hover {
 
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
-  color: #fff;
-  background-color: #8400ff;
-  box-shadow: 0 0 0 10px #e3c5ff;
+  color: $whiteColor;
+  background-color: $flashColor;
+  box-shadow: 0 0 0 10px #bbf5df;
 }
 
 .service-box .service-ico {
@@ -744,7 +740,7 @@ a:hover {
 ======================================*/
 
 .counter-box {
-  color: #fff;
+  color: $whiteColor;
   text-align: center;
 }
 
@@ -756,7 +752,16 @@ a:hover {
   height: 60px;
   width: 60px;
   line-height: 1.8;
-  box-shadow: 0 0 0 10px #e3c5ff;
+  box-shadow: 0 0 0 10px $flashColor;  /* $flashColor */
+}
+
+.counter-ico .ico-circle i {
+  transition-duration: 1s;
+}
+
+.counter-ico .ico-circle i:hover {
+    color: #20c997;
+    transition-duration: 1s;
 }
 
 .counter-num .counter {
@@ -772,7 +777,7 @@ a:hover {
   margin-bottom: 3rem;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #fff;
+  background-color: $whiteColor;
 }
 
 .work-box:hover img {
@@ -799,17 +804,17 @@ a:hover {
 }
 
 .work-content .w-more .w-ctegory {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .work-content .w-like {
   font-size: 2.5rem;
-  color: #8400ff;
+  color: $flashColor;
   float: right;
 }
 
 .work-content .w-like a {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .work-content .w-like .num-like {
@@ -829,7 +834,7 @@ a:hover {
 }
 
 .testimonial-box {
-  color: #fff;
+  color: $whiteColor;
   text-align: center;
 }
 
@@ -842,7 +847,7 @@ a:hover {
 }
 
 .testimonial-box .author {
-  color: #fff;
+  color: $whiteColor;
   text-transform: uppercase;
   font-weight: 600;
   margin: 1rem 0;
@@ -852,8 +857,8 @@ a:hover {
 
 .testimonial-box .comit {
   font-size: 2rem;
-  color: #8400ff;
-  background-color: #fff;
+  color: $flashColor;
+  background-color: $whiteColor;
   width: 52px;
   height: 52px;
   display: block;
@@ -882,15 +887,15 @@ a:hover {
 
 .card-blog .card-category {
   display: inline-block;
-  color: #fff;
+  color: $whiteColor;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #8400ff;
+  background-color: $flashColor;
   border-radius: 4px;
 }
 
 .card-blog .card-category .category {
-  color: #fff;
+  color: $whiteColor;
   display: inline-block;
   text-transform: uppercase;
   font-size: .7rem;
@@ -926,7 +931,7 @@ a:hover {
 .box-comments,
 .widget-sidebar {
   padding: 2rem;
-  background-color: #fff;
+  background-color: $whiteColor;
   margin-bottom: 3rem;
 }
 
@@ -939,7 +944,7 @@ a:hover {
 }
 
 .blog-wrapper .post-meta ul {
-  border-left: 4px solid #8400ff;
+  border-left: 4px solid $flashColor;
   margin-top: 1rem;
 }
 
@@ -949,7 +954,7 @@ a:hover {
 }
 
 .blog-wrapper .post-meta ul a {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .blog-wrapper .post-meta ul span {
@@ -957,7 +962,7 @@ a:hover {
 }
 
 .blog-wrapper .blockquote {
-  border-left: 4px solid #8400ff;
+  border-left: 4px solid $flashColor;
   padding: 18px;
   font-style: italic;
 }
@@ -989,7 +994,7 @@ a:hover {
 }
 
 .box-comments .list-comments a {
-  color: #8400ff;
+  color: $flashColor;
 }
 
 .box-comments .list-comments span {
@@ -1006,7 +1011,7 @@ a:hover {
 .widget-sidebar .sidebar-title {
   font-size: 1.6rem;
   font-weight: 600;
-  border-left: 5px solid #8400ff;
+  border-left: 5px solid $flashColor;
   padding-left: 15px;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
@@ -1023,19 +1028,19 @@ a:hover {
   width: 10px;
   height: 1px;
   left: 0;
-  background-color: #8400ff;
+  background-color: $flashColor;
   top: 20px;
 }
 
 .sidebar-search input {
-  background-color: #fff;
+  background-color: $whiteColor;
   border-radius: 0;
   transition: all 0.5s ease-in-out;
 }
 
 .sidebar-search .btn-search {
-  background-color: #8400ff;
-  border-color: #8400ff;
+  background-color: $flashColor;
+  border-color: $flashColor;
   border-radius: 0;
   padding-left: 20px;
   padding-right: 20px;
@@ -1043,14 +1048,14 @@ a:hover {
 
 .widget-tags ul li {
   display: inline-block;
-  background-color: #8400ff;
+  background-color: $flashColor;
   padding: .2rem .6rem;
   margin-bottom: .5rem;
   border-radius: 15px;
 }
 
 .widget-tags ul li a {
-  color: #fff;
+  color: $whiteColor;
 }
 
 /*======================================
@@ -1071,7 +1076,7 @@ a:hover {
 
 footer {
   text-align: center;
-  color: #fff;
+  color: $whiteColor;
   padding-bottom: 4rem;
 }
 
@@ -1084,7 +1089,7 @@ footer .credits {
 }
 
 footer .credits a {
-  color: #fff;
+  color: $whiteColor;
 }
 
 /*======================================
@@ -1092,8 +1097,8 @@ footer .credits a {
 ======================================*/
 
 #sendmessage {
-  color: #8400ff;
-  border: 1px solid #8400ff;
+  color: $flashColor;
+  border: 1px solid $flashColor;
   display: none;
   text-align: center;
   padding: 15px;
@@ -1150,15 +1155,15 @@ footer .credits a {
 }
 
 .button:hover {
-  background-color: #5a03ac;
-  color: #fff;
+  background-color: #0d9963;
+  color: $whiteColor;
   transition: all 500ms ease;
 }
 
 .button-a {
-  background-color: #8400ff;
-  color: #fff;
-  border-color: #e3c5ff;
+  background-color: $flashColor;
+  color: $whiteColor;
+  border-color: #bbf5df;
 }
 
 .button-big {
@@ -1262,4 +1267,22 @@ footer .credits a {
   .back-to-top {
     bottom: 15px;
   }
+}
+
+/***** ADD *******/
+
+.work-container:hover{
+  text-decoration: none;
+}
+.w-title,.card-title a,.author{
+  color: $blackColorTypo;
+}
+
+.modal-content{
+  padding: 40px;
+
+}
+.modal-content h3,.modal-content p,.modal-content li{
+  margin-left:5%;
+
 }
