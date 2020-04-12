@@ -1293,3 +1293,13 @@ footer .credits a {
 .spacing{
   margin: 12px;
 }
+
+.ion-social-github{
+  color: black;
+}
+.ion-social-twitter{
+  color: #00acee;
+}
+.ion-social-linkedin{
+  color: #0e76a8;
+}
