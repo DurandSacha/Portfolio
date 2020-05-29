@@ -915,6 +915,8 @@
                           </div>
                         {% endfor %}
 
+                        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                        
                         {{ form_start(contactForm) }}
                           {{ form_row(contactForm.Name) }}
                           <br/>
@@ -925,9 +927,14 @@
                           {{ form_row(contactForm.Message) }}
                           <br/>
 
+                          <div class="row">
+                          <div class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"> </div>
+                          </div>
+
                           <div class="col-md-12">
                             <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
+
                           {% do contactForm.setRendered() %}
                         {{ form_end(contactForm) }}
                     <!--</form>-->

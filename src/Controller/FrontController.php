@@ -17,7 +17,7 @@ class FrontController extends AbstractController
         $form = $this->createForm(contactForm::class);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()  && $this->captchaverify($request->get('g-recaptcha-response'))) {
             $message = (new \Swift_Message('Portfolio'))
                 ->setFrom($form->get('Email')->getData())
                 ->setTo('sacha6623@gmail.com')
