@@ -932,9 +932,10 @@
                           <br/>
 
                           <script type="text/javascript">
-                            function onReCaptchaValid(token) {
-                              document.getElementById('id_du_formulaire').submit();
-                            }
+                          console.log(document.contact_form.g-recaptcha.value);
+                           if(document.contact_form.g-recaptcha.value != "") {
+                            document.contact_form.submit();
+                          }
                           </script>
 
                           <div required class="g-recaptcha" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div><br/>

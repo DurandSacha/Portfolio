@@ -54,7 +54,7 @@ class FrontController extends AbstractController
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE); 
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, array(
-            "secret"=>"6LeTXQgUAAAAALExcpzgCxWdnWjJcPDoMfK3oKGi","response"=>$recaptcha));
+            "secret"=>"6Lci7_0UAAAAAAp7yKiQ-yB8AwxQNJ4jQgBrAHDf","response"=>$recaptcha));
         $response = curl_exec($ch);
         curl_close($ch);
         $data = json_decode($response);     
