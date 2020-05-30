@@ -3,16 +3,16 @@ Encore
 
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
-    .setPublicPath('build')
+    .setPublicPath('/')
 
     .addEntry('main', './assets/js/main.js')
     .configureBabel()
     .enableSingleRuntimeChunk()
     .cleanupOutputBeforeBuild()
-    .copyFiles({
-        from: './assets/img',
-        to: 'img/[path][name].[hash:8].[ext]'
-    })
+    //.copyFiles({
+        //from: './assets/img',
+        //to: 'img/[path][name].[hash:8].[ext]'
+    //})
     .splitEntryChunks()
     .autoProvidejQuery()
     //.enablePostCssLoader()
