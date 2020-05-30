@@ -932,16 +932,23 @@
                           <br/>
 
                           <script type="text/javascript">
-                          console.log(document.contact_form.g-recaptcha.value);
-                           if(document.contact_form.g-recaptcha.value != "") {
-                            document.contact_form.submit();
+                          function valider() {
+                            console.log('fonction valider');
+
+                            console.log(document.contact_form[4].value);
+
+                            if(document.contact_form[4].value == "") {
+                              alert('recaptcha is required');
+                            // div#rc-anchor-container.rc-anchor.rc-anchor-normal.rc-anchor-light
+                          }
+
                           }
                           </script>
 
                           <div required class="g-recaptcha" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div><br/>
 
                           <div class="col-md-12">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                            <button type="submit" onclick="valider()" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
 
                           {% do contactForm.setRendered() %}
