@@ -918,7 +918,7 @@
                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
                         <div class="row">
-                          <div class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
+                          <div required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
                           </div>
                         
                         {{ form_start(contactForm) }}
@@ -931,7 +931,13 @@
                           {{ form_row(contactForm.Message) }}
                           <br/>
 
-                          <div class="g-recaptcha" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div><br/>
+                          <script type="text/javascript">
+                            function onReCaptchaValid(token) {
+                              document.getElementById('id_du_formulaire').submit();
+                            }
+                          </script>
+
+                          <div required class="g-recaptcha" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div><br/>
 
                           <div class="col-md-12">
                             <button type="submit" class="button button-a button-big button-rouded">Send Message</button>

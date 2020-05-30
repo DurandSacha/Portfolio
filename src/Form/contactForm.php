@@ -40,6 +40,7 @@ class contactForm extends AbstractType
                 'label' => false,
 
             ])
+            ->getForm();
             /*
             ->add('Send', SubmitType::class, [
                 'attr' => ['type'=>'submit', 'class' => 'btn btn-success button-big button-rouded', ]
