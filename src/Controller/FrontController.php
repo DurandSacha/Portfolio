@@ -6,6 +6,7 @@ use App\Form\contactForm;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class FrontController extends AbstractController
 {
@@ -17,7 +18,10 @@ class FrontController extends AbstractController
         $form = $this->createForm(contactForm::class);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid() && $this->captchaverify($request->get('g-recaptcha-response'))) {
+        if ($form->isSubmitted() && $form->isValid() && !$this->captchaverify($request->get('g-recaptcha-response'))){
+            $this->addFlash('warning', "Captcha is required");
+        }
+        elseif ($form->isSubmitted() && $form->isValid() && $this->captchaverify($request->get('g-recaptcha-response'))) {
             $message = (new \Swift_Message('Portfolio'))
                 ->setFrom($form->get('Email')->getData())
                 ->setTo('sacha6623@gmail.com')
@@ -40,7 +44,6 @@ class FrontController extends AbstractController
         }
         return $this->render('home.html.twig', [
             'contactForm' => $form->createView(),
-
             //$this->redirectToRoute('home#contact')
         ]);
     }
