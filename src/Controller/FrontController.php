@@ -64,8 +64,7 @@ class FrontController extends AbstractController
     
         if($data != null){
             return true;
-        }  
-        return false;   
+        }     
 }
 
 
