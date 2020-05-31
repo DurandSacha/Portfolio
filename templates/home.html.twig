@@ -939,7 +939,7 @@
 
                             if(document.contact_form[4].value == "") {
                               alert('recaptcha is required');
-                              return
+                              return false;
                             // div#rc-anchor-container.rc-anchor.rc-anchor-normal.rc-anchor-light
                             }
                             document.contact_form.submit();
