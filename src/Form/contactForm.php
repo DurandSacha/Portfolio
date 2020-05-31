@@ -41,6 +41,21 @@ class contactForm extends AbstractType
 
             ])
             /*
+            ->add('Protect', TextareaType::class, [
+                'attr' => ['class' => 'g-reCAPTCHA', 
+                    'placeholder' => 'Message',
+                    'data-sitekey' => "6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"
+                ],
+                    'label' => false,
+
+            ])
+            */
+
+            /* <div required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>*/
+
+
+
+            /*
             ->add('Send', SubmitType::class, [
                 'attr' => ['type'=>'submit', 'class' => 'btn btn-success button-big button-rouded', ]
             ])

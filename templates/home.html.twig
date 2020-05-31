@@ -926,9 +926,15 @@
 
                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-                        <div class="row">
-                          <div required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
-                          </div>
+                        <script src="https://www.google.com/recaptcha/api.js?render=6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></script>
+                        <script>
+                        grecaptcha.ready(function() {
+                            grecaptcha.execute('6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW', {action: 'home'}).then(function(token) {
+                                document.getElementById('recaptchaResponse').value = token
+                            });
+                        });
+                        </script>
+                          
                         
                         {{ form_start(contactForm) }}
                           {{ form_row(contactForm.Name) }}
@@ -939,7 +945,11 @@
                           <br/>
                           {{ form_row(contactForm.Message) }}
                           <br/>
+                          <div class="row">
+                          <div required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
+                          </div>
 
+                          <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
                           <script type="text/javascript">
 
                           function validate() {
