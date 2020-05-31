@@ -927,13 +927,6 @@
                         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
                         <script src="https://www.google.com/recaptcha/api.js?render=6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></script>
-                        <script>
-                        grecaptcha.ready(function() {
-                            grecaptcha.execute('6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW', {action: 'home'}).then(function(token) {
-                                document.getElementById('recaptchaResponse').value = token
-                            });
-                        });
-                        </script>
                           
                         
                         {{ form_start(contactForm) }}
@@ -946,27 +939,58 @@
                           {{ form_row(contactForm.Message) }}
                           <br/>
                           <div class="row">
-                          <div required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
+                          <div id="protect" required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
                           </div>
-
-                          <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
                           <script type="text/javascript">
 
-                          function validate() {
-                            console.log('fonction valider');
+                          
+                            var validate = function() {
+                              grecaptcha.render('protect', {
+                                'sitekey' : '6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW',
+                                'callback': capcha_filled,
+                                'expired-callback': capcha_expired,
+                              });
+                              console.log('validate function');
+                            };
+                            var allowSubmit = false;
+                            function capcha_expired () {
+                                allowSubmit = false;
+                            }
+                            function capcha_filled () {
+                                allowSubmit = true;
+                            }
 
+                            function check_if_capcha_is_filled (e) {
+                              if(allowSubmit) return true;
+                              e.preventDefault();
+                              alert('Fill in the capcha!');
+                            }
+
+                            window.onload = function() {
+                                var $recaptcha = document.querySelector('#g-recaptcha-response');
+
+                                if($recaptcha) {
+                                    $recaptcha.setAttribute("required", "required");
+                                }
+                            };
+                            /*
                             console.log(document.contact_form[4].value);
 
                             if(document.contact_form[4].value != "") {
                               document.contact_form.submit();
                             }
                           }
+                          */
                           </script>
 
-                          <div required class="g-recaptcha" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div><br/>
+                          <div class="g-recaptcha" 
+                          data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"
+                          data-callback="capcha_filled"
+                          data-expired-callback="capcha_expired">
+                          </div><br/>
 
                           <div class="col-md-12">
-                            <button onclick="validate()" class="button button-a button-big button-rouded">Send Message</button>
+                            <button onclick="validate" class="button button-a button-big button-rouded">Send Message</button>
                           </div>
 
                           {% do contactForm.setRendered() %}
