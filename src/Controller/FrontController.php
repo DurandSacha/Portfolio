@@ -57,7 +57,7 @@ class FrontController extends AbstractController
         $client = HttpClient::create();
         $response = $client->request('GET', 'https://github.com/DurandSacha');
         $content = $response->getContent();
-        $content = preg_match('#791 contributions\n#', $content,$line);
+        $content = preg_match('#[0-9][0-9][0-9][0-9]* contributions\n#', $content,$line);
         $commitsYears = trim(str_replace(' contributions','', $line[0]));
 
         $publicRepo = 5;
