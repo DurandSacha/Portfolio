@@ -54,21 +54,16 @@ class FrontController extends AbstractController
         $form = $this->createForm(contactForm::class);
         $form->handleRequest($request);
 
-        /**************** TEST SCRAPING GITHUB  ************/
         $client = HttpClient::create();
         $response = $client->request('GET', 'https://github.com/DurandSacha');
         $content = $response->getContent();
-        $content = preg_match('#791 contributions\n#', $content,$line);   /// 791 contributions\n
+        $content = preg_match('#791 contributions\n#', $content,$line);
         $commitsYears = trim(str_replace(' contributions','', $line[0]));
-
-
 
         $publicRepo = 5;
         $publicRepoResponse = $this->checkConnection()->request('GET', 'https://api.github.com/users/DurandSacha')->toArray();
         $publicRepo = $publicRepoResponse['public_repos'];
         //return fetch('https://api.github.com/users/DurandSacha'
-
-
 
         if ($form->isSubmitted() && $form->isValid() && !$this->captchaverify($request->get('g-recaptcha-response'))){
             $this->addFlash('warning', "Captcha is required");
@@ -120,7 +115,7 @@ class FrontController extends AbstractController
         if($data != null){
             return true;
         }     
-}
+    }
 
 
     /**
@@ -137,7 +132,7 @@ class FrontController extends AbstractController
      */
     public function sell()
     {
-        return $this->render('services.html.twig', [
+        return $this->render('sell/photographieMaster.html.twig', [
         ]);
     }
 
