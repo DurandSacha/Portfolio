@@ -128,7 +128,7 @@ class FrontController extends AbstractController
     }
 
     /**
-     * @Route("/sell", name="sell")
+     * @Route("/PhotographieMaster", name="PhotographieMaster")
      */
     public function sell()
     {
