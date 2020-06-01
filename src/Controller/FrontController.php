@@ -61,6 +61,15 @@ class FrontController extends AbstractController
         $content = preg_match('#791 contributions\n#', $content,$line);   /// 791 contributions\n
         $commitsYears = trim(str_replace(' contributions','', $line[0]));
 
+
+
+        $publicRepo = 5;
+        $publicRepoResponse = $this->checkConnection()->request('GET', 'https://api.github.com/users/DurandSacha')->toArray();
+        $publicRepo = $publicRepoResponse['public_repos'];
+        //return fetch('https://api.github.com/users/DurandSacha'
+
+
+
         if ($form->isSubmitted() && $form->isValid() && !$this->captchaverify($request->get('g-recaptcha-response'))){
             $this->addFlash('warning', "Captcha is required");
         }
@@ -83,13 +92,14 @@ class FrontController extends AbstractController
 
             return $this->render('home.html.twig', [
                 'contactForm' => $form->createView(),
-                'commits_last_years' => $commitsYears
+                'commits_last_years' => $commitsYears,
+                'public_repo' => $publicRepo,
             ]);
         }
         return $this->render('home.html.twig', [
             'contactForm' => $form->createView(),
-            'commits_last_years' => $commitsYears
-            //$this->redirectToRoute('home#contact')
+            'commits_last_years' => $commitsYears,
+            'public_repo' => $publicRepo,
         ]);
     }
 
