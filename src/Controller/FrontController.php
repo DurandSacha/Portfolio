@@ -7,9 +7,45 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
+use Symfony\Component\DependencyInjection\ParameterBag\ContainerBagInterface;
+use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\HttpClient\ScopingHttpClient;
 
 class FrontController extends AbstractController
 {
+    private $connection;
+    /**
+     * @var ContainerBagInterface
+     */
+    private $containerBag;
+
+    public function __construct(ContainerBagInterface $containerBag)
+    {
+        $this->containerBag = $containerBag;
+    }
+
+    protected function checkConnection()
+    {
+        if($this->connection) {
+            return $this->connection;
+        }
+        return $this->connect();
+    }
+
+    private function connect()
+    {
+        $this->connection = HttpClient::create();
+        $this->connection = new ScopingHttpClient($this->connection, [
+            'https://api\.github\.com/' => [
+                'headers' => [
+                    'Accept' => 'application/vnd.github.v3+json',
+                    'Authorization' => 'token '.$this->containerBag->get('GITHUB_TOKEN'),
+                ],
+            ]
+        ]);
+        return $this->connection;
+    }
+    
     /**
      * @Route("/", name="home")
      */
@@ -17,6 +53,13 @@ class FrontController extends AbstractController
     {
         $form = $this->createForm(contactForm::class);
         $form->handleRequest($request);
+
+        /**************** TEST SCRAPING GITHUB  ************/
+        $client = HttpClient::create();
+        $response = $client->request('GET', 'https://github.com/DurandSacha');
+        $content = $response->getContent();
+        $content = preg_match('#791 contributions\n#', $content,$line);   /// 791 contributions\n
+        $commitsYears = trim(str_replace(' contributions','', $line[0]));
 
         if ($form->isSubmitted() && $form->isValid() && !$this->captchaverify($request->get('g-recaptcha-response'))){
             $this->addFlash('warning', "Captcha is required");
@@ -40,10 +83,12 @@ class FrontController extends AbstractController
 
             return $this->render('home.html.twig', [
                 'contactForm' => $form->createView(),
+                'commits_last_years' => $commitsYears
             ]);
         }
         return $this->render('home.html.twig', [
             'contactForm' => $form->createView(),
+            'commits_last_years' => $commitsYears
             //$this->redirectToRoute('home#contact')
         ]);
     }

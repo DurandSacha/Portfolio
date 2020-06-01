@@ -410,7 +410,8 @@
               <span class="ico-circle"><i class="ion-ios-people"></i></span>
             </div>
             <div class="counter-num">
-              <p class="counter" id="commit-last-year">588</p>
+                <!-- <p class="counter" id="commit-last-year">588</p> -->
+                 <p class="counter"> {{ commits_last_years }}</p>
               <span class="counter-text">COMMIT IN LAST YEAR</span>
             </div>
           </div>
@@ -973,14 +974,6 @@
                                     $recaptcha.setAttribute("required", "required");
                                 }
                             };
-                            /*
-                            console.log(document.contact_form[4].value);
-
-                            if(document.contact_form[4].value != "") {
-                              document.contact_form.submit();
-                            }
-                          }
-                          */
                           </script>
 
                           <div class="g-recaptcha" 
