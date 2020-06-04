@@ -235,6 +235,14 @@
         insertafter: ''
         line: "MAILER_PASS={{ mailer_pass }}"
 
+    -  name: Add github_token variable in .env file ( with a token API github )
+       become: true
+       lineinfile:
+        dest: "{{ symfony_root_dir }}/.env"
+        regexp: ''
+        insertafter: ''
+        line: "GITHUB_TOKEN={{ github_token }}"
+
     - name: remove cache in var/cache
       command: 'rm -rf var/cache/*'
 
