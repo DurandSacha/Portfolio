@@ -7,7 +7,7 @@
 
 
 # Portfolio in general
-This portfolio present my favorite project and my skills. 
+This portfolio present my favorite project, my skills and give differents links ( github ; linkedin ; open-source contributions... 
 
 ## Technology of website
 
