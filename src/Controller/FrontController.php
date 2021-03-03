@@ -60,9 +60,9 @@ class FrontController extends AbstractController
         $content = preg_match('#[0-9][0-9][0-9][0-9]* contributions\n#', $content,$line);
         $commitsYears = trim(str_replace(' contributions','', $line[0]));
 
-        $publicRepo = 5;
-        $publicRepoResponse = $this->checkConnection()->request('GET', 'https://api.github.com/users/DurandSacha')->toArray();
-        $publicRepo = $publicRepoResponse['public_repos'];
+        $publicRepo = 32;
+        //$publicRepoResponse = $this->checkConnection()->request('GET', 'https://api.github.com/users/DurandSacha')->toArray();
+        //$publicRepo = $publicRepoResponse['public_repos'];
         //return fetch('https://api.github.com/users/DurandSacha'
 
         if ($form->isSubmitted() && $form->isValid() && !$this->captchaverify($request->get('g-recaptcha-response'))){
