@@ -328,8 +328,8 @@
       args:
         chdir: '{{ symfony_root_dir }}'
 
-    - name: Clear cache and finish deploy
-      command: '{{ symfony_console_path }} cache:clear'
+    #- name: Clear cache and finish deploy
+      #command: '{{ symfony_console_path }} cache:clear'
       #changed_when: false
       #when: code_changed
 
