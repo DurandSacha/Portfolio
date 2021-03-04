@@ -314,8 +314,8 @@
         path: "{{ symfony_root_dir }}"
         state: latest
 
-    #- name: Install bundle assets
-      #command: '{{ symfony_console_path }} assets:install {{ symfony_web_dir }} --symlink --no-debug --env=prod'
+    - name: Install bundle assets
+      command: '{{ symfony_console_path }} assets:install {{ symfony_web_dir }} --symlink --no-debug --env=prod'
 
     - name: Install Node dependencies
       command: yarn install
@@ -328,8 +328,8 @@
       args:
         chdir: '{{ symfony_root_dir }}'
 
-    #- name: Clear cache and finish deploy
-      #command: '{{ symfony_console_path }} cache:clear'
+    - name: Clear cache and finish deploy
+      command: '{{ symfony_console_path }} cache:clear'
       #changed_when: false
       #when: code_changed
 
