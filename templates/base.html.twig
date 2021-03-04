@@ -10,9 +10,11 @@
             <!--  Styles -->
             <link rel="stylesheet" href="{{ asset('css/slides.css') }}" type="text/css"/>
             <link rel="stylesheet" href="{{ asset('css/custom.css') }}" type="text/css"/>
-            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
+            <!-- font awesome -->
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+            <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous"></script>
             <!-- Compressed Styles -->
 
 
@@ -29,7 +31,7 @@
 
         {% block javascripts %}
             {#{{ encore_entry_script_tags('app') }}#}
-            <script src="{{ asset('js/main.js') }}" type="text/css"/>
+            <script src="{{ asset('js/main.js') }}"/>
             <script src="https://kit.fontawesome.com/ac6338cc1c.js" crossorigin="anonymous"></script>
         {% endblock %}
     </head>
