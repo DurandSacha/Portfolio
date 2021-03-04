@@ -300,13 +300,14 @@
         name: yarn
         state: present
 
-    - name: Install NodeJS / yarn
-      become: true
-      apt:
-        name:
-          - nodejs
-          - yarn
-        update_cache: yes
+
+    #- name: Install NodeJS / yarn
+      #become: true
+      #apt:
+        #name:
+          #- nodejs
+          #- yarn
+        #update_cache: no
 
     - name: Install packages based on package.json.
       yarn:
