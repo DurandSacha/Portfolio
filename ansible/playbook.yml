@@ -27,10 +27,10 @@
       #tags:
         #- always
 
-    #- name: Update APT package manager repositories cache
-      #become: true
-      #apt:
-        #update_cache: yes
+    - name: Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
 
     - name: Upgrade installed packages
       become: true
@@ -41,7 +41,7 @@
 
     #- import_tasks: ./includes/playbook2.yml
 
-    - name: Install Git VCS
+    - name: Install Git
       become: true
       apt:
         name: git
