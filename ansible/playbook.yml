@@ -193,8 +193,8 @@
         #no_dev: no
       #when: code_changed | bool
 
-    - name: remove cache in var/cache
-      command: 'cd /var/www/html/Portfolio && composer install -n'
+    - name: new composer install (-n)
+      shell: 'cd /var/www/html/Portfolio && composer install -n'
 
     - name: Add Symfony config template to the Apache available sites
       become: true
