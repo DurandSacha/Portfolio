@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: ping CI
+        run: npm -v
+
       #- name: Configure AWS Credentials
         #uses: aws-actions/configure-aws-credentials@v1
         #with:
