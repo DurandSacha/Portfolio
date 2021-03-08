@@ -1,0 +1,42 @@
+.bigTitle{
+    letter-spacing: 16px;
+    font-size: 8.4rem;
+    color: rgb(240,240,240);
+    /*font-variant: no-common-ligatures proportional-nums;*/
+    text-transform: uppercase;
+    text-shadow:1px 4px 2px rgb(40,200,60), 4px 1px 3px red;
+    /*
+    color: #FFFFFF;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 8.4rem;
+	line-height: 1.071;
+	max-width: 900px;
+	margin-top: 0;
+	margin-bottom: .6rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    */
+
+    transition-duration: 1s;
+}
+
+.bigTitle:hover{
+    color: rgb(243,243,243);
+    text-shadow:1px 4px 0px rgb(200,0,0), 4px 1px 0px rgb(40,200,60), 1px 4px 30px rgba(190,190,220,0.2);
+    transition-duration: 0.6s;
+}
+
+.form-field{
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+}
+
+/******RESUME *******************/
+
+.info-list li strong{
+
+}
+.info-list li span{
+    
+}
