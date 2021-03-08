@@ -25,6 +25,7 @@
     color: rgb(243,243,243);
     text-shadow:1px 4px 0px rgb(200,0,0), 4px 1px 0px rgb(40,200,60), 1px 4px 30px rgba(190,190,220,0.2);
     transition-duration: 0.6s;
+    transform: rotateZ(0.1deg);
 }
 
 .form-field{
@@ -40,3 +41,43 @@
 .info-list li span{
     
 }
+/*****PORTFOLIO *****/
+
+.portfolio-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+
+}
+
+.portfolio-project{
+    width: 30%;
+    height: 2%;
+    margin: 3%;
+}
+
+.portfolio-project-mac{
+    width: 30%;
+    height: 5%;
+    margin: 3%;
+}
+
+
+/******ANNEXE*******/
+
+.hr70{
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 4%;
+    color: palevioletred;
+}
+
+
+
+
+
+
+
+
+

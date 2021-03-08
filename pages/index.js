@@ -335,54 +335,207 @@ export default function Home() {
 
         */}
 
-        <section id="portfolio">
 
+        {/* ONLY SQUARE IMAGE 800*801 */}
+        <section id="portfolio">
           <div className="row section-intro">
             <div className="col-twelve">
               <h5>Portfolio</h5>
             </div>   		
           </div>
 
-          <div className="row portfolio-content">
+            
+            <div className="col-twelve portfolio-container">
 
-            <div className="col-twelve">
-                <div id="folio-wrapper" className="block-1-2 block-mob-full stack">
-
+              
+                <div id="" className="stack portfolio-project">
                   <div className="bgrid folio-item">
                       <div className="item-wrap">
-                        <img src="img/portfolio/liberty.jpg" alt="Liberty"></img>
+                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
                           <a href="#modal-01" className="overlay">	                  	           
                             <div className="folio-item-table">
                               <div className="folio-item-cell">
-                              <h3 className="folio-title">Projet 1 </h3>	     					    
+                              <h3 className="folio-title">play.wikirun.io </h3>	     					    
                               <span className="folio-types">
-                                  Mon projet
+                                  Société Akarah
                               </span>
                               </div>	                      	
                             </div>                    
                           </a>             
                       </div>  
 
-                <div id="modal-01" className="popup-modal slider mfp-hide">	
-                  <div className="media">
-                    <img src="img/portfolio/modals/m-liberty.jpg" alt="" />
-                  </div>      	
-                  <div className="description-box">
-                      <h4>Liberty</h4>		      
-                      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                      <div className="categories">Web Development</div>			               
-                  </div>
-                    <div className="link-box">
-                        <a href="http://www.behance.net">Details</a>
-                      <a href="#" className="popup-modal-dismiss">Close</a>
-                    </div>		      
-                </div>
+                      <div id="modal-01" className="popup-modal slider mfp-hide">	
+                        <div className="media">
+                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                        </div>      	
+                        <div className="description-box">
+                            <h4>Snowtricks Community</h4>		      
+                            <p>Symfony - FUN </p>
+                            <div className="categories">Web Development</div>			               
+                        </div>
+                          <div className="link-box">
+                              <a href="http://www.behance.net">Details</a>
+                            <a href="#" className="popup-modal-dismiss">Close</a>
+                          </div>		      
+                      </div>
+                    </div>
+                  </div> 
 
-                </div></div></div> 
-            </div>   
+                  {/***** P2 *********** */}
+                  <div id="" className="stack portfolio-project">
+                  <div className="bgrid folio-item">
+                      <div className="item-wrap">
+                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                          <a href="#modal-01" className="overlay">	                  	           
+                            <div className="folio-item-table">
+                              <div className="folio-item-cell">
+                              <h3 className="folio-title">Snowtricks </h3>	     					    
+                              <span className="folio-types">
+                                  Symfony
+                              </span>
+                              </div>	                      	
+                            </div>                    
+                          </a>             
+                      </div>  
 
-        </section>
-        
+                      <div id="modal-01" className="popup-modal slider mfp-hide">	
+                        <div className="media">
+                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                        </div>      	
+                        <div className="description-box">
+                            <h4>Snowtricks Community</h4>		      
+                            <p>Symfony - FUN </p>
+                            <div className="categories">Web Development</div>			               
+                        </div>
+                          <div className="link-box">
+                              <a href="http://www.behance.net">Details</a>
+                            <a href="#" className="popup-modal-dismiss">Close</a>
+                          </div>		      
+                      </div>
+                    </div>
+                  </div> 
+
+
+                
+
+
+                {/***** P3 *********** */}
+                <div id="" className="stack portfolio-project">
+                  <div className="bgrid folio-item">
+                      <div className="item-wrap">
+                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                          <a href="#modal-01" className="overlay">	                  	           
+                            <div className="folio-item-table">
+                              <div className="folio-item-cell">
+                              <h3 className="folio-title">Bilemo API </h3>	     					    
+                              <span className="folio-types">
+                                  API PHP
+                              </span>
+                              </div>	                      	
+                            </div>                    
+                          </a>             
+                      </div>  
+
+                      <div id="modal-01" className="popup-modal slider mfp-hide">	
+                        <div className="media">
+                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                        </div>      	
+                        <div className="description-box">
+                            <h4>Snowtricks Community</h4>		      
+                            <p>Symfony - FUN </p>
+                            <div className="categories">Web Development</div>			               
+                        </div>
+                          <div className="link-box">
+                              <a href="http://www.behance.net">Details</a>
+                            <a href="#" className="popup-modal-dismiss">Close</a>
+                          </div>		      
+                      </div>
+                    </div>
+                  </div> 
+
+
+
+                {/***** P3 *********** */}
+                <div id="" className="stack portfolio-project">
+                  <div className="bgrid folio-item">
+                      <div className="item-wrap">
+                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                          <a href="#modal-01" className="overlay">	                  	           
+                            <div className="folio-item-table">
+                              <div className="folio-item-cell">
+                              <h3 className="folio-title">Chalet et caviar </h3>	     					    
+                              <span className="folio-types">
+                                  Wordpress Immobilier
+                              </span>
+                              </div>	                      	
+                            </div>                    
+                          </a>             
+                      </div>  
+
+                      <div id="modal-01" className="popup-modal slider mfp-hide">	
+                        <div className="media">
+                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                        </div>      	
+                        <div className="description-box">
+                            <h4>Snowtricks Community</h4>		      
+                            <p>Symfony - FUN </p>
+                            <div className="categories">Web Development</div>			               
+                        </div>
+                          <div className="link-box">
+                              <a href="http://www.behance.net">Details</a>
+                            <a href="#" className="popup-modal-dismiss">Close</a>
+                          </div>		      
+                      </div>
+                    </div>
+                  </div> 
+
+
+                {/***** P5 *********** */}
+                <div id="" className="stack portfolio-project">
+                  <div className="bgrid folio-item">
+                      <div className="item-wrap">
+                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                          <a href="#modal-01" className="overlay">	                  	           
+                            <div className="folio-item-table">
+                              <div className="folio-item-cell">
+                              <h3 className="folio-title">Shifumi Mobile </h3>	     					    
+                              <span className="folio-types">
+                                  React Native - Parse
+                              </span>
+                              </div>	                      	
+                            </div>                    
+                          </a>             
+                      </div>  
+
+                      <div id="modal-01" className="popup-modal slider mfp-hide">	
+                        <div className="media">
+                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                        </div>      	
+                        <div className="description-box">
+                            <h4>Snowtricks Community</h4>		      
+                            <p>Symfony - FUN </p>
+                            <div className="categories">Web Development</div>			               
+                        </div>
+                          <div className="link-box">
+                              <a href="http://www.behance.net">Details</a>
+                            <a href="#" className="popup-modal-dismiss">Close</a>
+                          </div>		      
+                      </div>
+                    </div>
+                  </div> 
+
+                {/* end project */}
+                </div> 
+                 
+             
+             <br/><br/><br/><br/><br/><br/>
+
+              
+              
+             <hr className="hr70"/>
+
+          </section>
+
         {/*
         <section id="cta" className="grey-section">
 
@@ -407,122 +560,8 @@ export default function Home() {
           </div>
 
         </section>
-        */}
 
-        <section id="services">
-
-          <div className="overlay"></div>
-
-          <div className="row section-intro">
-            <div className="col-twelve">
-
-              <h5>Services</h5>
-              <h1>What Can I Do For You?</h1>
-
-              <p className="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-            </div>   		
-          </div> 
-
-          <div className="row services-content">
-
-            <div id="owl-slider" className="owl-carousel services-list">
-
-                <div className="service">	
-
-                  <span className="icon"><i className="icon-earth"></i></span>            
-
-                    <div className="service-content">	
-
-                      <h3>Webdesign</h3>
-
-                      <p className="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-                    
-                  </div> 	         	 
-
-              </div> 
-
-              <div className="service">	
-
-                <span className="icon"><i className="icon-window"></i></span>                          
-
-                    <div className="service-content">	
-
-                      <h3>Web Development</h3>  
-
-                      <p className="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p>
-
-                    </div>	                          
-
-              </div> 
-
-              <div className="service">
-
-                <span className="icon"><i className="icon-paint-brush"></i></span>		            
-
-                    <div className="service-content">
-
-                      <h3>Branding</h3>
-
-                      <p className="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                      </p> 
-
-                    </div> 	            	               
-
-              </div>
-
-              <div className="service">
-
-                <span className="icon"><i className="icon-toggles"></i></span>	              
-
-                    <div className="service-content">
-
-                      <h3>UI/UX Design</h3>
-
-                      <p className="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                    </p> 
-                    
-                    </div>                
-
-              </div>
-
-              <div className="service">
-
-                <span className="icon"><i className="icon-image"></i></span>	            
-
-                    <div className="service-content">
-
-                      <h3>Graphics Design</h3>
-
-                      <p className="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                      </p> 
-
-                    </div>	               
-
-              </div>
-
-              <div className="service">
-
-                <span className="icon"><i className="icon-chat"></i></span>	   	           
-
-                    <div className="service-content">
-
-                      <h3>Consultancy</h3>
-
-                      <p className="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-                      </p> 
-                      
-                    </div>	               
-
-              </div>  
-
-              </div>  
-            
-          </div>  
-          
-        </section> 	
+        */}	
          
         <section id="stats" className="count-up">
 
@@ -759,9 +798,8 @@ export default function Home() {
 
               <div className="col-eight tab-full">
                 <div className="copyright">
-                    <span>© Copyright 2018 </span> 
-                    <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span> 
-                    <span>Distributed by <a href="https://themewagon.com/">themewagon</a></span>	         	
+                    <span>© Copyright 2021 </span> 
+                    <span>Design by Sacha Durand</span> 	         	
                   </div>		                  
                 </div>
 
