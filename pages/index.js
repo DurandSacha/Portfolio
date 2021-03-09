@@ -26,7 +26,7 @@ export default function Home() {
             <div className="top-bar">
               <a className="menu-toggle" href="#"><span>Menu</span></a>
               <div className="logo">
-                  <a href="index.html">KARDS</a>
+                  <a href="index.html">SACHA</a>
                 </div>		      
               <nav id="main-nav-wrap">
                 <ul className="main-navigation">
@@ -114,15 +114,15 @@ export default function Home() {
                   <span>Sacha Durand</span>
                 </li>
                 <li>
-                  <strong className="info-info-list">Age</strong>
+                  <strong className="info-info-list">AGE:</strong>
                   <span>23 ans ( 22 mars 1998 )</span>
                 </li>
                 <li>
-                  <strong className="info-info-list" >Titre</strong>
+                  <strong className="info-info-list" >TITRE:</strong>
                   <span>Développeur web back-end</span>
                 </li>
                 <li>
-                  <strong className="info-info-list">Email:</strong>
+                  <strong className="info-info-list">EMAIL:</strong>
                   <span>sacha6623@gmail.com</span>
                 </li>
 
@@ -577,11 +577,11 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    1500
+                    3
                   </h3>
 
                   <h5 className="stat-title">
-                    Projects Completed
+                    Année d'experience 
                   </h5>
 
                 </div>					
@@ -593,11 +593,11 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    900
+                    1500
                   </h3>
 
                   <h5 className="stat-title">
-                    Happy Clients
+                    commits/année
                   </h5>
 
                 </div>
@@ -609,11 +609,11 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    200
+                    +30
                   </h3>
 
                   <h5 className="stat-title">
-                    Awards Received
+                    projets réalisés
                   </h5>
 
                 </div> 									
@@ -625,11 +625,11 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    120
+                    +15000
                   </h3>
 
                   <h5 className="stat-title">
-                    Crazy Ideas
+                    cafés
                   </h5>
 
                 </div> 
@@ -641,11 +641,11 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    1500
+                    +20
                   </h3>
 
                   <h5 className="stat-title">
-                    Coffee Cups
+                    technologies maitrisé
                   </h5>
 
                 </div>  
@@ -657,11 +657,11 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    7200
+                    +30
                   </h3>
 
                   <h5 className="stat-title">
-                    Hours
+                    Repository
                   </h5>
 
                 </div>  
@@ -678,12 +678,8 @@ export default function Home() {
 
           <div className="row section-intro">
             <div className="col-twelve">
-
               <h5>Contact</h5>
-              <h1>I'd Love To Hear From You.</h1>
-
-              <p className="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
+              <p className="lead">N'hésitez pas à me contacter pour tout travail, mais aussi pour information. Ou tout simplement pour évoquer le magnifique métier de développeur web. Ensemble, partageons notre passion</p>
             </div> 
           </div>
 
@@ -693,13 +689,13 @@ export default function Home() {
                   <form name="contactForm" id="contactForm" method="post" action="">
                   <fieldset>
                         <div className="form-field">
-                          <input name="contactName" type="text" id="contactName" placeholder="Name" defaultValue="" onChange={console.log('inputed')} minlength="2" required=""></input>
+                          <input name="contactName" type="text" id="contactName" placeholder="Nom" defaultValue="" onChange={console.log('inputed')} minlength="2" required=""></input>
                         </div>
                         <div className="form-field">
                           <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" defaultValue="" onChange={console.log('inputed')} required=""></input>
                       </div>
                         <div className="form-field">
-                          <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" defaultValue="" onChange={console.log('inputed')}></input>
+                          <input name="contactSubject" type="text" id="contactSubject" placeholder="Sujet" defaultValue="" onChange={console.log('inputed')}></input>
                       </div>                     
                         <div className="form-field">
                           <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
@@ -737,12 +733,12 @@ export default function Home() {
                 <i className="icon-pin"></i>
               </div>
 
-              <h5>Where to find me</h5>
+              <h5>Ou me trouver ?</h5>
 
               <p>
-                  1600 Amphitheatre Parkway<br/>
-                  Mountain View, CA<br/>
-                  94043 US
+                  2536 route des faisans,<br/>
+                  manneville-la-goupil<br/>
+                  76110 FR
               </p>
 
             </div>
@@ -753,10 +749,9 @@ export default function Home() {
                 <i className="icon-mail"></i>
               </div>
 
-              <h5>Email Me At</h5>
+              <h5>Email Me</h5>
 
-              <p>someone@kardswebsite.com<br/>
-                info@kardswebsite.com			     
+              <p>sacha6623@gmail.com<br/>			     
               </p>
 
             </div>
@@ -767,11 +762,9 @@ export default function Home() {
                 <i className="icon-phone"></i>
               </div>
 
-              <h5>Call Me At</h5>
+              <h5>Appelez-moi </h5>
 
-              <p>Phone: (+63) 555 1212<br/>
-                Mobile: (+63) 555 0100<br/>
-                  Fax: (+63) 555 0101
+              <p>Mobile : 06 58 01 65 54 <br/>
               </p>
 
             </div>
