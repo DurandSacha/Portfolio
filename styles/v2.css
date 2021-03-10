@@ -101,7 +101,47 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     margin: 3%;
 }
 
+/*****FORM NEW *******/
+.input-form{
+    margin-left: 16%;
+    width: 100%;
+    margin-bottom: 6%;
+    padding-bottom: 0%;
+    /*box-shadow:0px 0px 1px rgb(3, 223, 183), 0px 1px 1px red;*/
+    box-shadow:0px 0px 15px rgba(148, 0, 69, 0.10);
+    transition-duration: 0.5s;
+}
+.input-form:hover{
+    box-shadow:0px 0px 15px rgba(148, 0, 69, 0.25);
+    transition-duration: 1s;
+    cursor: url("../public/img/cursor-focus-2.png") 2 2 ,pointer;
+}
 
+.input-form input, .textarea-form textarea{
+    background-color: rgb(51,50,49);
+}
+
+.textarea-form textarea{
+    /*height: 1%;*/
+}
+
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    /*flex-wrap: wrap;*/
+}
+.submit-form{
+    width: 40%;
+    text-align: center;
+    margin: 0;
+    margin-left: 33%;
+    
+}
+
+.protect, .g-recaptcha{
+    margin-left: 45%;
+}
 /******ANNEXE*******/
 
 .hr70{

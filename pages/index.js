@@ -710,58 +710,74 @@ export default function Home() {
 
         </section>
 
-         
+
         <section id="contact">
 
-          <div className="row section-intro">
-            <div className="col-twelve">
-              <h5>Contact</h5>
-              <p className="lead">N'hésitez pas à me contacter pour tout travail, mais aussi pour information. Ou tout simplement pour évoquer le magnifique métier de développeur web. Ensemble, partageons notre passion</p>
-              <br/><br/>
-            </div> 
-          </div>
+        <div className="row section-intro">
+          <div className="col-twelve">
+            <h5>Contact</h5>
+            <p className="lead">N'hésitez pas à me contacter pour tout travail, mais aussi pour information. Ou tout simplement pour évoquer le magnifique métier de développeur web. Ensemble, partageons notre passion</p>
+            <br/><br/>
+          </div> 
+        </div>
+          
+          <form name="contactForm" id="contactForm" method="post" action="">
 
-          <div className="row contact-form">
-
-            <div className="col-twelve">
-                  <form name="contactForm" id="contactForm" method="post" action="">
-                  <fieldset>
-                        <div className="form-field">
-                          <input name="contactName" type="text" id="contactName" placeholder="Nom" defaultValue="" onChange={console.log('inputed')} minlength="2" required=""></input>
-                        </div>
-                        <div className="form-field">
-                          <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" defaultValue="" onChange={console.log('inputed')} required=""></input>
-                      </div>
-                        <div className="form-field">
-                          <input name="contactSubject" type="text" id="contactSubject" placeholder="Sujet" defaultValue="" onChange={console.log('inputed')}></input>
-                      </div>                     
-                        <div className="form-field">
-                          <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-                      </div>    
-
-                      <div className="form-field">
-                          <button className="submitform">Envoyer</button>
-                          <div id="submit-loader">
-                              <div className="text-loader">Envoi...</div>                             
-                          <div className="s-loader">
-                          <div className="bounce1"></div>
-                          <div className="bounce2"></div>
-                          <div className="bounce3"></div>
-                      </div>
-                    </div>
-                        </div>
-
-                  </fieldset>
-                </form>
-                  <div id="message-warning">            	
-                  </div>            
-                <div id="message-success">
-                    <i className="fa fa-check"></i>Merci, votre message a été envoyé !<br/>
+            <div class="form-container">
+              <div>
+                <div className="form-field input-form">
+                    <input name="contactName" type="text" id="contactName" placeholder="Nom" defaultValue="" onChange={console.log('inputed')} minlength="2" required=""></input>
                 </div>
 
+                <div className="form-field input-form">
+                    <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" defaultValue="" onChange={console.log('inputed')} required=""></input>
+                </div>
+
+                <div className="form-field input-form">
+                    <input name="contactSubject" type="text" id="contactSubject" placeholder="Sujet" defaultValue="" onChange={console.log('inputed')}></input>
+                </div>     
+
+
               </div>
+
+              {/* CAPTCHA AND TEXTAREA*/}
+              <div>             
+                <div className="form-field input-form textarea-form">
+                  <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="50" cols="50" required=""></textarea>
+                </div>
+              </div>
+            </div>
             
-          </div>
+              
+              {/*}
+              <div id="protect" required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
+                <div class="g-recaptcha" 
+                    data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"
+                    data-callback="capcha_filled"
+                    data-expired-callback="capcha_expired">
+                </div>
+              */}
+
+
+              <div className="form-field submit-form">
+                  <button className="submitform">Envoyer</button>                    
+                  <div className="s-loader"></div>
+                  <div className="bounce1"></div>
+                  <div className="bounce2"></div>
+                  <div className="bounce3"></div>
+              </div>  
+              
+
+            
+
+          </form>
+
+
+          <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+          <script src="https://www.google.com/recaptcha/api.js?render=6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></script>
+        </section>
+         
+        <section id="contact">
 
           <div className="row contact-info">
 
