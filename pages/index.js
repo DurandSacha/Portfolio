@@ -21,6 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script src="../public/js/jquery-2.1.3.min.js"></script>
 
+        {/*
         <header>   	
           <div className="row">
             <div className="top-bar">
@@ -44,6 +45,8 @@ export default function Home() {
           </div> 
 
         </header> 
+        */}
+
       </Head>
 
       <main>         
@@ -366,7 +369,7 @@ export default function Home() {
 
                       <div id="modal-01" className="popup-modal slider mfp-hide">	
                         <div className="media">
-                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                          <img src="img/portfolio/wikirun-mac.png" alt="" />
                         </div>      	
                         <div className="description-box">
                             <h4>Snowtricks Community</h4>		      
@@ -385,7 +388,7 @@ export default function Home() {
                   <div id="" className="stack portfolio-project">
                   <div className="bgrid folio-item">
                       <div className="item-wrap">
-                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                        <img src="img/portfolio/snowtricks-mac.png" alt="Liberty"></img>
                           <a href="#modal-01" className="overlay">	                  	           
                             <div className="folio-item-table">
                               <div className="folio-item-cell">
@@ -400,7 +403,7 @@ export default function Home() {
 
                       <div id="modal-01" className="popup-modal slider mfp-hide">	
                         <div className="media">
-                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                          <img src="img/portfolio/snowtricks-mac.png" alt="" />
                         </div>      	
                         <div className="description-box">
                             <h4>Snowtricks Community</h4>		      
@@ -423,7 +426,7 @@ export default function Home() {
                 <div id="" className="stack portfolio-project">
                   <div className="bgrid folio-item">
                       <div className="item-wrap">
-                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                        <img src="img/portfolio/bilemo-mac.png" alt="Liberty"></img>
                           <a href="#modal-01" className="overlay">	                  	           
                             <div className="folio-item-table">
                               <div className="folio-item-cell">
@@ -438,7 +441,7 @@ export default function Home() {
 
                       <div id="modal-01" className="popup-modal slider mfp-hide">	
                         <div className="media">
-                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                          <img src="img/portfolio/bilemo-mac.png" alt="" />
                         </div>      	
                         <div className="description-box">
                             <h4>Snowtricks Community</h4>		      
@@ -459,7 +462,7 @@ export default function Home() {
                 <div id="" className="stack portfolio-project">
                   <div className="bgrid folio-item">
                       <div className="item-wrap">
-                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                        <img src="img/portfolio/chalet-caviar-mac.png" alt="Liberty"></img>
                           <a href="#modal-01" className="overlay">	                  	           
                             <div className="folio-item-table">
                               <div className="folio-item-cell">
@@ -474,7 +477,7 @@ export default function Home() {
 
                       <div id="modal-01" className="popup-modal slider mfp-hide">	
                         <div className="media">
-                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                          <img src="img/portfolio/chalet-caviar-mac.png" alt="" />
                         </div>      	
                         <div className="description-box">
                             <h4>Snowtricks Community</h4>		      
@@ -494,7 +497,7 @@ export default function Home() {
                 <div id="" className="stack portfolio-project">
                   <div className="bgrid folio-item">
                       <div className="item-wrap">
-                        <img src="img/portfolio/wikirun-mac.png" alt="Liberty"></img>
+                        <img src="img/portfolio/shifumi-mac.png" alt="Liberty"></img>
                           <a href="#modal-01" className="overlay">	                  	           
                             <div className="folio-item-table">
                               <div className="folio-item-cell">
@@ -509,7 +512,41 @@ export default function Home() {
 
                       <div id="modal-01" className="popup-modal slider mfp-hide">	
                         <div className="media">
-                          <img src="img/portfolio/modals/wikirun.png" alt="" />
+                          <img src="img/portfolio/shifumi-mac.png" alt="" />
+                        </div>      	
+                        <div className="description-box">
+                            <h4>Snowtricks Community</h4>		      
+                            <p>Symfony - FUN </p>
+                            <div className="categories">Web Development</div>			               
+                        </div>
+                          <div className="link-box">
+                              <a href="http://www.behance.net">Details</a>
+                            <a href="#" className="popup-modal-dismiss">Close</a>
+                          </div>		      
+                      </div>
+                    </div>
+                  </div> 
+
+                 {/***** P6 *********** */}
+                 <div id="" className="stack portfolio-project">
+                  <div className="bgrid folio-item">
+                      <div className="item-wrap">
+                        <img src="img/portfolio/arp-mac.png" alt="Liberty"></img>
+                          <a href="#modal-01" className="overlay">	                  	           
+                            <div className="folio-item-table">
+                              <div className="folio-item-cell">
+                              <h3 className="folio-title">Light MVC PHP framework </h3>	     					    
+                              <span className="folio-types">
+                                  petit framework minimaliste PHP
+                              </span>
+                              </div>	                      	
+                            </div>                    
+                          </a>             
+                      </div>  
+
+                      <div id="modal-01" className="popup-modal slider mfp-hide">	
+                        <div className="media">
+                          <img src="img/portfolio/arp-mac.png" alt="" />
                         </div>      	
                         <div className="description-box">
                             <h4>Snowtricks Community</h4>		      
@@ -581,7 +618,7 @@ export default function Home() {
                   </h3>
 
                   <h5 className="stat-title">
-                    Année d'experience 
+                    Années d'experiences
                   </h5>
 
                 </div>					
@@ -645,7 +682,7 @@ export default function Home() {
                   </h3>
 
                   <h5 className="stat-title">
-                    technologies maitrisé
+                    technologies maitrisées
                   </h5>
 
                 </div>  
@@ -661,7 +698,7 @@ export default function Home() {
                   </h3>
 
                   <h5 className="stat-title">
-                    Repository
+                    Repositories
                   </h5>
 
                 </div>  
@@ -680,6 +717,7 @@ export default function Home() {
             <div className="col-twelve">
               <h5>Contact</h5>
               <p className="lead">N'hésitez pas à me contacter pour tout travail, mais aussi pour information. Ou tout simplement pour évoquer le magnifique métier de développeur web. Ensemble, partageons notre passion</p>
+              <br/><br/>
             </div> 
           </div>
 
@@ -749,7 +787,7 @@ export default function Home() {
                 <i className="icon-mail"></i>
               </div>
 
-              <h5>Email Me</h5>
+              <h5>Adresse mail</h5>
 
               <p>sacha6623@gmail.com<br/>			     
               </p>
