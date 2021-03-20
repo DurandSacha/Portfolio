@@ -2,6 +2,16 @@ import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 
 import jquery from "jquery";
+//window.jQuery = window.$ = jQuery;
+
+//import '../public/js/jquery-2.1.3.min.js';
+
+/*
+this.state = {
+  siteVisible:false,
+  spinnerVisible:false
+}
+*/
 
 export default function Home() {
   return (
@@ -65,9 +75,10 @@ export default function Home() {
           </div>  
 
           <ul className="intro-social">        
-            <li><a href="https://github.com/DurandSacha"><i className="fa fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/m-durand-sacha/"><i className="fa fa-linkedin"></i></a></li>
-          </ul>      	
+              <li><a href="#"><i className="fa fa-github"></i></a></li>
+              <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+            </ul>      	
+
         </section> 
 
          
@@ -122,7 +133,7 @@ export default function Home() {
             <div className="col-six tab-full">
 
               <h3>Compétences</h3>
-              <p>Mes compétences sont le reflet de ma formation précise, ainsi que ma curiosité qui m'a diversifié mes savoirs-faires </p>
+              <p>Mes compétences sont le reflet de ma formation précise, ainsi que ma curiosité qui m'a diversifié mes savoir-faire </p>
 
               <ul className="skill-bars">
                 <li>
@@ -138,11 +149,12 @@ export default function Home() {
                   <strong>Symfony/Laravel</strong>
                 </li>
                 <li>
-                  <div className="progress percent70"><span>70%</span></div>
+                  <div className="progress percent75"><span>75%</span></div>
                   <strong>React.js / next.js</strong>
                 </li>
                 <li>
-                  <div className="progress percent80"><span>80%</span></div>
+
+                  <div className="progress percent90"><span>90%</span></div>
                   <strong>Gestion de serveurs et déploiement</strong>
                 </li>
             
@@ -154,8 +166,8 @@ export default function Home() {
 
           <div className="row button-section">
             <div className="col-twelve">
-              <a href="#contact" title="Hire Me" className="button stroke smoothscroll"> Contactez-moi ! </a>
-              <a href="#" title="Download CV" className="button button-primary"> Mon CV </a>
+              <a href="#contact" title="Hire Me" className="button stroke smoothscroll">Contactez-moi ! </a>
+              <a href="CV.pdf" download title="Download CV" className="button button-primary">Mon CV </a>
             </div>   		
           </div>
 
@@ -743,7 +755,6 @@ export default function Home() {
                 </div>
               */}
 
-
               <div className="form-field submit-form">
                   <button className="submitform">Envoyer</button>                    
                   <div className="s-loader"></div>
@@ -772,7 +783,7 @@ export default function Home() {
                 <i className="icon-pin"></i>
               </div>
 
-              <h5>Adresse</h5>
+              <h5>Ou me trouver ?</h5>
 
               <p>
                   2536 route des faisans,<br/>
@@ -788,7 +799,7 @@ export default function Home() {
                 <i className="icon-mail"></i>
               </div>
 
-              <h5> Échange Mail</h5>
+              <h5>Adresse mail</h5>
 
               <p>sacha6623@gmail.com<br/>			     
               </p>
@@ -801,7 +812,7 @@ export default function Home() {
                 <i className="icon-phone"></i>
               </div>
 
-              <h5> Appelez-moi ! </h5>
+              <h5>Appelez-moi </h5>
 
               <p>Mobile : 06 58 01 65 54 <br/>
               </p>
@@ -819,9 +830,12 @@ export default function Home() {
               <div className="col-six tab-full pull-right social">
 
                 <ul className="footer-social">        
-                  <li><a href="https://github.com/DurandSacha"><i className="fa fa-github"></i></a></li>
-                  <li><a href="https://www.linkedin.com/in/m-durand-sacha/"><i className="fa fa-linkedin"></i></a></li>
-                </ul> 
+                  <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i className="fa fa-behance"></i></a></li>
+                  <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
+                  <li><a href="#"><i className="fa fa-instagram"></i></a></li>
+              </ul> 
                   
               </div>
 
