@@ -1,8 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'user@website.com';
-
+$siteOwnersEmail = 'sacha6623@gmail.com';
 
 if($_POST) {
 
@@ -32,7 +31,7 @@ if($_POST) {
 	$message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
-   $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
+   $message .= "<br /> ----- <br /> This email was sent from your portfolio contact section form. <br />";
 
    // Set From: header
    $from =  $name . " <" . $email . ">";
@@ -65,5 +64,6 @@ if($_POST) {
 	} # end if - there was a validation error
 
 }
+header("location:".  $_SERVER['HTTP_REFERER']); 
 
 ?>

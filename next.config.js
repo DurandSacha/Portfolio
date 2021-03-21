@@ -6,6 +6,15 @@ module.exports = {
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
     },
+    async redirects() {
+        return [
+          {
+            source: '/contact',
+            destination: '/',
+            permanent: true,
+          },
+        ]
+    },
     webpack: (config, { dev }) => {
         config.plugins.push(
             new webpack.ProvidePlugin({
