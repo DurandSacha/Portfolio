@@ -93,14 +93,20 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     width: 25%;
     height: 2%;
     margin: 3%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .portfolio-project-mac{
     width: 30%;
     height: 5%;
     margin: 3%;
+    border-radius: 20px;
 }
 
+.overlay{
+    border-radius: 20px;
+}
 /*****FORM NEW *******/
 .input-form{
     margin-left: 16%;
@@ -150,8 +156,6 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     margin-top: 4%;
     color: palevioletred;
 }
-
-
 
 
 

@@ -112,7 +112,7 @@ export default function Home() {
 
           <div className="row button-section">
             <div className="col-twelve">
-              <a href="#contact" title="Hire Me" className="button stroke smoothscroll">Contactez-moi ! </a>
+              <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sacha6623@gmail.com" title="Hire Me" className="button stroke smoothscroll">Contactez-moi ! </a>
               <a href="CV.pdf" download title="Download CV" className="button button-primary">Mon CV </a>
             </div>   		
           </div>
@@ -414,7 +414,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    +15000
+                    + 1500
                   </h3>
 
                   <h5 className="stat-title">
@@ -430,7 +430,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    +20
+                    + 20
                   </h3>
 
                   <h5 className="stat-title">
@@ -446,7 +446,7 @@ export default function Home() {
                   </div>
 
                   <h3 className="stat-count">
-                    +30
+                    + 30
                   </h3>
 
                   <h5 className="stat-title">
@@ -462,7 +462,7 @@ export default function Home() {
 
         </section>
 
-
+      {/*
         <section id="contact">
 
         <div className="row section-intro">
@@ -492,23 +492,13 @@ export default function Home() {
 
               </div>
 
-              {/* CAPTCHA AND TEXTAREA*/}
               <div>             
                 <div className="form-field input-form textarea-form">
                   <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="50" cols="50" required=""></textarea>
                 </div>
               </div>
             </div>
-            
-              
-              {/*}
-              <div id="protect" required="required" class="g-reCAPTCHA" data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></div>
-                <div class="g-recaptcha" 
-                    data-sitekey="6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"
-                    data-callback="capcha_filled"
-                    data-expired-callback="capcha_expired">
-                </div>
-              */}
+          
 
               <div className="form-field submit-form">
                   <button className="submitform">Envoyer</button>                    
@@ -524,6 +514,7 @@ export default function Home() {
           <script src="https://www.google.com/recaptcha/api.js" async defer></script>
           <script src="https://www.google.com/recaptcha/api.js?render=6Lci7_0UAAAAADsYfAmuqgF84-li9TfWItwEEmGW"></script>
         </section>
+      */}
          
         <section id="contact">
 
@@ -564,7 +555,7 @@ export default function Home() {
                 <i className="icon-phone"></i>
               </div>
 
-              <h5>Appelez-moi </h5>
+              <h5>Appelez-moi ! </h5>
 
               <p>Mobile : 06 58 01 65 54 <br/>
               </p>
@@ -572,7 +563,9 @@ export default function Home() {
             </div>
             
           </div>
-          
+        <br/>
+        <br/>
+        <br/>
         </section>
          
 

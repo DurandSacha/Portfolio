@@ -2176,7 +2176,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #stats {
-	background: #990047;
+	background: linear-gradient(45deg, rgb(255,35,35), #ed054b);
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
 	text-align: center;
@@ -2187,6 +2187,9 @@ header .logo a {
 #stats .stat {
 	border-left: 1px solid rgba(255, 255, 255, 0.12);
 	min-height: 17.4rem;
+}
+#stats .stat:hover {
+	color: pink;
 }
 #stats .stat:first-child {
 	border: none;
@@ -2201,7 +2204,7 @@ header .logo a {
 	margin-top: 1.2rem;
 	margin-bottom: 0;
 	font-family: "poppins-medium", sans-serif;
-	color: white;
+	color: gainsboro;
 }
 #stats .stat-title {
 	color: rgba(255, 255, 255, 0.5);
