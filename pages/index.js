@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
+import Box from '../components/Animation/HeaderAnimation';
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
       <main>         
         <section id="intro">   
           <div className="intro-overlay"></div>	
+          <div className="three-anim"></div>
+          <Box/>
 
           <div className="intro-content">
             <div className="row">
@@ -420,7 +423,6 @@ export default function Home() {
                   <h5 className="stat-title">
                     cafés
                   </h5>
-
                 </div> 
 
                 <div className="bgrid stat">
@@ -603,7 +605,8 @@ export default function Home() {
             <div id="loader"></div>
         </div> 
 
-          
+        <script src="js/header-animation.js"></script>
+
         {/*
         <script src="js/jquery-2.1.3.min.js"></script>
         <script src="js/plugins.js"></script>
