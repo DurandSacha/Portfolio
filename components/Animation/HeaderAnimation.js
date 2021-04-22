@@ -6,20 +6,20 @@ import dynamic from 'next/dynamic';
 import RenderCompleted from '../../hooks/isMounted';
 import { useRouter } from 'next/router';
 
-
+/*
 export default function HeaderAnimation(props){
   const isMounted = RenderCompleted();
-  console.log(isMounted);
+  //console.log(isMounted);
 
     const mesh = useRef()
     const [hovered, setHover] = useState(false)
     const [active, setActive] = useState(false)
 
     if(isMounted == true){
-      console.log('DOM chargé');
+      //console.log('DOM chargé');
 
 
-      console.log('build three action function');
+      //console.log('build three action function');
     
       return (
         <mesh
@@ -37,7 +37,7 @@ export default function HeaderAnimation(props){
       
     }
     else if (isMounted == false) {
-      console.log('DOM inaccessible');
+      //console.log('DOM inaccessible');
       return(<div className="three-anim"></div>);
     }
 }
@@ -57,7 +57,7 @@ function rendering(){
 }
 
 if(typeof document ==! 'undefined'){
-  console.log('rendering');
+  //console.log('rendering');
   ReactDOM.render(
     <Canvas>
       <ambientLight />
@@ -68,6 +68,8 @@ if(typeof document ==! 'undefined'){
     document.getElementById('three-anim'),
   );
 }
+
+*/
 
 
  

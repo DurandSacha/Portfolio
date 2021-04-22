@@ -1,14 +1,7 @@
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import HeaderAnimation from '../components/Animation/HeaderAnimation';
 
-/*
-const HeaderAnimation = dynamic(
-  () => import('../components/Animation/HeaderAnimation'),
-  { ssr: false }
-)
-*/
 
 
 export default function Home() {
@@ -25,7 +18,6 @@ export default function Home() {
         <section id="intro">   
           <div className="intro-overlay"></div>	
           <div className="three-anim"></div>
-            <HeaderAnimation />
             
           <p id="siteRoute"><span id="siteRoute1">Sacha </span><span class="slashRoute">/</span> <span id="siteRoute2">Accueil </span></p>
 

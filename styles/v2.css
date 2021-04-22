@@ -72,6 +72,11 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
 }
 
 /******HEAD**************************/
+#intro{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 
 #siteRoute{
     color:aliceblue;

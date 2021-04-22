@@ -3,17 +3,32 @@
 *   target div : head-animation-div
 */
 
-
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.01, 1000 );
+const renderer = new THREE.WebGLRenderer();
 
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+
+container = document.getElementById('head-animation-div');
+container.appendChild(renderer.domElement);
+
+scene.add(new THREE.AxesHelper());
+scene.add(camera);
+camera.position.z = 5;
+
+renderer.render(scene,camera);
+
+/*
 var container = document.getElementById('head-animation-div');
-var context = canvas.getContext('2d');
+//var context = canvas.getContext('2d');
+
+
 var w = container.offsetWidth;
 var h = container.offsetHeight;
 renderer.setSize(w, h);
 
-const renderer = new THREE.WebGLRenderer();
+
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 container.appendChild(renderer.domElement);
@@ -35,3 +50,4 @@ const animate = function () {
 };
 
 animate();
+*/

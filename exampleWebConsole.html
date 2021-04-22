@@ -1,0 +1,58 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<title>Affichage type condole</title>
+
+<script type="text/javascript">
+<!--/*--><![CDATA[//><!--
+var i=0;
+var vit_ecrit = 50;
+var vit_curs = 500;
+var texte ="Bonjour et bienvenue sur le simili de console.     \nCe script ne sert absolument à rien.    \nbla bla bla bla bla bla bla bla bla      \nbla bla bla bla bla bla bla bla bla ."
+
+ecrit = function ()
+	{
+	var caractere = texte.charAt(i);
+	if(caractere=="\n") caractere="<br />[root@website]# ";
+	$('texte_console').innerHTML = $('texte_console').innerHTML + caractere;
+	i++;
+	if(i<texte.length) setTimeout("ecrit()",vit_ecrit);
+	else setTimeout("clignote()",vit_curs);
+	}
+	
+clignote = function()
+	{
+	if($('curseur').innerHTML=="") $('curseur').innerHTML="_";
+	else $('curseur').innerHTML="";
+	setTimeout("clignote()",vit_curs);
+	}
+function $(el) { return document.getElementById(el); }
+ 
+window.onload = ecrit;
+//--><!]]>
+</script>
+
+<style type="text/css">
+body { background-color:#666; text-align:center;}
+#console { width:900px; padding:0; margin:0 auto; text-align:left; }
+#console #top { background:url(images/console_top.gif) no-repeat; height:24px;}
+#console #bottom { background:url(images/console_bottom.gif) no-repeat; height:24px;}
+#console #content { background:url(images/console_bg.gif) repeat-y; width:900px; height:300px; color:#bbb; font-family:lucida console, lucida; font-size:12px; }
+
+</style>
+
+</head>
+
+<body>
+
+<div id="console">
+	<div id="top"></div>
+	<div id="content"><div style="padding: 5px 10px;"><span id="texte_console">[root@website]# </span><span id="curseur">_</span></div></div>
+	<div id="bottom"></div>
+</div>
+
+</body>
+
+</html>
