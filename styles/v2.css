@@ -71,14 +71,44 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     padding-bottom: 2%;
 }
 
+/******HEAD**************************/
+
+#siteRoute{
+    color:aliceblue;
+    margin-top: 3%;
+    margin-left: 5%;
+    z-index: 1000;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-variant: small-caps;
+}
+#siteRoute1{
+    font-size: 18px;
+}
+#siteRoute2{
+    font-size: 15px;
+}
+.slashRoute{
+    color: rgb(243, 2, 151);
+    font-weight: 600;
+}
+
+#head-animation-div{
+    z-index: 1001;
+    position: absolute;
+}
+
+
 /******RESUME *******************/
 
+/*
 .info-list li strong{
 
 }
 .info-list li span{
     
 }
+*/
 /*****PORTFOLIO *****/
 
 .portfolio-container{

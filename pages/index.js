@@ -21,14 +21,15 @@ export default function Home() {
         <script src="../public/js/jquery-2.1.3.min.js"></script>
 
       </Head>
-
       <main>         
         <section id="intro">   
           <div className="intro-overlay"></div>	
           <div className="three-anim"></div>
             <HeaderAnimation />
             
-          
+          <p id="siteRoute"><span id="siteRoute1">Sacha </span><span class="slashRoute">/</span> <span id="siteRoute2">Accueil </span></p>
+
+          <div id="head-animation-div"></div>
 
           <div className="intro-content">
             <div className="row">
@@ -52,8 +53,8 @@ export default function Home() {
           </div>  
 
           <ul className="intro-social">        
-              <li><a href="#"><i className="fa fa-github"></i></a></li>
-              <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/DurandSacha"><i className="fa fa-github"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sacha-durand-687032150/"><i className="fa fa-linkedin"></i></a></li>
             </ul>      	
 
         </section> 
@@ -588,18 +589,13 @@ export default function Home() {
 
               <div className="col-six tab-full pull-right social">
 
-                <ul className="footer-social">        
-                  <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i className="fa fa-behance"></i></a></li>
-                  <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
-                  <li><a href="#"><i className="fa fa-instagram"></i></a></li>
-              </ul> 
+                
                   
               </div>
 
               <div className="col-eight tab-full">
                 <div className="copyright">
+                    <br/>
                     <span>© Copyright 2021 </span> 
                     <span>Design by Sacha Durand</span> 	         	
                   </div>		                  
@@ -618,6 +614,8 @@ export default function Home() {
         </div> 
 
         <script src="js/header-animation.js"></script>
+        <script src="js/three.js"></script>
+        <script src="js/three-head.js"></script>
 
         {/*
         <script src="js/jquery-2.1.3.min.js"></script>
