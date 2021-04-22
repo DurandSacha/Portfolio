@@ -10,31 +10,10 @@
     
 }
 
-a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
+a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover, #siteRoute1:hover{
     cursor: url("../public/img/cursor-focus-2.png") 2 2 ,progress;
     cursor: url("../public/img/cursor-focus-2.png") 2 2 ,pointer;
 }
-
-
-/*
-.cursor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    background: #039dff;
-    border-radius: 50%;
-    transform: translate(-50%,-50%);
-    transition: all .3s ease-in-out;
-    transition-property: width,height,border;
-    will-change: width,height,transform,border;
-    pointer-events: none;
-    z-index: 999;
-}
-*/
-
-/**********************/
 
 .bigTitle{
     letter-spacing: 16px;
@@ -43,19 +22,6 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     /*font-variant: no-common-ligatures proportional-nums;*/
     text-transform: uppercase;
     text-shadow:1px 4px 2px rgb(40,200,60), 4px 1px 3px red;
-    /*
-    color: #FFFFFF;
-	font-family: "poppins-medium", sans-serif;
-	font-size: 8.4rem;
-	line-height: 1.071;
-	max-width: 900px;
-	margin-top: 0;
-	margin-bottom: .6rem;
-	margin-left: auto;
-	margin-right: auto;
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    */
-
     transition-duration: 1s;
 }
 
@@ -92,28 +58,49 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
 }
 #siteRoute2{
     font-size: 15px;
+    transition-duration: 0.6s;
+}
+#siteRoute2:hover{
+    font-size: 15px;
+    color: rgb(207, 4, 129);
+    transition-duration: 0.1s;
 }
 .slashRoute{
     color: rgb(243, 2, 151);
     font-weight: 600;
 }
 
-#head-animation-div{
+#console{
+    position: absolute;
+    margin-left: 65%;
+    margin-top: 3%;
+    font-size: 15px;
+    color:antiquewhite;
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    /*background-color: rgba(0,0,0,0.4);*/
+}
+.ConsolePrefix{
+    color:rgb(20,200,20);
+}
+.command{
+    margin-left: 0%;
+}
+
+
+
+#head-animation-div, #head-animations-div{
     z-index: 1001;
     position: absolute;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 
 
 /******RESUME *******************/
 
-/*
-.info-list li strong{
-
-}
-.info-list li span{
-    
-}
-*/
 /*****PORTFOLIO *****/
 
 .portfolio-container{
@@ -121,7 +108,6 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content:space-evenly;
-
 }
 
 .portfolio-project{
@@ -191,7 +177,6 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack{
     margin-top: 4%;
     color: palevioletred;
 }
-
 
 /******THREE****/
 canvas {

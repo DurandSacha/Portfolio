@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import HeaderAnimation from '../components/Animation/HeaderAnimation';
 
 
 
@@ -17,11 +18,18 @@ export default function Home() {
       <main>         
         <section id="intro">   
           <div className="intro-overlay"></div>	
-          <div className="three-anim"></div>
+
             
           <p id="siteRoute"><span id="siteRoute1">Sacha </span><span class="slashRoute">/</span> <span id="siteRoute2">Accueil </span></p>
+          
+          <div id="console">
+              <p><span class="ConsolePrefix">[sacha@website]$ </span><span class="command"> Website.renderer();</span></p>
+              <p><span class="ConsolePrefix">[sacha@website]$ </span></p>
+          </div>
 
+          <canvas id="head-animations-div"></canvas>
           <div id="head-animation-div"></div>
+          {/* <HeaderAnimation/> */}
 
           <div className="intro-content">
             <div className="row">
@@ -579,11 +587,7 @@ export default function Home() {
         <footer>
             <div className="row">
 
-              <div className="col-six tab-full pull-right social">
-
-                
-                  
-              </div>
+              <div className="col-six tab-full pull-right social"></div>
 
               <div className="col-eight tab-full">
                 <div className="copyright">
@@ -605,7 +609,6 @@ export default function Home() {
             <div id="loader"></div>
         </div> 
 
-        <script src="js/header-animation.js"></script>
         <script src="js/three.js"></script>
         <script src="js/three-head.js"></script>
 

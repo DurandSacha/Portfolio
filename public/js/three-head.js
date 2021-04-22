@@ -1,53 +1,35 @@
 /* 
 *   THREE.js animation for head
-*   target div : head-animation-div
+*   Target div : head-animation-div
+*   Target canvas : head-animations-div
 */
 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.01, 1000 );
-const renderer = new THREE.WebGLRenderer();
+//import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r127/build/three.module.js';
 
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+function main() {
+  const canvas = document.querySelector('#head-animations-div');
+  const renderer = new THREE.WebGLRenderer({canvas});
 
-container = document.getElementById('head-animation-div');
-container.appendChild(renderer.domElement);
+  const fov = 75;
+  const aspect = 2;  // the canvas default
+  const near = 0.1;
+  const far = 5;
+  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera.position.z = 2;
 
-scene.add(new THREE.AxesHelper());
-scene.add(camera);
-camera.position.z = 5;
+  const scene = new THREE.Scene();
 
-renderer.render(scene,camera);
+  const boxWidth = 1;
+  const boxHeight = 1;
+  const boxDepth = 1;
+  const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 
-/*
-var container = document.getElementById('head-animation-div');
-//var context = canvas.getContext('2d');
+  const material = new THREE.MeshBasicMaterial({color: 0x44aa88});  // greenish blue
 
+  const cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
 
-var w = container.offsetWidth;
-var h = container.offsetHeight;
-renderer.setSize(w, h);
+  renderer.render(scene, camera);
+}
 
-
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
-container.appendChild(renderer.domElement);
-
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-
-camera.position.z = 5;
-
-const animate = function () {
-    requestAnimationFrame( animate );
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
-    renderer.render( scene, camera );
-};
-
-animate();
-*/
+main();
