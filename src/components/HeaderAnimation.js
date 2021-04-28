@@ -2,18 +2,12 @@
 import ReactDOM from 'react-dom'
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { three } from 'three'
+//import { three } from 'three/src/Three'
 //import { Html, useProgress } from '@react-three/drei'
 
-/*
-function Loader() {
-  const { progress } = useProgress()
-  return <Html center>{progress} % loaded</Html>
-}
-*/
 
-//todo: npm install react-use-gesture
-
+// TODO: stars modele : https://codesandbox.io/s/9y8vkjykyy?file=/src/index.js:33-73
+// TODO: npm install react-use-gesture
 
 export default function HeaderAnimation(props) {
   const mesh = useRef()
@@ -88,6 +82,7 @@ function Light({ brightness, color }) {
     />
   );
 }
+
 
 // RENDER ELEMENT 
 const element = document.getElementById('head-animation-div');
