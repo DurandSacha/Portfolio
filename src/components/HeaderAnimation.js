@@ -11,7 +11,6 @@ export default function HeaderAnimation(props) {
   const [hovered, setHover] = useState(false)
   const [active, setActive] = useState(false)
   // Subscribe this component to the render-loop, rotate the mesh every frame
-  useFrame((state, delta) => (mesh.current.rotation.x += 0.01))
   // Return view, these are regular threejs elements expressed in JSX
   return (
     <mesh
@@ -22,7 +21,7 @@ export default function HeaderAnimation(props) {
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}>
       <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+      <meshStandardMaterial color={hovered ? 'hotpink' : 'blue'} />
     </mesh>
   )
 }
@@ -50,22 +49,19 @@ function Box(props) {
   )
 }
 
-/*
-let div = document.createElement('div');
-div.classList.add('head-animation-div');
 
-let text = document.createTextNode('Test');
-div.appendChild(text);
-document.body.appendChild(div);  
-*/
 
-ReactDOM.render(
-  <Canvas>
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Box position={[-1.2, 0, 0]} />
-    <Box position={[1.2, 0, 0]} />
-  </Canvas>,
-  document.getElementById('head-animation-div'),
-)
+// RENDER ELEMENT 
+const element = document.getElementById('head-animation-div');
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    ReactDOM.render(
+      <Canvas>
+        <ambientLight />
+        <pointLight position={[10, 10, 10]} />
+        <Box position={[-1.2, 0, 0]} />
+        <Box position={[1.2, 0, 0]} />
+      </Canvas>,
+      document.getElementById('head-animation-div')
+    )
+})

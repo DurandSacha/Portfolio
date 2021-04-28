@@ -6,7 +6,7 @@ import './styles/vendor.css';
 import './styles/font-awesome/css/font-awesome.min.css';
 import './styles/v2.css';
 
-//import HeaderAnimation  from './components/HeaderAnimation'
+import HeaderAnimation  from './components/HeaderAnimation';
 
 // image
 import wikirunIMG from './assets/portfolio/wikirun-mac.png'
@@ -29,8 +29,6 @@ function Home() {
      <main>         
        <section id="intro">   
          <div className="intro-overlay"></div>	
-
-           
          <p id="siteRoute"><span id="siteRoute1">Sacha </span><span class="slashRoute">/</span> <span id="siteRoute2">Accueil </span></p>
          
          <div id="console">
@@ -39,7 +37,7 @@ function Home() {
          </div>
 
          <div id="head-animation-div"></div>
-          {/*<HeaderAnimation/>*/}
+         
 
          <div className="intro-content">
            <div className="row">
@@ -71,6 +69,7 @@ function Home() {
 
         
        <section id="about">  
+        <div id="head-animation-div"></div>
 
          <div className="row about-content">
 

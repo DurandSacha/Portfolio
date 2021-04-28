@@ -91,8 +91,8 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 
 
 #head-animation-div{
-    z-index: 1000;
-    position: fixed;
+    z-index: 1001;
+    position: absolute;
     margin-left: 2%;
     margin-top: 2%;
 }
