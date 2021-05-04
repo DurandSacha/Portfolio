@@ -15,9 +15,12 @@ import shifumiIMG from './assets/portfolio/shifumi-mac.png'
 import chaletIMG from './assets/portfolio/chalet-caviar-mac.png'
 import bilemoIMG from './assets/portfolio/bilemo-mac.png'
 import arpIMG from './assets/portfolio/arp-mac.png'
+import { unmountComponentAtNode } from 'react-dom';
 
 function Home() {
+
   return (
+    
     <div className="">
     {/*} <Head>
        <title>Sacha Durand | Portfolio </title>
@@ -26,10 +29,11 @@ function Home() {
 
      </Head>
      */}
+
      <main>         
        <section id="intro">   
          <div className="intro-overlay"></div>	
-         <p id="siteRoute"><span id="siteRoute1">Sacha </span><span class="slashRoute">/</span> <span id="siteRoute2">Accueil </span></p>
+         <p id="siteRoute" /*data-aos="fade-down-right" data-aos-duration="600"*/><span id="siteRoute1">Sacha </span><span class="slashRoute">/</span> <span id="siteRoute2">Accueil </span></p>
          
          <div id="console">
              <p><span class="ConsolePrefix">[23/04/21 22:11] [sacha@website]$ </span><span class="command"> website.renderer;</span></p>
@@ -45,24 +49,25 @@ function Home() {
              <div className="col-twelve">
 
                <h5>Hello, I'm</h5>
-               <h1 className="bigTitle">SACHA DURAND</h1>
+               {/* data-aos='flip-left' */}
+               <h1 className="bigTitle" >SACHA DURAND</h1>
 
                <p className="intro-position">
-                 <span>Développeur Back</span>
-                 <span>Développeur Front</span> 
-                 <span>Dev'Ops</span> 
+                 <span data-aos="">Développeur Back</span>
+                 <span data-aos="">Développeur Front</span> 
+                 <span data-aos="">Dev'Ops</span> 
                </p>
 
-               <a className="button stroke smoothscroll" href="#about" title="">Plus d'information</a>
+               <a data-aos="fade-up" className="button stroke smoothscroll" href="#about" title="">Plus d'information</a>
 
              </div>  
              
            </div>   		 		
          </div>  
 
-         <ul className="intro-social">        
-             <li><a href="https://github.com/DurandSacha"><i className="fa fa-github"></i></a></li>
-             <li><a href="https://www.linkedin.com/in/sacha-durand-687032150/"><i className="fa fa-linkedin"></i></a></li>
+         <ul className="intro-social" data-aos-easing="ease-out-cubic">        
+             <li data-aos="fade-up" data-aos-offset="100"><a href="https://github.com/DurandSacha"><i className="fa fa-github"></i></a></li>
+             <li data-aos="fade-up" data-aos-offset="100"><a href="https://www.linkedin.com/in/sacha-durand-687032150/"><i className="fa fa-linkedin"></i></a></li>
            </ul>      	
 
        </section> 

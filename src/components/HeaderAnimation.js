@@ -7,6 +7,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 
 
 // TODO: stars modele : https://codesandbox.io/s/9y8vkjykyy?file=/src/index.js:33-73
+// TODO: game modele : https://codesandbox.io/s/react-three-fiber-game-state-and-sprites-b7e01
 // TODO: npm install react-use-gesture
 
 export default function HeaderAnimation(props) {
@@ -86,7 +87,7 @@ function Light({ brightness, color }) {
 
 // RENDER ELEMENT 
 const element = document.getElementById('head-animation-div');
-
+/*
 document.addEventListener("DOMContentLoaded", function(event) {
     ReactDOM.render(
       <Canvas>
@@ -95,8 +96,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         <Box position={[-1.2, 0, 0]} />
         <Box position={[1.2, 0, 0]} angle={0.4} />
         <Sphere position={[2, 2, 0]}/>
+        <Sphere position={[-1, -2, 0]}/>
         <Light brightness={5} color={"blue"} />
       </Canvas>,
       document.getElementById('head-animation-div')
     )
 })
+*/
