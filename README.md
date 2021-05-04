@@ -7,3 +7,9 @@ using react, this portfolio show a different project designed by sacha durand.
 - Portfolio / CV
 - Contact
 - labs
+
+## Concept
+- 3D
+- Hidden feature
+- original design
+- Mobile First
