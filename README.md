@@ -7,9 +7,11 @@ using react, this portfolio show a different project designed by sacha durand.
 - Portfolio / CV
 - Contact
 - labs
+- Action in a console
 
 ## Concept
 - 3D
 - Hidden feature
 - original design
 - Mobile First
+- Game in site ?
