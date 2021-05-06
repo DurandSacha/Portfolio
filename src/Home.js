@@ -15,6 +15,9 @@ import shifumiIMG from './assets/portfolio/shifumi-mac.png'
 import chaletIMG from './assets/portfolio/chalet-caviar-mac.png'
 import bilemoIMG from './assets/portfolio/bilemo-mac.png'
 import arpIMG from './assets/portfolio/arp-mac.png'
+
+import imgP1 from './assets/e1.jpg'
+
 import { unmountComponentAtNode } from 'react-dom';
 
 function Home() {
@@ -72,13 +75,29 @@ function Home() {
 
        </section> 
 
-        
+       <section id="projects">
+
+          <div className="row section-intro">
+           <div className="col-twelve">
+             <h5>Portfolio</h5>
+           </div>   		
+         </div>
+
+          <div class="row container-projects">
+            <div class="col-lg-2 project project-container1"><div class="project1"></div></div>
+            <div class="col-lg-2 project project-container2"><div class="project2"></div></div>
+            <div class="col-lg-2 project project-container3"><div class="project3"></div></div>
+            <div class="col-lg-2 project project-container4"><div class="project4"></div></div>
+          </div>
+       </section> 
+
+
        <section id="about">  
         <div id="head-animation-div"></div>
 
          <div className="row about-content">
 
-           <div className="col-six tab-full">
+           <div className="col-six tab-full" data-aos="fade-up" data-aos-offset="120">
 
              <h3>Profil</h3>
              <p>Cela fait longtemps que je suis passionné par la technologie du web. J’ai donc chercher a m’instruire afin de construire une carrière à partir de ma passion.
@@ -101,12 +120,11 @@ function Home() {
                  <strong className="info-info-list">EMAIL:</strong>
                  <span>sacha6623@gmail.com</span>
                </li>
-
              </ul>
 
            </div>
 
-           <div className="col-six tab-full">
+           <div className="col-six tab-full" data-aos="fade-down" data-aos-offset="130">
 
              <h3>Compétences</h3>
              <p>Mes compétences sont le reflet de ma formation précise, ainsi que ma curiosité qui m'a diversifié mes savoir-faire </p>
@@ -597,7 +615,7 @@ function Home() {
        <br/>
        </section>
         
-
+      {/*}
        <footer>
            <div className="row">
 
@@ -617,6 +635,7 @@ function Home() {
 
              </div>    	
        </footer>  
+      */}
 
        {/* <div id="preloader" className={this.state.visible ? 'mainDiv' : 'hide mainDiv'}> */}
        {/*

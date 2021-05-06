@@ -70,6 +70,7 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 }
 
 #console{
+    display: none;
     position: absolute;
     margin-left: 65%;
     margin-top: 3%;
@@ -97,7 +98,53 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     margin-top: 2%;
 }
 
+/******PROJECT *************/
 
+#projects{
+    height: 100vh;
+    background: rgb(19,20,21) ;
+    /*z-index: 1200;*/
+    /*box-shadow: 1px 1px 1px grey;*/
+    width: 100vw;
+    padding-top: 3%;
+}
+
+.container-projects{
+    padding-left: 6%;
+    padding-top: 3%;
+}
+
+.project{
+    border: 1px solid rgb(188, 230, 3);
+    height: 40vh;
+    width: 10vw;
+    margin-right: 5%;
+}
+
+/* no-repeat center      #313131 url  */
+.project-container1{
+    background-image: url('../assets/e1.jpg');
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+}
+.project-container1:hover{
+    filter : brightness(75%);
+    /*filter : contrast(05%);*/
+    transition-duration: 0.4s;
+}
+
+
+.project-container2{
+    background: url('../assets/e2.jpg');
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+}
+.project-container3{
+    background: url('../assets/e3.jpg');
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+}
+.project-container4{
+    background: url('../assets/e4.jpg') ;
+    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+}
 
 /******RESUME *******************/
 
