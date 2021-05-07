@@ -10,7 +10,7 @@ using react, this portfolio show a different project designed by sacha durand.
 - Action in a console
 
 ## Concept
-- 3D
+- 3D ( Three.js & CSS polygons functions )
 - Hidden feature
 - original design
 - Mobile First
