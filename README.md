@@ -2,16 +2,15 @@
 
 using react, this portfolio show a different project designed by sacha durand.
 
-## Feature
+#### Feature 📝
+- [x] Portfolio / CV
+- [x] Contact
+- [ ] labs
+- [ ] Action in a console
+- [ ] Parcour
 
-- Portfolio / CV
-- Contact
-- labs
-- Action in a console
+#### Feature 📝
+- [ ] v15
+- [ ] v2.0 ( Responsive, Design Pro, Hidden Feature, Polygon, Formations, Modals in project )
+- [ ] v2.1 ( Three, AOS, effect,.., game ? )
 
-## Concept
-- 3D ( Three.js & CSS polygons functions )
-- Hidden feature
-- original design
-- Mobile First
-- Game in site ?
