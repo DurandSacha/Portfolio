@@ -111,14 +111,20 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 
 .container-projects{
     padding-left: 0%;
+    padding-left: 10%;
+    margin-right: 0%;
     padding-top: 3%;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:center;
+    align-items: stretch;
 }
 
 .project{
     /*border: 2px solid rgb(188, 230, 3);*/
     height: 50vh;
-    width: 16vw;
-    margin-right: -4%;
+    width: 18vw;
 }
 
 /* no-repeat center      #313131 url  */
@@ -137,16 +143,27 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     background: url('../assets/e2.jpg');
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 0%;
+    margin-left: -28%;
 }
 .project-container3{
     background: url('../assets/e3.jpg');
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 6%;
+    margin-left: -57%;
 }
 .project-container4{
     background: url('../assets/e4.jpg') ;
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 3%;
+    margin-left: -84%;
+}
+.project-text{
+    color: yellow;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 2%;
+    margin-right: 70%;
 }
 
 /******RESUME *******************/

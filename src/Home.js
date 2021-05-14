@@ -84,10 +84,10 @@ function Home() {
          </div>
 
           <div class="row container-projects">
-            <div class="col-lg-2 project project-container1"><div class="project1"></div></div>
-            <div class="col-lg-2 project project-container2"><div class="project2"></div></div>
-            <div class="col-lg-2 project project-container3"><div class="project3"></div></div>
-            <div class="col-lg-2 project project-container4"><div class="project4"></div></div>
+            <div class="col-lg-2 "><div class="project1 project project-container1"></div><p class="project-text">DDDD</p> </div>
+            <div class="col-lg-2 "><div class="project2 project project-container2"></div><p class="project-text">DDDD</p></div>
+            <div class="col-lg-2 "><div class="project3 project project-container3"></div><p class="project-text">DDDD</p></div>
+            <div class="col-lg-2 "><div class="project4 project project-container4"></div><p class="project-text">DDDD</p></div>
           </div>
        </section> 
 
