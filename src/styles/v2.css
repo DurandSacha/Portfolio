@@ -9,7 +9,7 @@
     
 }
 
-a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover, #siteRoute1:hover{
+a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover, #siteRoute1:hover, .project:hover{
     cursor: url(../assets/cursor-focus-2.png) 2 2 ,progress;
     cursor: url(../assets/cursor-focus-2.png) 2 2 ,pointer;
 }
@@ -102,7 +102,7 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 
 #projects{
     height: 100vh;
-    background: rgb(19,20,21) ;
+    background: rgb(61, 69, 77) ;
     /*z-index: 1200;*/
     /*box-shadow: 1px 1px 1px grey;*/
     width: 100vw;
@@ -110,40 +110,43 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 }
 
 .container-projects{
-    padding-left: 6%;
+    padding-left: 0%;
     padding-top: 3%;
 }
 
 .project{
-    border: 1px solid rgb(188, 230, 3);
-    height: 40vh;
-    width: 10vw;
-    margin-right: 5%;
+    /*border: 2px solid rgb(188, 230, 3);*/
+    height: 50vh;
+    width: 16vw;
+    margin-right: -4%;
 }
 
 /* no-repeat center      #313131 url  */
 .project-container1{
     background-image: url('../assets/e1.jpg');
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
+    margin-top: 2%;
 }
 .project-container1:hover{
-    filter : brightness(75%);
+    filter : brightness(70%);
     /*filter : contrast(05%);*/
     transition-duration: 0.4s;
 }
 
-
 .project-container2{
     background: url('../assets/e2.jpg');
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
+    margin-top: 0%;
 }
 .project-container3{
     background: url('../assets/e3.jpg');
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
+    margin-top: 6%;
 }
 .project-container4{
     background: url('../assets/e4.jpg') ;
-    clip-path: polygon(0% 15%, 100% 0%, 100% 85%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
+    margin-top: 3%;
 }
 
 /******RESUME *******************/
