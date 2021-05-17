@@ -8,7 +8,7 @@ using react, this portfolio show a different project designed by sacha durand.
 #### Feature 📝
 - [x] Portfolio / CV
 - [x] Contact
-- [ ] labs
+- [ ] labs (hooks, CDN,API, cookie receiver,..)
 - [ ] Action in a console
 - [ ] Parcour
 
