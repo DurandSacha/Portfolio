@@ -13,8 +13,8 @@ using react, this portfolio show a different project designed by sacha durand.
 - [ ] Parcour
 
 #### Feature 📝
-- [ ] v15
-- [ ] v2.0 ( Responsive, Design Pro, Hidden Feature, Polygon, Formations, Modals in project )
+- [ ] v1 (NOW)
+- [ ] v2.0 ( Responsive, Design Pro, Hidden Feature, Polygon, Formations, Modals in project, CI )
 - [ ] v2.1 ( Three, AOS, effect,.., game ? )
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=DurandSacha/Portfolio)
