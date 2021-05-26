@@ -163,7 +163,18 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     font-size: 19px;
     text-align: center;
     margin-top: 2%;
+}
+.p-text-1{
+    margin-right: 10%;
+}
+.p-text-2{
     margin-right: 70%;
+}
+.p-text-3{
+    margin-right: 80%;
+}
+.p-text-4{
+    margin-right: 10%;
 }
 
 /******RESUME *******************/
