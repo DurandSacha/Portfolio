@@ -19,7 +19,15 @@
     ],
     "rules": {
         //"quotes": ["error", "double"]
-        "indent": ["warn", 4]
+        "indent": ["warn", 4],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "camelcase": ["error", {
+          "allow": ["^UNSAFE_"],
+          "properties": "never",
+          "ignoreGlobals": true
+        }],
+        "no-multi-spaces": "error",
+        "no-var": "warn"
     },
     "settings": {
         "react": {

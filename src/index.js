@@ -20,7 +20,7 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-var el = document.querySelector("#intro");
+let el = document.querySelector("#intro");
 el.addEventListener("mousemove", function(e) {
     el.style.setProperty('--x', -e.offsetX + "px");
     el.style.setProperty('--y', -e.offsetY + "px");
