@@ -89,8 +89,6 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     margin-left: 0%;
 }
 
-
-
 #head-animation-div{
     z-index: 1001;
     position: absolute;
@@ -103,15 +101,13 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 #projects{
     height: 100vh;
     background: rgb(61, 69, 77) ;
-    /*z-index: 1200;*/
-    /*box-shadow: 1px 1px 1px grey;*/
     width: 100vw;
     padding-top: 3%;
 }
 
 .container-projects{
     padding-left: 0%;
-    padding-left: 10%;
+    padding-left: 0%;
     margin-right: 0%;
     padding-top: 3%;
 
@@ -119,12 +115,18 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     flex-wrap: nowrap;
     justify-content:center;
     align-items: stretch;
+    border: 2px solid yellowgreen;
+}
+.column-flex{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(167, 15, 142);
+    padding: 0;
 }
 
 .project{
-    /*border: 2px solid rgb(188, 230, 3);*/
     height: 50vh;
-    width: 18vw;
+    width: 17vw;
 }
 
 /* no-repeat center      #313131 url  */
@@ -143,40 +145,57 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     background: url('../assets/e2.jpg');
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 0%;
-    margin-left: -28%;
 }
+.project-container2:hover{
+    filter : brightness(70%);
+    /*filter : contrast(05%);*/
+    transition-duration: 0.4s;
+}
+
 .project-container3{
     background: url('../assets/e3.jpg');
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 6%;
-    margin-left: -57%;
 }
+.project-container3:hover{
+    filter : brightness(70%);
+    /*filter : contrast(05%);*/
+    transition-duration: 0.4s;
+}
+
 .project-container4{
     background: url('../assets/e4.jpg');
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 3%;
-    margin-left: -84%;
 }
+.project-container4:hover{
+    filter : brightness(70%);
+    /*filter : contrast(05%);*/
+    transition-duration: 0.4s;
+}
+
+
 .project-text{
     color: yellow;
-    font-weight: bold;
-    font-size: 19px;
+    font-size: 22px;
     text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
     margin-top: 2%;
-    width: 18vw;
-    border: 2px solid red;
+    width: 14vw;
+    border: 2px solid blue;
 }
 .p-text-1{
-    margin-right: 10%;
+    /*margin-right: 10%;*/
 }
 .p-text-2{
-    margin-right: 70%;
+    /*margin-right: 70%;*/
 }
 .p-text-3{
-    margin-right: 80%;
+    /*margin-right: 80%;*/
 }
 .p-text-4{
-    margin-right: 10%;
+    /*margin-right: 10%;*/
 }
 
 /******RESUME *******************/
