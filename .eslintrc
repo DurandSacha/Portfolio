@@ -19,6 +19,7 @@
     ],
     "rules": {
         //"quotes": ["error", "double"]
+        "semi": ["warn", "always"],
         "indent": ["warn", 4],
         "comma-spacing": ["error", { "before": false, "after": true }],
         "camelcase": ["error", {
@@ -27,7 +28,25 @@
           "ignoreGlobals": true
         }],
         "no-multi-spaces": "error",
-        "no-var": "warn"
+        "no-multiple-empty-lines": "warn",
+        "no-var": "warn",
+        "max-params" : ["warn", 6],
+        "no-else-return": "warn",
+        "max-classes-per-file": ["warn",2],
+        "eqeqeq": "error",
+        "no-console":"off",
+        "no-unreachable": "warn",
+        "no-irregular-whitespace":"warn",
+        "no-redeclare" : "warn",
+        "no-duplicate-imports" : "warn",
+        //"no-empty-class": "error",
+        "no-const-assign": "error",
+        "prefer-const" : "warn",
+        "no-trailing-spaces" : "warn",
+        //"no-unused-vars" : "warn",
+        //"max-statements-per-line": ["warn", 3],
+        "max-lines" : ["error", 900],
+        "max-lines-per-function" : ["error", 900]
     },
     "settings": {
         "react": {

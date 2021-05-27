@@ -152,7 +152,7 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     margin-left: -57%;
 }
 .project-container4{
-    background: url('../assets/e4.jpg') ;
+    background: url('../assets/e4.jpg');
     clip-path: polygon(25% 0%, 100% 9%, 78% 100%, 0% 100%);
     margin-top: 3%;
     margin-left: -84%;
@@ -163,6 +163,8 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     font-size: 19px;
     text-align: center;
     margin-top: 2%;
+    width: 18vw;
+    border: 2px solid red;
 }
 .p-text-1{
     margin-right: 10%;

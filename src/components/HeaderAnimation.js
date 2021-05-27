@@ -1,7 +1,7 @@
 
-import ReactDOM from 'react-dom'
-import React, { useRef, useState, useLayoutEffect } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import ReactDOM from 'react-dom';
+import React, { useRef, useState, useLayoutEffect } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 //import { three } from 'three/src/Three'
 //import { Html, useProgress } from '@react-three/drei'
 
@@ -86,7 +86,7 @@ function Light({ brightness, color }) {
 }
 
 
-// RENDER ELEMENT 
+// RENDER ELEMENT
 const element = document.getElementById('head-animation-div');
 /*
 document.addEventListener("DOMContentLoaded", function(event) {
