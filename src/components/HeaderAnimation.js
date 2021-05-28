@@ -6,11 +6,6 @@ import { Canvas, useFrame } from '@react-three/fiber';
 //import { three } from 'three/src/Three'
 //import { Html, useProgress } from '@react-three/drei'
 
-
-// TODO: stars modele : https://codesandbox.io/s/9y8vkjykyy?file=/src/index.js:33-73
-// TODO: game modele : https://codesandbox.io/s/react-three-fiber-game-state-and-sprites-b7e01
-// TODO: npm install react-use-gesture
-
 /*
 export default function HeaderAnimation(props) {
   const mesh = useRef()

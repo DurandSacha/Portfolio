@@ -1,5 +1,7 @@
 {
     // use npm package : yarn add eslint babel-eslint
+
+    // http://www.w3bai.com/fr/js/js_best_practices.html
     "root": true,
     "parserOptions": {
       "ecmaVersion": 2020,
@@ -20,7 +22,7 @@
     "rules": {
         "quotes": ["error", "single"],
         "semi": ["warn", "always"],
-        "indent": ["warn", 4],
+        "indent": ["warn", 2],
         "comma-spacing": ["error", { "before": false, "after": true }],
         "camelcase": ["error", {
           "allow": ["^UNSAFE_"],
@@ -42,9 +44,10 @@
         "no-const-assign": "error",
         "prefer-const" : "warn",
         "no-trailing-spaces" : "warn",
-        "no-unused-vars" : "warn",
+        "no-unused-vars" : "off",
         "max-lines" : ["error", 900],
-        "max-lines-per-function" : ["error", 900]
+        "max-len":["error",135]
+        //"max-lines-per-function" : ["error", 900]
     },
     "settings": {
         "react": {
