@@ -13,6 +13,9 @@ import chaletIMG from './assets/portfolio/chalet-caviar-mac.png';
 import bilemoIMG from './assets/portfolio/bilemo-mac.png';
 import arpIMG from './assets/portfolio/arp-mac.png';
 
+import etudeCas1 from './assets/element/miniature1.png';
+import etudeCas2 from './assets/element/miniature2.png';
+
 function Home() {
 
   return (
@@ -107,6 +110,26 @@ function Home() {
 
           <button class="button-center"> Plus de projets</button>
         </section>
+
+        <section id="analyse-project">
+          <div className="row section-analyse-project">
+            <div className="col-twelve">
+              <h5 class="black-title">Étude de cas</h5>
+            </div>
+          </div>
+
+          <div id="analyse-container">
+            <div class="analyse">
+              <img src={etudeCas1} alt="wikirun" height="100%"></img>
+            </div>
+
+            <div class="analyse">
+              <img src={etudeCas2} alt="wikirun"></img>
+            </div>
+          </div>
+        </section>
+
+        <hr class="hr70"></hr>
 
         <section id="about">
           <div id="head-animation-div"></div>

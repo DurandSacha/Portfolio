@@ -23,19 +23,19 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 
 .bigTitle{
     letter-spacing: 16px;
-    font-size: 8.4rem;
+    font-size: 8.5rem;
     color: rgb(240,240,240);
     /*font-variant: no-common-ligatures proportional-nums;*/
     text-transform: uppercase;
-    text-shadow:1px 4px 2px rgb(49, 213, 71), 4px 1px 3px rgb(237, 13, 13);
+    /*text-shadow:1px 4px 2px rgb(49, 213, 71), 4px 1px 3px rgb(237, 13, 13);*/
     transition-duration: 1s;
 }
 
 .bigTitle:hover{
     color: rgb(243,243,243);
-    text-shadow:1px 4px 0px rgb(221, 16, 16), 4px 1px 0px rgb(40,200,60), 1px 4px 30px rgba(190,190,220,0.2);
+    text-shadow:1px 4px 0px rgb(221, 16, 16), 4px 1px 0px rgb(28, 250, 232), 1px 4px 30px rgba(190,190,220,0.1);
     transition-duration: 0.6s;
-    transform: rotateZ(0.1deg);
+    /*transform: rotateZ(0.1deg);*/
 }
 
 .form-field{
@@ -226,35 +226,38 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     transform: translateY(-0.1vh);
 }
 
-/******RESUME *******************/
-
-/*****PORTFOLIO *****/
-
-.portfolio-container{
+/******ANALYSE PROJECT (etude de cas) *******************/
+#analyse-project{
+    height: 60vh;
+}
+.black-title{
+    color:rgb(23,25,51);
+    margin-top: 4%;
+    max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	position: relative;
+}
+#analyse-container{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:space-evenly;
-}
+    padding: 4%;
+    justify-content:space-around;
 
-.portfolio-project{
-    width: 25%;
-    height: 2%;
-    margin: 3%;
-    border-radius: 20px;
+}
+.analyse{
+    width: 40vw ;
+    height: 50vh;
     overflow: hidden;
+    transition-duration: 0.3s;
+}
+.analyse:hover{
+    box-shadow: 0px 0px 10px rgba(238, 238, 1,1);
+    transform: translateY(-0.2vh);
+    transition-duration: 0.3s;
 }
 
-.portfolio-project-mac{
-    width: 30%;
-    height: 5%;
-    margin: 3%;
-    border-radius: 20px;
-}
-
-.overlay{
-    border-radius: 20px;
-}
 /*****FORM NEW *******/
 .input-form{
     margin-left: 16%;
@@ -298,7 +301,7 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 .hr70{
     margin-left: 15%;
     width: 70%;
-    margin-top: 4%;
+    margin-top: 10%;
     color: palevioletred;
 }
 
