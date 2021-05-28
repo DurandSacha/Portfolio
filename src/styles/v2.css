@@ -12,6 +12,9 @@
 h3{
     color: rgb(46, 50, 109);
 }
+h5{
+    color: yellow;
+}
 
 a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover, #siteRoute1:hover, .project:hover{
     cursor: url(../assets/cursor-focus-2.png) 2 2 ,progress;
@@ -24,13 +27,13 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     color: rgb(240,240,240);
     /*font-variant: no-common-ligatures proportional-nums;*/
     text-transform: uppercase;
-    text-shadow:1px 4px 2px rgb(40,200,60), 4px 1px 3px red;
+    text-shadow:1px 4px 2px rgb(49, 213, 71), 4px 1px 3px rgb(237, 13, 13);
     transition-duration: 1s;
 }
 
 .bigTitle:hover{
     color: rgb(243,243,243);
-    text-shadow:1px 4px 0px rgb(200,0,0), 4px 1px 0px rgb(40,200,60), 1px 4px 30px rgba(190,190,220,0.2);
+    text-shadow:1px 4px 0px rgb(221, 16, 16), 4px 1px 0px rgb(40,200,60), 1px 4px 30px rgba(190,190,220,0.2);
     transition-duration: 0.6s;
     transform: rotateZ(0.1deg);
 }
@@ -65,11 +68,11 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 }
 #siteRoute2:hover{
     font-size: 15px;
-    color: rgb(207, 4, 129);
+    color: yellow;
     transition-duration: 0.1s;
 }
 .slashRoute{
-    color: rgb(243, 2, 151);
+    color: rgb(181, 181, 18);
     font-weight: 600;
 }
 
@@ -200,6 +203,27 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
     word-break: break-word;
     font-weight: 600;
     line-height: 1.2;
+}
+
+/*more project button*/
+.button-center, .button-center:after{
+    margin: 0 auto;
+    width: 10vw;
+    margin-top: 6%;
+    margin-left: 45vw;
+    padding: 0%;
+    transition-duration: 1s;
+    background-color: yellow;
+    color: rgb(23,25,51);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter';
+}
+.button-center:hover{
+    box-shadow: 10px 10px rgb(23,25,51);
+    background-color: yellow;
+    transition-duration: 0.3s;
+    transform: translateY(-0.1vh);
 }
 
 /******RESUME *******************/

@@ -91,7 +91,7 @@ a, a:visited {
 	transition: all 0.3s ease-in-out;
 }
 a:hover, a:focus, a:active {
-	color: #FF0077;
+	color: yellow;
 	outline: 0;
 }
 
@@ -737,8 +737,8 @@ button.stroke.large, .button.stroke.large {
 	line-height: 5.4rem !important;
 }
 button.stroke:hover, .button.stroke:hover {
-	border: 3px solid #FF0077;
-	color: #FF0077;
+	border: 3px solid rgb(75, 81, 165);
+	color: rgb(75, 81, 165);
 }
 button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
@@ -1042,7 +1042,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: #FF0077;
+	color: yellow;
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
@@ -1344,7 +1344,7 @@ header .logo a {
 	
 }
 .intro-content h5 {
-	color: #cc005f;
+	color: yellow;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
 	line-height: 1.565;
@@ -1391,7 +1391,8 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	border-color: #cc005f;
+	border-color: yellow;
+	transition-duration: 0.4s;
 }
 .intro-content .button::after {
 	display: inline-block;
@@ -1423,7 +1424,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #cc005f;
+	color:yellow;
 }
 
 /**
@@ -1637,7 +1638,7 @@ header .logo a {
 	text-align: center;
 }
 #resume .resume-header h2 {
-	color: #FF0077;
+	color: yellow;
 }
 
 #resume .resume-timeline {
@@ -1964,7 +1965,7 @@ header .logo a {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-	background: #cc005f;
+	background: yellow;
 	border: none;
 }
 @media only screen and (max-width:600px) {
@@ -2130,7 +2131,7 @@ header .logo a {
 	color: white;
 }
 #services .section-intro h5 {
-	color: #FF0077;
+	color: yellow;
 }
 #services .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2152,7 +2153,7 @@ header .logo a {
 }
 .services-list .icon i {
 	font-size: 5.4rem;
-	color: #FF0077;
+	color: yellow;
 }
 .services-list h3 {
 	color: #FFFFFF;
@@ -2180,7 +2181,7 @@ header .logo a {
 	background: #FFFFFF;
 }
 .owl-theme .owl-controls .owl-page.active span {
-	background: #FF0077;
+	background: yellow;
 }
 
 
@@ -2191,10 +2192,12 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #stats {
-	background: linear-gradient(45deg, rgb(255,35,35), #ed054b);
+	/*background: linear-gradient(45deg, rgb(255,35,35), #ed054b);*/
+	background: linear-gradient(90deg, rgb(40, 43, 87) 0%, rgb(55, 62, 136) 35%, rgb(67, 75, 189) 100%);
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
 	text-align: center;
+	font-family: 'Inter', "poppins-medium", sans-serif;
 }
 #stats .row {
 	max-width: 1440px;
@@ -2214,15 +2217,16 @@ header .logo a {
 	color: #000000;
 }
 #stats .stat-count {
-	color: #FFFFFF;
-	font-size: 3.6rem;
+	color: yellow;
+	font-size: 3.1rem;
 	margin-top: 1.2rem;
 	margin-bottom: 0;
-	font-family: "poppins-medium", sans-serif;
-	color: gainsboro;
+	font-family: 'Inter', "poppins-medium", sans-serif;
+	/*color: gainsboro;*/
 }
 #stats .stat-title {
 	color: rgba(255, 255, 255, 0.5);
+	font-family: 'Inter', "poppins-medium", sans-serif;
 }
 
 /**
@@ -2269,7 +2273,7 @@ header .logo a {
 	color: white;
 }
 #contact .section-intro h5 {
-	color: #FF0077;
+	color: yellow;
 }
 #contact .section-intro p {
 	color: rgba(255, 255, 255, 0.7);
@@ -2436,7 +2440,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .contact-info h5 {
-	color: #FF0077;
+	color: yellow;
 }
 
 /**
