@@ -1,7 +1,8 @@
 
-import ReactDOM from 'react-dom';
+/*import ReactDOM from 'react-dom';
 import React, { useRef, useState, useLayoutEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
+*/
 //import { three } from 'three/src/Three'
 //import { Html, useProgress } from '@react-three/drei'
 

@@ -18,7 +18,7 @@
     "extends": [
     ],
     "rules": {
-        //"quotes": ["error", "double"]
+        "quotes": ["error", "single"],
         "semi": ["warn", "always"],
         "indent": ["warn", 4],
         "comma-spacing": ["error", { "before": false, "after": true }],
@@ -39,12 +39,10 @@
         "no-irregular-whitespace":"warn",
         "no-redeclare" : "warn",
         "no-duplicate-imports" : "warn",
-        //"no-empty-class": "error",
         "no-const-assign": "error",
         "prefer-const" : "warn",
         "no-trailing-spaces" : "warn",
-        //"no-unused-vars" : "warn",
-        //"max-statements-per-line": ["warn", 3],
+        "no-unused-vars" : "warn",
         "max-lines" : ["error", 900],
         "max-lines-per-function" : ["error", 900]
     },

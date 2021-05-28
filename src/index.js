@@ -1,9 +1,5 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './Home';
-//import reportWebVitals from './reportWebVitals';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -19,10 +15,10 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-const el = document.querySelector("#intro");
-el.addEventListener("mousemove", function(e) {
-    el.style.setProperty('--x', -e.offsetX + "px");
-    el.style.setProperty('--y', -e.offsetY + "px");
+const el = document.querySelector('#intro');
+el.addEventListener('mousemove', function(e) {
+    el.style.setProperty('--x', -e.offsetX + 'px');
+    el.style.setProperty('--y', -e.offsetY + 'px');
 });
 
 // If you want to start measuring performance in your app, pass a function

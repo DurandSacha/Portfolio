@@ -13,10 +13,6 @@ import chaletIMG from './assets/portfolio/chalet-caviar-mac.png';
 import bilemoIMG from './assets/portfolio/bilemo-mac.png';
 import arpIMG from './assets/portfolio/arp-mac.png';
 
-import imgP1 from './assets/e1.jpg';
-
-import { unmountComponentAtNode } from 'react-dom';
-
 function Home() {
 
     return (
@@ -73,13 +69,12 @@ function Home() {
                     </div>
 
                     <div class="row container-projects">
-                        <div class="col-lg-3 column-flex "><div class="project1 project project-container1"></div><p class="project-text p-text-1">Project 1</p> </div>
-                        <div class="col-lg-3 column-flex"><div class="project2 project project-container2"></div><p class="project-text p-text-2">Project 2</p></div>
-                        <div class="col-lg-3 column-flex"><div class="project3 project project-container3"></div><p class="project-text p-text-3">Project 3</p></div>
-                        <div class="col-lg-3 column-flex"><div class="project4 project project-container4"></div><p class="project-text p-text-4">Project 4</p></div>
+                        <div class="column-flex" data-aos="fade-down"><div class="project1 project project-container1"></div><p class="project-text p-text-1">Shifumi mobile</p></div>
+                        <div class="column-flex" data-aos="fade-down"><div class="project2 project project-container2"></div><p class="project-text p-text-2">Wikirun</p></div>
+                        <div class="column-flex" data-aos="fade-down"><div class="project3 project project-container3"></div><p class="project-text p-text-3">Snowtricks Social</p></div>
+                        <div class="column-flex" data-aos="fade-down"><div class="project4 project project-container4"></div><p class="project-text p-text-4">Scraping Docs</p></div>
                     </div>
                 </section>
-
 
                 <section id="about">
                     <div id="head-animation-div"></div>
