@@ -4,6 +4,7 @@ import './styles/v2.css';
 import './styles/base.css';
 import './styles/vendor.css';
 import './styles/font-awesome/css/font-awesome.min.css';
+import GitHubButton from 'react-github-btn';
 
 // image
 import wikirunIMG from './assets/portfolio/wikirun-mac.png';
@@ -64,6 +65,14 @@ function Home() {
           </div>
 
           <ul className="intro-social" data-aos-easing="ease-out-cubic">
+            {/*
+          <GitHubButton href="https://github.com/DurandSacha"
+            className="github-follow-button"
+            data-color-scheme="no-preference: light; light: light; dark: dark;"
+            data-size="large" data-show-count="true"
+            aria-label="Follow @DurandSacha on GitHub">Follow</GitHubButton>
+            */}
+
             <li data-aos="fade-up" data-aos-offset="100">
               <a href="https://github.com/DurandSacha">
                 <i className="fa fa-github"></i>
@@ -78,6 +87,7 @@ function Home() {
 
         </section>
 
+        
         <section id="projects">
 
           <div className="row section-intro">
@@ -110,26 +120,6 @@ function Home() {
 
           <button class="button-center"> Plus de projets</button>
         </section>
-
-        <section id="analyse-project">
-          <div className="row section-analyse-project">
-            <div className="col-twelve">
-              <h5 class="black-title">Étude de cas</h5>
-            </div>
-          </div>
-
-          <div id="analyse-container">
-            <div class="analyse">
-              <img src={etudeCas1} alt="wikirun" height="100%"></img>
-            </div>
-
-            <div class="analyse">
-              <img src={etudeCas2} alt="wikirun"></img>
-            </div>
-          </div>
-        </section>
-
-        <hr class="hr70"></hr>
 
         <section id="about">
           <div id="head-animation-div"></div>
@@ -213,6 +203,26 @@ function Home() {
           </div>
 
         </section>
+
+        <section id="analyse-project">
+          <div className="row section-analyse-project">
+            <div className="col-twelve">
+              <h5 class="black-title">Étude de cas</h5>
+            </div>
+          </div>
+
+          <div id="analyse-container">
+            <div class="analyse">
+              <img src={etudeCas1} alt="wikirun" height="100%"></img>
+            </div>
+
+            <div class="analyse">
+              <img src={etudeCas2} alt="wikirun"></img>
+            </div>
+          </div>
+        </section>
+
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
         <section id="stats" className="count-up">
 
