@@ -14,8 +14,8 @@ using react, this portfolio show a different project designed by sacha durand.
 
 #### Feature 📝
 - [ ] v1 (NOW)
-- [ ] v2.0 ( Responsive, Design Pro, Hidden Feature, Polygon, Formations, Modals in project, CI )
-- [ ] v2.1 ( Three, AOS, effect )
+- [ ] v2.0 ( Responsive, Design Pro, Polygon, Formations, Modals in project, CI )
+- [ ] v2.1 ( AOS, effect, case study, police , DevOps parcour )
 
 ![Your Repository's Stats](https://github-readme-stats.vercel.app/api?username=DurandSacha&show_icons=true)
 
