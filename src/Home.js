@@ -99,21 +99,25 @@ function Home() {
           </div>
 
           <div class="row container-projects">
-            <div class="column-flex" data-aos="fade-down">
+            <div class="column-flex" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500"
+              data-aos-anchor-placement="center-center">
               <div class="project1 project project-container1">
               </div>
               <p class="project-text p-text-1">Shifumi mobile</p>
             </div>
-            <div class="column-flex" data-aos="fade-down" data-aos-delay="50">
+            <div class="column-flex" data-aos="fade-up" data-aos-offset="400" data-aos-duration="1000"
+              data-aos-anchor-placement="center-center">
               <div class="project2 project project-container2">
               </div>
               <p class="project-text p-text-2">Wikirun</p></div>
-            <div class="column-flex" data-aos="fade-down">
+            <div class="column-flex" data-aos="fade-down" data-aos-offset="800" data-aos-duration="1500"
+              data-aos-anchor-placement="center-center">
               <div class="project3 project project-container3">
               </div>
               <p class="project-text p-text-3">Snowtricks Social</p>
             </div>
-            <div class="column-flex" data-aos="fade-down">
+            <div class="column-flex" data-aos="fade-left" data-aos-offset="1200" data-aos-duration="2000"
+              data-aos-anchor-placement="center-center">
               <div class="project4 project project-container4">
               </div>
               <p class="project-text p-text-4">Machine Learning</p>
