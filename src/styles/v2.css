@@ -33,7 +33,7 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 
 .bigTitle:hover{
     color: rgb(243,243,243);
-    text-shadow:1px 4px 0px rgb(221, 16, 16), 4px 1px 0px rgb(28, 250, 232), 1px 4px 30px rgba(190,190,220,0.1);
+    text-shadow:1px 4px 0px rgb(31, 25, 25), 4px 1px 0px rgb(229, 233, 6), 1px 4px 30px rgba(190,190,220,0.1);
     transition-duration: 0.6s;
     /*transform: rotateZ(0.1deg);*/
 }
@@ -239,7 +239,7 @@ a:hover, img:hover, i:hover, .portfolio-project:hover,.stack, #siteRoute2:hover,
 }
 
 .project-text{
-    color: rgb(206, 206, 7);
+    color: rgb(255, 255, 18);
     font-size: 22px;
     text-align: center;
     margin: 0;

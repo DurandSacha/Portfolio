@@ -32,7 +32,7 @@ function Home() {
             <span id="siteRoute2"> Accueil </span>
           </p>
 
-          <button id="labButton">Lab </button>
+          {/*<button id="labButton">Lab </button>*/}
 
           <div id="console">
             <p><span class="ConsolePrefix">[23/04/21 22:11] [sacha@website]$ </span><span class="command"> website.renderer;</span></p>
@@ -116,7 +116,7 @@ function Home() {
             <div class="column-flex" data-aos="fade-down">
               <div class="project4 project project-container4">
               </div>
-              <p class="project-text p-text-4">Scraping Docs</p>
+              <p class="project-text p-text-4">Machine Learning</p>
             </div>
           </div>
 
@@ -209,6 +209,7 @@ function Home() {
         <section id="analyse-project">
           <div className="row section-analyse-project">
             <div className="col-twelve">
+              {/* TODO: More study case */}
               <h5 class="black-title">Étude de cas</h5>
             </div>
           </div>
