@@ -1,5 +1,6 @@
 import './styles/fonts.css';
 import './styles/main.css';
+import './styles/parcours.css';
 import './styles/v2.css';
 import './styles/base.css';
 import './styles/vendor.css';
@@ -89,7 +90,6 @@ function Home() {
 
         </section>
 
-        
         <section id="projects">
 
           <div className="row section-intro">
@@ -99,24 +99,24 @@ function Home() {
           </div>
 
           <div class="row container-projects">
-            <div class="column-flex" data-aos="fade-right" data-aos-offset="100" data-aos-duration="500"
+            <div class="column-flex" data-aos="fade-right" data-aos-offset="10" data-aos-duration="500"
               data-aos-anchor-placement="center-center">
               <div class="project1 project project-container1">
               </div>
               <p class="project-text p-text-1">Shifumi mobile</p>
             </div>
-            <div class="column-flex" data-aos="fade-up" data-aos-offset="400" data-aos-duration="1000"
+            <div class="column-flex" data-aos="fade-up" data-aos-offset="20" data-aos-duration="1000"
               data-aos-anchor-placement="center-center">
               <div class="project2 project project-container2">
               </div>
               <p class="project-text p-text-2">Wikirun</p></div>
-            <div class="column-flex" data-aos="fade-down" data-aos-offset="800" data-aos-duration="1500"
+            <div class="column-flex" data-aos="fade-down" data-aos-offset="30" data-aos-duration="1500"
               data-aos-anchor-placement="center-center">
               <div class="project3 project project-container3">
               </div>
               <p class="project-text p-text-3">Snowtricks Social</p>
             </div>
-            <div class="column-flex" data-aos="fade-left" data-aos-offset="1200" data-aos-duration="2000"
+            <div class="column-flex" data-aos="fade-left" data-aos-offset="50" data-aos-duration="2000"
               data-aos-anchor-placement="center-center">
               <div class="project4 project project-container4">
               </div>
@@ -337,6 +337,55 @@ function Home() {
 
             </div>
           </div>
+
+        </section>
+
+        <section id="parcours">
+          <ul class="timeline-events">
+            <li class="timeline-event-years-6-5 timeline-event-legend">
+              <span>
+                <i></i>
+                <h2>Étude</h2>
+                <h3>Lycée Maupassant, Fecamp</h3>
+                <h4>BAC STI2D</h4>
+              </span>
+              <i></i>
+            </li>
+            <li class="timeline-event-years-2">
+              <h2>2 ans</h2>
+              <h3>Lycée Edouard Branly, Amiens</h3>
+              <h4>BTS Systême Numérique</h4>
+            </li>
+            <li class="timeline-event-years-2">
+              <h2>1 ans</h2>
+              <h3>Openclassrooms</h3>
+              <h4>Spécialisation PHP Symfony</h4>
+            </li>
+            <li class="timeline-event-years-3">
+              <h2>6 mois</h2>
+              <h3>Stage @akarah</h3>
+              <h4>Développeur web back-end</h4>
+            </li>
+            <li class="timeline-event-years-7">
+              <h2>2021-maintenant</h2>
+              <h3>Entreprise @akarah</h3>
+              <h4>Développeur web back-end</h4>
+            </li>
+          </ul>
+          <ul class="timelines-years">
+            <li>2013</li>
+            <li>2014</li>
+            <li>2015</li>
+            <li>2016</li>
+            <li>2017</li>
+            <li>2018</li>
+            <li>2019</li>
+            <li>2020</li>
+            <li>2021</li>
+            <li>2022</li>
+          </ul>
+
+          <h3 class="title-parcours">Expériences</h3>
 
         </section>
 
