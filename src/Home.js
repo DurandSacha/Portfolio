@@ -1,3 +1,13 @@
+/*
+import { makeStyles } from 'material-ui/core/styles';
+import Modal from 'material-ui/core/Modal';
+import Backdrop from 'material-ui/core/Backdrop';
+import Fade from 'material-ui/core/Fade';
+*/
+
+import Modal from './components/Modal/Modal';
+import StudyCase from '../src/components/StudyCase';
+
 import './styles/fonts.css';
 import './styles/main.css';
 import './styles/parcours.css';
@@ -17,8 +27,18 @@ import arpIMG from './assets/portfolio/arp-mac.png';
 
 import etudeCas1 from './assets/element/miniature1.png';
 import etudeCas2 from './assets/element/miniature2.png';
+import { NoToneMapping } from 'three';
+
+//modals
+//const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
+//const { isShowing: isRegistrationFormShowed, toggle: toggleRegistrationForm} = useModal();
 
 function Home() {
+
+  let visible = false;
+
+  const show = () => visible = true;
+  const hide = () => {visible = false; };
 
   return (
 
@@ -99,24 +119,24 @@ function Home() {
           </div>
 
           <div class="row container-projects">
-            <div class="column-flex" data-aos="fade-right" data-aos-offset="10" data-aos-duration="500"
+            <div class="column-flex" data-aos="fade-right" data-aos-offset="1" data-aos-duration="500"
               data-aos-anchor-placement="center-center">
               <div class="project1 project project-container1">
               </div>
               <p class="project-text p-text-1">Shifumi mobile</p>
             </div>
-            <div class="column-flex" data-aos="fade-up" data-aos-offset="20" data-aos-duration="1000"
+            <div class="column-flex" data-aos="fade-up" data-aos-offset="3" data-aos-duration="1000"
               data-aos-anchor-placement="center-center">
               <div class="project2 project project-container2">
               </div>
               <p class="project-text p-text-2">Wikirun</p></div>
-            <div class="column-flex" data-aos="fade-down" data-aos-offset="30" data-aos-duration="1500"
+            <div class="column-flex" data-aos="fade-down" data-aos-offset="6" data-aos-duration="1500"
               data-aos-anchor-placement="center-center">
               <div class="project3 project project-container3">
               </div>
               <p class="project-text p-text-3">Snowtricks Social</p>
             </div>
-            <div class="column-flex" data-aos="fade-left" data-aos-offset="50" data-aos-duration="2000"
+            <div class="column-flex" data-aos="fade-left" data-aos-offset="9" data-aos-duration="2000"
               data-aos-anchor-placement="center-center">
               <div class="project4 project project-container4">
               </div>
@@ -210,24 +230,7 @@ function Home() {
 
         </section>
 
-        <section id="analyse-project">
-          <div className="row section-analyse-project">
-            <div className="col-twelve">
-              {/* TODO: More study case */}
-              <h5 class="black-title">Étude de cas</h5>
-            </div>
-          </div>
-
-          <div id="analyse-container">
-            <div class="analyse">
-              <img src={etudeCas1} alt="wikirun" height="100%"></img>
-            </div>
-
-            <div class="analyse">
-              <img src={etudeCas2} alt="wikirun"></img>
-            </div>
-          </div>
-        </section>
+        <StudyCase />
 
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
