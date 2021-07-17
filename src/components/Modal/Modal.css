@@ -14,4 +14,20 @@
   border-radius: 15px;
   margin-top: -15vh;
   z-index: 5000;
+  border: 2px solid rgb(55, 62, 156);
+  box-shadow: 2px 2px 10px rgb(66, 74, 187);
+}
+
+.Modal button{
+  color: white;
+  background-color: rgb(21,23,49);
+  border-radius:4px ;
+  
+  position: absolute;
+    top: 1.5%;
+    right: 1.5%;
+}
+
+.Modal p{
+  text-align: left;
 }

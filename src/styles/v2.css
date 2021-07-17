@@ -367,6 +367,28 @@ canvas {
     height: 100vh;
   }
 
+/****FOOTER ******/
+.contact-info p{
+    margin-right: left;
+}
+/***** GENERAL *****/
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+
+.sacha-button:hover{
+    /*border: 2px solid yellow;*/
+    background-color: rgba(0,0,0,0);
+}
+
 
 
 

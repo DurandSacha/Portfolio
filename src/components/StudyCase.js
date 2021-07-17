@@ -44,12 +44,6 @@ export default class StudyCase extends Component {
     });
   }
 
-  /*
-  toggle = () => {
-    setIsShowing(!isShowing);
-  };
-  */
-
   render() {
     return (
       <div>

@@ -29,10 +29,6 @@ import etudeCas1 from './assets/element/miniature1.png';
 import etudeCas2 from './assets/element/miniature2.png';
 import { NoToneMapping } from 'three';
 
-//modals
-//const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
-//const { isShowing: isRegistrationFormShowed, toggle: toggleRegistrationForm} = useModal();
-
 function Home() {
 
   let visible = false;
@@ -119,24 +115,24 @@ function Home() {
           </div>
 
           <div class="row container-projects">
-            <div class="column-flex" data-aos="fade-right" data-aos-offset="1" data-aos-duration="500"
+            <div class="column-flex" /*data-aos="fade-right"*/ data-aos-offset="-4" data-aos-duration="500"
               data-aos-anchor-placement="center-center">
               <div class="project1 project project-container1">
               </div>
               <p class="project-text p-text-1">Shifumi mobile</p>
             </div>
-            <div class="column-flex" data-aos="fade-up" data-aos-offset="3" data-aos-duration="1000"
+            <div class="column-flex" /*data-aos="fade-up"*/ data-aos-offset="0" data-aos-duration="1000"
               data-aos-anchor-placement="center-center">
               <div class="project2 project project-container2">
               </div>
               <p class="project-text p-text-2">Wikirun</p></div>
-            <div class="column-flex" data-aos="fade-down" data-aos-offset="6" data-aos-duration="1500"
+            <div class="column-flex" /*data-aos="fade-down"*/ data-aos-offset="0" data-aos-duration="1500"
               data-aos-anchor-placement="center-center">
               <div class="project3 project project-container3">
               </div>
               <p class="project-text p-text-3">Snowtricks Social</p>
             </div>
-            <div class="column-flex" data-aos="fade-left" data-aos-offset="9" data-aos-duration="2000"
+            <div class="column-flex" /*data-aos="fade-left"*/ data-aos-offset="0" data-aos-duration="2000"
               data-aos-anchor-placement="center-center">
               <div class="project4 project project-container4">
               </div>
@@ -144,22 +140,24 @@ function Home() {
             </div>
           </div>
 
-          <button class="button-center"> Plus de projets</button>
+          <br/><br/>
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6">
+              <a type="button" href="https://github.com/DurandSacha" download title="More project"
+                className="button button-primary text-center sacha-button">Plus de projets</a>
+            </div>
+          </div>
         </section>
 
         <section id="about">
           <div id="head-animation-div"></div>
-
           <div className="row about-content">
-
             <div className="col-six tab-full" data-aos="fade-up" data-aos-offset="120">
-
               <h3>Profil</h3>
               <p>Cela fait longtemps que je suis passionné par la technologie du web.
                   J’ai donc chercher a m’instruire afin de construire une
                   carrière à partir de ma passion.
                Le développement back-end est ma spécialité.<br/><br/></p>
-
               <ul className="info-list">
                 <li>
                   <strong className="title-info-list">NOM:</strong>
@@ -178,9 +176,7 @@ function Home() {
                   <span>sacha6623@gmail.com</span>
                 </li>
               </ul>
-
             </div>
-
             <div className="col-six tab-full" data-aos="fade-down" data-aos-offset="130">
 
               <h3>Compétences</h3>

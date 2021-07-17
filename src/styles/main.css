@@ -696,7 +696,7 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-	background: #313131;
+	background: #edd101;
 	color: #FFFFFF;
 }
 .button.button-primary:hover,
