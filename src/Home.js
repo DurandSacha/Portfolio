@@ -165,7 +165,7 @@ function Home() {
                 </li>
                 <li>
                   <strong className="info-info-list">AGE:</strong>
-                  <span>23 ans ( 22 mars 1998 )</span>
+                  <span>23 ans</span>
                 </li>
                 <li>
                   <strong className="info-info-list" >TITRE:</strong>
@@ -203,7 +203,7 @@ function Home() {
                 <li>
 
                   <div className="progress percent90"><span>90%</span></div>
-                  <strong>Gestion de serveurs et déploiement</strong>
+                  <strong>DevOps</strong>
                 </li>
 
               </ul>
@@ -270,42 +270,33 @@ function Home() {
                 </div>
 
                 <div className="bgrid stat">
-
                   <div className="icon-part">
                     <i className="icon-badge"></i>
                   </div>
-
                   <h3 className="stat-count">
                    +30
                   </h3>
-
                   <h5 className="stat-title">
                    projets réalisés
                   </h5>
 
                 </div>
-
                 <div className="bgrid stat">
-
                   <div className="icon-part">
                     <i className="icon-light-bulb"></i>
                   </div>
-
                   <h3 className="stat-count">
                    + 1500
                   </h3>
-
                   <h5 className="stat-title">
                    cafés
                   </h5>
                 </div>
 
                 <div className="bgrid stat">
-
                   <div className="icon-part">
                     <i className="icon-cup"></i>
                   </div>
-
                   <h3 className="stat-count">
                    + 20
                   </h3>
@@ -317,23 +308,18 @@ function Home() {
                 </div>
 
                 <div className="bgrid stat">
-
                   <div className="icon-part">
                     <i className="icon-clock"></i>
                   </div>
-
                   <h3 className="stat-count">
                    + 30
                   </h3>
-
                   <h5 className="stat-title">
                    Repositories
                   </h5>
 
                 </div>
-
               </div>
-
             </div>
           </div>
 
@@ -391,20 +377,21 @@ function Home() {
         <section id="contact">
 
           <div className="row contact-info">
-
             <div className="col-four tab-full">
-
               <div className="icon">
                 <i className="icon-pin"></i>
               </div>
 
-              <h5>Ou me trouver ?</h5>
+              <h5>Contact</h5>
 
               <p>
                  2536 route des faisans,<br/>
                  manneville-la-goupil<br/>
                  76110 FR
               </p>
+
+              <p>sacha6623@gmail.com</p>
+              <p> 06 58 01 65 54 </p>
 
             </div>
 
@@ -414,24 +401,18 @@ function Home() {
                 <i className="icon-mail"></i>
               </div>
 
-              <h5>Adresse mail</h5>
-
-              <p>sacha6623@gmail.com<br/>
+              <h5>autre</h5>
+              <p>...<br/>
               </p>
-
             </div>
 
             <div className="col-four tab-full">
-
               <div className="icon">
                 <i className="icon-phone"></i>
               </div>
+              <h5>Autre</h5>
 
-              <h5>Appelez-moi ! </h5>
-
-              <p>Mobile : 06 58 01 65 54 <br/>
-              </p>
-
+              <p>..</p>
             </div>
 
           </div>
