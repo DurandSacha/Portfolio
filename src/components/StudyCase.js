@@ -50,7 +50,7 @@ export default class StudyCase extends Component {
         <section id="analyse-project">
           <div className="row section-analyse-project">
             <div className="col-twelve">
-              <h5 class="black-title">Étude de cas</h5>
+              <h5 class="study-title">Étude de cas</h5>
             </div>
           </div>
           <div id="analyse-container">
