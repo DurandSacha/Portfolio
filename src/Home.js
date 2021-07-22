@@ -226,6 +226,7 @@ function Home() {
 
         </section>
 
+
         <StudyCase />
 
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>

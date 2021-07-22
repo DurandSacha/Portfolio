@@ -56,8 +56,12 @@ export default class StudyCase extends Component {
           <div id="analyse-container">
 
             {/* ONE STUDY CASE */}
-            <div class="analyse" onClick={this.showFirstModal}>
-              <img src={etudeCas1} alt="wikirun" height="100%"></img>
+            <div class="analyse-section">
+              <div class="analyse" onClick={this.showFirstModal}>
+                <img src={etudeCas1} alt="wikirun" height="50%"></img>
+              </div>
+              <p class="analyse-title">Title</p>
+              <p class="analyse-p">Lorem ipsum asset im dolor ua delo petra</p>
             </div>
             <Modal 
               visible={this.state.firstModal} 
@@ -68,8 +72,27 @@ export default class StudyCase extends Component {
             />
 
             {/* TWO STUDY CASE */}
-            <div class="analyse" onClick={this.showSecondModal}>
-              <img src={etudeCas2} alt="other"></img>
+            <div class="analyse-section">
+              <div class="analyse" onClick={this.showSecondModal}>
+                <img src={etudeCas2} alt="other"></img>
+              </div>
+              <p class="analyse-title">Title</p>
+              <p class="analyse-p">Lorem ipsum asset im dolor ua delo petra</p>
+            </div>
+            
+            <Modal 
+              visible={this.state.secondModal} 
+              hide={this.hideSecondModal} 
+              title={'Other Article'}
+              content={'Hello OtherArticle'}
+            
+            />
+            <div class="analyse-section">
+              <div class="analyse" onClick={this.showSecondModal}>
+                <img src={etudeCas2} alt="other"></img>
+              </div>
+              <p class="analyse-title">Title</p>
+              <p class="analyse-p">Lorem ipsum asset im dolor ua delo petra</p>
             </div>
             <Modal 
               visible={this.state.secondModal} 
@@ -78,7 +101,54 @@ export default class StudyCase extends Component {
               content={'Hello OtherArticle'}
             
             />
+            <div class="analyse-section">
+              <div class="analyse" onClick={this.showSecondModal}>
+                <img src={etudeCas2} alt="other"></img>
+              </div>
+              <p class="analyse-title">Title</p>
+              <p class="analyse-p">Lorem ipsum asset im dolor ua delo petra</p>
+            </div>
+            <Modal 
+              visible={this.state.secondModal} 
+              hide={this.hideSecondModal} 
+              title={'Other Article'}
+              content={'Hello OtherArticle'}
+            
+            />
+            <div class="analyse-section">
+              <div class="analyse" onClick={this.showSecondModal}>
+                <img src={etudeCas2} alt="other"></img>
+              </div>
+              <p class="analyse-title">Title</p>
+              <p class="analyse-p">Lorem ipsum asset im dolor ua delo petra</p>
+            </div>
+            <Modal 
+              visible={this.state.secondModal} 
+              hide={this.hideSecondModal} 
+              title={'Other Article'}
+              content={'Hello OtherArticle'}
+            
+            />
+
+            <div class="analyse-section">
+              <div class="analyse" onClick={this.showSecondModal}>
+                <img src={etudeCas2} alt="other"></img>
+              </div>
+              <p class="analyse-title">Title</p>
+              <p class="analyse-p">Lorem ipsum asset im dolor ua delo petra</p>
+            </div>
+            <Modal 
+              visible={this.state.secondModal} 
+              hide={this.hideSecondModal} 
+              title={'Other Article'}
+              content={'Hello OtherArticle'}
+            
+            />
+
+
           </div>
+
+          
         </section>
 
 

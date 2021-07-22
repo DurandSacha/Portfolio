@@ -2200,7 +2200,7 @@ header .logo a {
  */
 #stats {
 	/*background: linear-gradient(45deg, rgb(255,35,35), #ed054b);*/
-	background: linear-gradient(180deg, rgb(44, 48, 107) 0%, rgb(61, 68, 145) 65%, rgb(67, 75, 189) 100%);
+	background: linear-gradient(180deg, rgb(44, 48, 107) 0%, rgb(39, 44, 102), rgb(21,23,49) 100%);
 	padding-top: 7.2rem;
 	padding-bottom: 6rem;
 	text-align: center;

@@ -10,12 +10,14 @@ export default function Modal(props){
         opacity: props.visible ? '1' : '0'
       }}
     >
-      <div class="row">
+      <div class="row header">
         <h1>{props.title}</h1>
         <button onClick={props.hide}>X</button>
       </div>
-      <hr/>
-      <p>{props.content}</p>
+      <br/><br/>
+      <div class="content">
+        <p>{props.content}</p>
+      </div>
     </div>
   );
 }
