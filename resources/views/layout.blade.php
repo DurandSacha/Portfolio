@@ -2,7 +2,9 @@
 <head>
     <!-- Link -->
     <link rel="stylesheet" href="/css/global.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+
+    <!--<link href="{ { mix('../public/css/app.css') }}" rel="stylesheet">-->
+
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <!-- Fonts -->
 
