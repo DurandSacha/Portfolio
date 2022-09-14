@@ -1,20 +1,21 @@
 <html>
 <head>
+    <!-- Link -->
     <link rel="stylesheet" href="/css/global.css" type="text/css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+    <!-- Fonts -->
 
-    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
-    <script src="/js/map.js"></script>
+    <script src="">/* CDN AND JS import*/</script>
 
-    <title>My Travels</title>
+
+    <title>Nom</title>
 </head>
 
 <body class="container">
 
 <header>
-    <h1>My Travels</h1>
+    <h1>Hello !</h1>
 </header>
 
 <div class="main">
