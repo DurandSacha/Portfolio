@@ -10,5 +10,13 @@ This demo uses laravel, with an out-of-the-box built-in docker framework, this a
     - go to localhost:8000
 
 
+### To do 
+
+    - install tailwind CSS
+    - configure dockerfile for add default yarn & npm
+    - install composer scripts
+    - unit test
+    - documente migration
+    
 
 
