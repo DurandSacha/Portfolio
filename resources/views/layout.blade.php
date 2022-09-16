@@ -3,7 +3,9 @@
     <!-- Link -->
     <link rel="stylesheet" href="/css/global.css" type="text/css">
 
-    <!--<link href="{ { mix('../public/css/app.css') }}" rel="stylesheet">-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{mix('css/app.css') }}" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <!-- Fonts -->
@@ -17,7 +19,7 @@
 <body class="container">
 
 <header>
-    <h1>Hello !</h1>
+    <h1 class="text-red-500 text-2xl font-bold">Hello !</h1>
 </header>
 
 <div class="main">
