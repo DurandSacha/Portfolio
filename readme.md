@@ -11,13 +11,6 @@ delivered with laravel, docker components, tailwind CSS
     - docker-compose up -d
     - go to localhost:8000
 
-
-### To do 
-
-    - configure dockerfile for add default yarn & npm
-    - install composer scripts
-    - unit test
-    - documente migration
     
 
 
