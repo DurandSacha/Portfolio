@@ -2,13 +2,27 @@
 
 @section('content')
 
-            <div class="map_container clearfix">
+    <div class="bg-gray-500 h-full w-full">
+        <p> Welcome To home</p>
+    </div>
 
-                <div class="column x3">
+    <div class="bg-yellow-500 h-full w-full">
+        <p> Project</p>
+    </div>
 
-                    <p> Welcome To home</p>
-                </div>
-            </div>
+    <div class="bg-red-500 h-full w-full">
+        <p> Skill and award</p>
+    </div>
+
+    <div class="bg-blue-500 h-full w-full">
+        <p> Blog</p>
+    </div>
+
+    <div class="bg-gray-700 h-1/3 w-full">
+        <p> Footer</p>
+    </div>
+
+
 
 @endsection
 

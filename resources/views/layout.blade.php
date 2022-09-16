@@ -13,16 +13,17 @@
     <script src="">/* CDN AND JS import*/</script>
 
 
-    <title>Nom</title>
+    <title>Sacha Durand</title>
 </head>
 
-<body class="container">
+<body class="">
 
 <header>
-    <h1 class="text-red-500 text-2xl font-bold">Hello !</h1>
+    
 </header>
 
-<div class="main">
+<x-navigation/>
+<div class="w-full">
     @yield('content')
 </div>
 
