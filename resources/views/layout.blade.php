@@ -22,7 +22,6 @@
     
 </header>
 
-<x-navigation/>
 <div class="w-full">
     @yield('content')
 </div>
