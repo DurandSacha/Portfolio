@@ -16,17 +16,17 @@
       </div>
       
       <div>
-        <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-            Docs
+        <a href="#responsive-header" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Projets
           </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-            Examples
+          <a href="#responsive-header" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+            Distinction
           </a>
-          <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white pr-16">
-            Blog
+          <a href="#responsive-header" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white pr-16">
+            Contact
           </a>
 
-        <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
+        <a href="#" class="text-blue-300 inline-block text-sm px-4 py-2 leading-none border-blue-300 rounded hover:text-white hover:text-teal-500 hover:bg-blue-300 mt-4 lg:mt-0">Download</a>
       </div>
     </div>
   </nav>
