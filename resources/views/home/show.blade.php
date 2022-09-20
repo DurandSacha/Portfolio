@@ -16,9 +16,13 @@
             <div class="grid h-screen place-items-center">
                 <div class="text-center">
                     <br/><br/><br/><br/><br/><br/>
-                    <p> 
-                        <svg class="text-blue-400" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0a2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"/></svg>
-                    </p>
+                    <div class="w-full grid grid-rows-8 grid-flow-col gap-4">
+                        <div></div>
+                        <div> 
+                            <svg class="text-blue-400" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0a2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"/></svg>
+                        </div>
+                        <div></div>
+                    </div>
                     <h1 class="font-extrabold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-blue-400 to-green-400"> Sacha Durand</h1>
                     <h2 class="font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">Développeur web Full-stack</h2>
                 </div>
@@ -57,20 +61,69 @@
         </div>
     </div>
 
-    <div class="bg-yellow-500 h-full w-full">
-        <p> Project</p>
+    <div class="bg-yellow-500 h-full w-full" id="project">
+        <div class="pt-16 px-12">
+            <div><h2 class="text-center text-3xl font-bold"> Projets</h2></div>
+            <div class="m-8 h-auto p-4 flex flex-row gap-4 justify-center">
+                <div class="border border-red-500 h-80 lg:w-1/6"><h3>Arthurimmo.com</h3></div>
+                <div class="border border-red-500 h-80 lg:w-1/6"><h3>Wikirun.io</h3></div>
+                <div class="border border-red-500 h-80 lg:w-1/6"><h3>IA tic tac toe</h3></div>
+                <div class="border border-red-500 h-80 lg:w-1/6"><h3>TakeQAIR R&D</h3></div>
+                <div class="border border-red-500 h-80 lg:w-1/6"><h3>Lesiteimmo.com</h3></div>
+            </div>
+        </div>
     </div>
 
-    <div class="bg-red-500 h-full w-full">
-        <p> Skill and award</p>
+    <div class="bg-black text-white lg:h-1/2 w-full" id="skill">
+        <div class="pt-16">
+            <div><h2 class="text-center text-3xl font-bold"> Compétences et skills</h2></div>
+        </div>
     </div>
 
-    <div class="bg-blue-500 h-full w-full">
-        <p> Blog</p>
+    <div class="bg-black text-white lg:h-1/2 w-full" id="blog">
+        <div class="pt-16">
+            <div><h2 class="text-center text-3xl font-bold"> Blog</h2></div>
+        </div>
     </div>
 
-    <div class="bg-gray-700 h-1/3 w-full">
-        <p> Footer</p>
+    <div class="bg-black text-white h-full w-full" id="contact">
+        <div class="pt-16">
+            <div><h2 class="text-center text-3xl font-bold"> Contact</h2></div>
+        </div>
+    </div>
+
+    <div class="bg-yellow-500 lg:h-1/3 w-full">
+        <div class="pt-16">
+            <div><h2 class="text-center text-3xl font-bold"> Footer</h2></div>
+            <div class="p-4">
+                <div class="flex flex justify-around">
+                    <div class="">
+                        <ul>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <ul>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <ul>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                            <li>Hello World</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
