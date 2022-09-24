@@ -26,7 +26,8 @@
             Contact
           </a>
 
-        <a href="#" class="text-blue-300 inline-block text-sm px-4 py-2 leading-none border-blue-300 rounded hover:text-white hover:text-teal-500 hover:bg-blue-300 mt-4 lg:mt-0">Download</a>
+        <!--<a href="#" class="text-blue-300 inline-block text-sm px-4 py-2 leading-none border-blue-300 rounded hover:text-white
+          hover:text-teal-500 hover:bg-blue-300 mt-4 lg:mt-0">Download</a>-->
       </div>
     </div>
   </nav>
