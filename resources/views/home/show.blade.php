@@ -63,39 +63,82 @@
         </div>
     </div>
 
-    <div class="bg-yellow-500 h-full w-full" id="project">
-        <div class="pt-8 px-8">
-            <div class="grid grid-cols-4 grid-rows-4 gap-0">
-                <div class="box col-span-2  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-arthurimmo">Arthurimmo</div>
-                <div class="box col-span-1  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-wikirun">Wikirun</div>
-                <div class="box col-span-1  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-tic-tac-toe">IA Tic Tac Toe</div>
-                <div class="box col-span-1  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-takeqair">TakeQAIR</div>
-                <div class="box col-span-1  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-lesiteimmo">Lesiteimmo.com</div>
-                <div class="box col-span-1  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-qa">R&D QA</div>
-                <div class="box col-span-1  w-80 h-80 bg-red-500 min-w-full min-h-full" id="background-armada">Armada 2023 R&D</div>
+    <div class="lg:bg-yellow-500  md:bg-orange-500 sm:bg-black h-full w-full" id="project">
+        <div class="">
+            <div class="grid grid-cols-4 grid-rows-4 gap-1 p-8 pt-24">
+                <div class="box col-span-2 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-arthurimmo">Arthurimmo</div>
+                <div class="box col-span-1 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-wikirun">Wikirun</div>
+                <div class="box col-span-1 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-tic-tac-toe">IA Tic Tac Toe</div>
+                <div class="box col-span-1 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-takeqair">TakeQAIR</div>
+                <div class="box col-span-1 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-lesiteimmo">Lesiteimmo.com</div>
+                <div class="box col-span-1 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-qa">R&D QA</div>
+                <div class="box col-span-1 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-armada">Armada 2023 R&D</div>
             </div>
             
         </div>
     </div>
 
+    <!--
     <div class="bg-black text-white lg:h-1/2 w-full" id="skill">
         <div class="pt-16">
             <div><h2 class="text-center text-3xl font-bold"> Compétences et skills</h2></div>
         </div>
     </div>
+    -->
 
+    <!--
     <div class="bg-black text-white lg:h-1/2 w-full" id="blog">
         <div class="pt-16">
             <div><h2 class="text-center text-3xl font-bold"> Blog</h2></div>
         </div>
     </div>
+    -->
 
-    <div class="bg-black text-white h-full w-full" id="contact">
+    <div class="bg-black text-white w-full" id="contact">
         <div class="pt-16">
             <div><h2 class="text-center text-3xl font-bold"> Contact</h2></div>
-        </div>
-    </div>
+            <div class="flex flex-row min-h-screen justify-center items-center">
+                <div class="w-1/2" >
+                        <div class="container mx-auto pb-4 px-4 lg:px-20">
+                        <form method="POST" action="{{ route('contact.send') }}"> 
+                            <div class="w-full">
+                                <div class="flex">
+                                    <h1 class="font-bold uppercase text-5xl">Contact</h1>
+                                </div>
+                                <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+                                    <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
+                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-500"
+                                        type="text" placeholder="Nom*" />
+                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"
+                                        type="email" placeholder="Email*" />
+                            </div>
+                            <div class="my-4">
+                                <textarea placeholder="Message*" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"></textarea>
+                            </div>
+                            <div class="my-2 w-1/2 lg:w-1/4">
+                                <button class="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full 
+                                    focus:outline-none focus:shadow-outline border-4 border-indigo-600">
+                                    Send Message
+                                </button>
+                            </div>
 
+                            @if (\Session::has('message'))
+                                <div class="alert alert-success">
+                                    <ul>
+                                        <li>{!! \Session::get('message') !!}</li>
+                                    </ul>
+                                </div>
+                            @endif
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    </div>
+          
+
+    <!--
     <div class="bg-yellow-500 lg:h-1/3 w-full">
         <div class="pt-16">
             <div><h2 class="text-center text-3xl font-bold"> Footer</h2></div>
@@ -129,8 +172,18 @@
             </div>
         </div>
     </div>
+-->
 
     <style>
+        #project{
+            height: 100vh;
+        }
+        .bg-portfolio{
+            /*
+            height: 50% !important;
+            border: 2px solid green;
+            */
+        }
         #background-home {
             background: url('/img/svg/product-lines.svg');
             width: 100%;

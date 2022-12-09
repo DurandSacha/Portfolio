@@ -26,9 +26,11 @@
     @yield('content')
 </div>
 
+<!--
 <div class="footer clearfix">
     @yield('footer')
 </div>
+-->
 
 
 @yield('script')

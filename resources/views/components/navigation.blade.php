@@ -19,9 +19,11 @@
         <a href="#project" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
             Projets
           </a>
+          <!--
           <a href="#skill" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
             Distinction
           </a>
+        -->
           <a href="#contact" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white pr-16">
             Contact
           </a>
