@@ -16,7 +16,6 @@ class HomeController extends Controller
     public function show()
     {
         return view('home.show', [
-            //'user' => User::findOrFail($id)
         ]);
     }
 }

@@ -22,7 +22,7 @@
     
 </header>
 
-<div class="w-full">
+<div class="w-full layout-body">
     @yield('content')
 </div>
 
@@ -35,6 +35,58 @@
 
 @yield('script')
 
+<!--SMOOTH SCROLL-->
+<script>
+    const navLinks = [...document.querySelectorAll(".nav-nav a")];
+    const sections = [...document.querySelectorAll(".navSection")];
+    console.log(navLinks);
+    console.log(sections);
 
+    let sectionPosition;
+
+    function positionCalculation(){
+      sectionPosition = sections.map(section => section.offsetTop);
+    }
+    positionCalculation();
+    //console.log(sectionPosition);
+
+    navLinks.forEach(link => link.addEventListener("click", addScrollSmooth));
+
+    function addScrollSmooth(e){
+      const linkIndex = navLinks.indexOf(e.target);
+      //console.log("e : "+e);
+      console.log("linkIndex : "+linkIndex);
+      window.scrollTo({
+        top: sectionPosition[linkIndex + 1],
+        behavior : "smooth"
+      })
+    }
+
+    window.onscroll = function(e) {
+        //var distanceScrolled = document.documentElement.scrollTop;
+        //console.log(distanceScrolled);
+        //find scroll direction, and scroll to next element
+        //console.log(e.timeStamp);
+        //
+        //console.log(this.oldScroll > this.scrollY);
+        
+        let direction = this.oldScroll > this.scrollY;
+        //console.log(direction);
+        if(direction == false){
+            //console.log("scroll down");
+            //console.log(document.body.scrollTop);
+        }
+        if(direction == true){
+            //console.log("scroll up");
+            //console.log(document.body.scrollTop);
+            //this.addScrollSmooth(0);
+        }
+        this.oldScroll = this.scrollY;
+    }
+
+    // -1 : home
+    // 0 : projet
+    // 1 : contact
+  </script>
 </body>
 </html>

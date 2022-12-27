@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="bg-black h-full w-full text-white"><!--TODO: #040812 and background image-->
+    <div class="bg-black h-full w-full text-white navSection"><!--TODO: #040812 and background image-->
         <div id="background-home">
             <x-navigation/>
             <div class="grid h-screen place-items-center">
@@ -63,7 +63,24 @@
         </div>
     </div>
 
-    <div class="lg:bg-yellow-500  md:bg-orange-500 sm:bg-black h-full w-full" id="project">
+    <div class="sm:bg-black h-full w-full navSection" id="project">
+        <div class="bg-gradient-to-br from-green-400 to-yellow-400 p-20 bg-gray-100 flex items-center">
+            <div class="flex flex-row flex-wrap justify-around gap-4">
+                <x-card-project title="Arthurimmo.com" description="Site national pour la franchise immobilière Arthurimmo.com, Sites agences et gestion en multi-site" picture="arthurimmo"/>
+                <x-card-project title="Wikirun.io" description="Jeu de course sur les liens wikipedia dans un environnement adapté ( gestion d'infrastructure de jeu, back-end)" picture="wikirun"/>
+                <x-card-project title="lesiteimmo.com" description="Site d'annonces immobilière, et gestion d'import/export d'annonce immobilière" picture="lesiteimmo"/>
+                <x-card-project title="tic-tac-toe.io" description="Developpement d'un jeu de tictactoe, et projet de machine learning" picture="tic-tac-toe"/>
+                <x-card-project title="takeQAIR project" description="Developpement d'une API dans le domaine de la santé. Construction d'un package pour le format metier HL7 et HPRIM" picture="takeqair2"/>
+                <x-card-project title="Armada 2023" description="Projet R&D sur la conception de l'application Armada 2023" picture="armada"/>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+    <!--
+    <div class="lg:bg-yellow-500  md:bg-orange-500 sm:bg-black h-full w-full navSection" id="project">
         <div class="">
             <div class="grid grid-cols-4 grid-rows-4 gap-1 p-8 pt-24">
                 <div class="box col-span-2 w-80 h-96 bg-red-500 min-w-full min-h-full bg-portfolio" id="background-arthurimmo">Arthurimmo</div>
@@ -77,6 +94,7 @@
             
         </div>
     </div>
+    -->
 
     <!--
     <div class="bg-black text-white lg:h-1/2 w-full" id="skill">
@@ -94,8 +112,8 @@
     </div>
     -->
 
-    <div class="bg-black text-white w-full" id="contact">
-        <div class="pt-16">
+    <div class="bg-black text-white w-full navSection" id="contact">
+        <div class="pt-0">
             <div><h2 class="text-center text-3xl font-bold"> Contact</h2></div>
             <div class="flex flex-row min-h-screen justify-center items-center">
                 <div class="w-1/2" >
@@ -118,7 +136,7 @@
                             <div class="my-2 w-1/2 lg:w-1/4">
                                 <button class="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full 
                                     focus:outline-none focus:shadow-outline border-4 border-indigo-600">
-                                    Send Message
+                                    Envoyer
                                 </button>
                             </div>
 
@@ -135,7 +153,7 @@
                 </div>
             </div>
         </div>          
-    </div>
+    
           
 
     <!--
