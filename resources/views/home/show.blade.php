@@ -113,9 +113,9 @@
     -->
 
     <div class="bg-black text-white w-full navSection" id="contact">
-        <div class="pt-0">
-            <div><h2 class="text-center text-3xl font-bold"> Contact</h2></div>
-            <div class="flex flex-row min-h-screen justify-center items-center">
+        <div class="pt-20">
+            <!--<div><h2 class="text-center text-3xl font-bold"> Contact</h2></div>-->
+            <div class="flex flex-row pb-40 justify-center items-center">
                 <div class="w-1/2" >
                         <div class="container mx-auto pb-4 px-4 lg:px-20">
                         <form method="POST" action="{{ route('contact.send') }}"> 
@@ -125,13 +125,13 @@
                                 </div>
                                 <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                                     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
-                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-500"
+                                    <input class="w-full bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-500"
                                         type="text" placeholder="Nom*" />
-                                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"
+                                    <input class="w-full bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"
                                         type="email" placeholder="Email*" />
                             </div>
                             <div class="my-4">
-                                <textarea placeholder="Message*" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"></textarea>
+                                <textarea placeholder="Message*" class="w-full h-32 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"></textarea>
                             </div>
                             <div class="my-2 w-1/2 lg:w-1/4">
                                 <button class="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full 
@@ -152,10 +152,12 @@
                     </div>
                 </div>
             </div>
-        </div>          
+    </div>       
     
-          
-
+    <div class="bg-blue-400 text-white w-full navSection" id="copyright">
+        <p class="text-center pt-1 pb-1">Sacha Durand @2023</p>
+    </div>
+    
     <!--
     <div class="bg-yellow-500 lg:h-1/3 w-full">
         <div class="pt-16">
@@ -190,7 +192,7 @@
             </div>
         </div>
     </div>
--->
+    -->
 
     <style>
         #project{
