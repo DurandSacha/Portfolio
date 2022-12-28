@@ -1,3 +1,4 @@
+#ONLY FOR DEV : this docker-compose is overrided in production mode
 version: '3.7'
 services:
   app:
