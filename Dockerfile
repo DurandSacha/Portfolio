@@ -1,3 +1,4 @@
+#ONLY FOR DEV : this file is overrided in production mode
 FROM php:7.4-fpm
 
 # Arguments defined in docker-compose.yml
