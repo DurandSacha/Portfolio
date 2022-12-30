@@ -118,7 +118,7 @@
             <div class="flex flex-row pb-40 justify-center items-center">
                 <div class="w-1/2" >
                         <div class="container mx-auto pb-4 px-4 lg:px-20">
-                        <form method="POST" action="{{ route('contact.send') }}"> 
+                        <form method="POST" action="{{ action('ContactController@send') }}">  <!--  -->
                             <div class="w-full">
                                 <div class="flex">
                                     <h1 class="font-bold uppercase text-5xl">Contact</h1>
@@ -126,12 +126,13 @@
                                 <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
                                     <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                                     <input class="w-full bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-500"
-                                        type="text" placeholder="Nom*" />
+                                        type="text" placeholder="Nom*" name="name" />
                                     <input class="w-full bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"
-                                        type="email" placeholder="Email*" />
+                                        type="email" placeholder="Email*" name="email" />
                             </div>
                             <div class="my-4">
-                                <textarea placeholder="Message*" class="w-full h-32 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"></textarea>
+                                <textarea placeholder="Message*" name="content"
+                                class="w-full h-32 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600"></textarea>
                             </div>
                             <div class="my-2 w-1/2 lg:w-1/4">
                                 <button class="uppercase text-sm font-bold tracking-wide text-gray-100 p-3 rounded-lg w-full 

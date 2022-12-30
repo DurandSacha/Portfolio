@@ -6,6 +6,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="{{mix('css/app.css') }}" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="{{ url('favicon.png') }}">
 
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <!-- Fonts -->
