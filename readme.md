@@ -11,6 +11,9 @@ delivered with laravel, docker components, tailwind CSS
     - docker-compose up -d
     - go to localhost:8000
 
+### utilitaire
+    - php artisan db:seed --class=UserSeeder
+
     
 
 

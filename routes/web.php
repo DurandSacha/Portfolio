@@ -2,7 +2,19 @@
 
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', [HomeController::class, 'show']);
 Route::post('/', [HomeController::class, 'show']);
 Route::post('/contact', 'ContactController@send')->name('contact.send');
+
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/checkLogin', [AuthController::class, 'login'])->name('checkLogin');
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+/** dashboard **/
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'welcome'])->name('dashboard.welcome');
+});

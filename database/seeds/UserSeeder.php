@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\User;
 
-class PlacesTableSeeder extends Seeder
+class UserSeeder extends Seeder
 {
-
     /**
      * Run the database seeds.
      *
@@ -13,13 +13,16 @@ class PlacesTableSeeder extends Seeder
      */
     public function run()
     {
-        foreach (self::$places as $place => $coords) {
-            DB::table('users')->insert([
-                'name' => 'Sacha Durand',
-                'email' => 'sacha6623@gmail.com',
-                'password' => '00000000',
-                'roles' => 'admin',
-            ]);
+        $user = User::firstOrNew([
+            'email' => 'sacha6623@gmail.com',
+        ]);
+
+        if (!$user->exists) {
+            $user->name = 'Sacha Durand';
+            $user->email = 'sacha6623@gmail.com';
+            $user->password = Hash::make('00000000');
+            $user->roles = 'admin';
+            $user->save();
         }
     }
 }
