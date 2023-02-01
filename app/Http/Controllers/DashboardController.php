@@ -10,4 +10,14 @@ class DashboardController extends Controller
     {
         return view('dashboard.welcome');
     }
+
+    public function mailing()
+    {
+        return view('dashboard.mailing');
+    }
+
+    public function stats()
+    {
+        return view('dashboard.stats');
+    }
 }

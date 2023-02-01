@@ -17,4 +17,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 /** dashboard **/
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'welcome'])->name('dashboard.welcome');
+    Route::get('/mailing', [DashboardController::class, 'mailing'])->name('dashboard.mailing');
+    Route::get('/stats', [DashboardController::class, 'stats'])->name('dashboard.stats');
 });

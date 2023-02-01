@@ -4,6 +4,6 @@
         <x-dashboard-navigation/>
     </div>
     <div class="p-8 bg-black w-5/6 text-gray-400">
-        <p>Welcome to admin dashboard</p>
+        <p>stats</p>
     </div>
 </div>
