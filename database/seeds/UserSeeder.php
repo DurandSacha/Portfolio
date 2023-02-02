@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
         if (!$user->exists) {
             $user->name = 'Sacha Durand';
             $user->email = 'sacha6623@gmail.com';
-            $user->password = Hash::make('00000000');
+            $user->password = Hash::make(getenv('ADMIN_PASS'));
             $user->roles = 'admin';
             $user->save();
         }
