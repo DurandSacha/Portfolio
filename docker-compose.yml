@@ -42,8 +42,21 @@ services:
       - './docker-compose/nginx:/etc/nginx/conf.d'
     networks:
       - travellist
+
+  redis:
+    image: "redis:alpine"
+    container_name: portfolio-redis
+    hostname: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - travellist
+    volumes:
+      - redis:/data
+
 networks:
   travellist:
     driver: bridge
 volumes:
   dbdata:
+  redis:
