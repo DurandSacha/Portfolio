@@ -37,7 +37,7 @@
                         <div class="form-group">
                            <label for="mode">Mode d'envoi :</label>
                            <select class="form-control p-2 border-4 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline px-4" id="mode" name="mode">
-                              <option value="perso">sacha6623@gmail.com</option>
+                              <!--<option value="perso">sacha6623@gmail.com</option>-->
                               <option value="pro">sachadurand.fr</option>
                            </select>
                         </div>
