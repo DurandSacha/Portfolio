@@ -36,9 +36,9 @@
     
                         <div class="form-group">
                            <label for="mode">Mode d'envoi :</label>
-                           <select class="form-control p-2 border-4 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline px-4" id="mode" name="mode">
+                           <select class="form-control p-2 border-4 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline" id="mode" name="mode">
                               <!--<option value="perso">sacha6623@gmail.com</option>-->
-                              <option value="pro">sachadurand.fr</option>
+                              <option class="mx-2" value="pro">sachadurand.fr</option>
                            </select>
                         </div>
                         <button type="submit"  id="submit" class="ml-4 p-4 border bg-black text-gray-200 visible rounded-lg mt-8 ">Envoyer</button>
@@ -50,14 +50,12 @@
                         </div>
                     @endif
 
+                    <br/><br/><br/>
                     <ul>
+                        <li class="text-red-400 text-sm">TODO: envoi doux</li>
                         <li class="text-red-400 text-sm">TODO: envoi sur une liste précise</li>
-                        <li class="text-red-400 text-sm">TODO: Option d'envoi ( Envoi doux, directe... )</li>
                     </ul>
                 </div>
-
-                 <!-- TODO: envoi sur une liste précise -->
-                 <!-- TODO: option envoi sur email de plus d'un mois -->
 
                  <br/><br/>
             </div>

@@ -31,7 +31,7 @@ class MailController extends Controller
         $recipient_emails = preg_split("/[\s|,]+/", $recipients);
     
         foreach ($recipient_emails as $recipient) {
-            dispatch_now(new SendMailJob($subject, $recipient, $message));
+            dispatch(new SendMailJob($subject, $recipient, $message));
         }
     
         return redirect()->back()->with('message', count($recipient_emails).' email(s) envoyé avec succès (dans la file d\'attente)');
