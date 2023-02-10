@@ -23,5 +23,4 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/sendEmails', [MailController::class, 'sendEmails'])->name('dashboard.sendEmails');
 
-
 });
