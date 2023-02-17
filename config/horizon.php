@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'path' => '/horizon',
+    'path' => 'horizon',
 
     /*
     |--------------------------------------------------------------------------
@@ -182,7 +182,7 @@ return [
     'defaults' => [
         'supervisor-1' => [
             'connection' => 'redis',
-            'queue' => ['default', 'emails'],
+            'queue' => ['default'],
             'balance' => 'false',
             'maxProcesses' => 1,
             'maxTime' => 0,
