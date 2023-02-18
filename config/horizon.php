@@ -208,8 +208,11 @@ return [
                 'timeout' => 100,
                 'nice' => 0,
                 'throttle' => [
-                    'attempts' => 4,
-                    'every' => 60,
+                    'global' => [
+                        'rate' => 4,
+                        'strategy' => 'misfire',
+                        'min_time' => 15,
+                    ],
                 ],
             ],
         ],
