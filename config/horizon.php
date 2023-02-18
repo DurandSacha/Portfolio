@@ -182,7 +182,7 @@ return [
     'defaults' => [
         'supervisor-1' => [
             'connection' => 'redis',
-            'queue' => ['default'],
+            'queue' => ['default', 'emails'],
             'balance' => 'false',
             'maxProcesses' => 1,
             'maxTime' => 0,
@@ -198,15 +198,19 @@ return [
         'production' => [
             'supervisor-1' => [
                 'connection' => 'redis',
-                'queue' => ['default'],
-                'balance' => 'false',
+                'queue' => ['default', 'emails'],
+                'balance' => 'simple',
                 'maxProcesses' => 1,
-                'maxTime' => 0,
+                'maxTime' => 1500,
                 'maxJobs' => 0,
                 'memory' => 128,
                 'tries' => 1,
-                'timeout' => 60,
+                'timeout' => 100,
                 'nice' => 0,
+                'throttle' => [
+                    'attempts' => 4,
+                    'every' => 60,
+                ],
             ],
         ],
 
