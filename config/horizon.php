@@ -207,13 +207,7 @@ return [
                 'tries' => 1,
                 'timeout' => 100,
                 'nice' => 0,
-                'throttle' => [
-                    'global' => [
-                        'rate' => 4,
-                        'strategy' => 'misfire',
-                        'min_time' => 15,
-                    ],
-                ],
+                'throttle' => 20,
             ],
         ],
 
