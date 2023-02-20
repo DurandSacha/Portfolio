@@ -190,6 +190,7 @@ return [
             'memory' => 128,
             'tries' => 1,
             'timeout' => 60,
+            'sleep' => 40,
             'nice' => 0,
         ],
     ],
@@ -206,6 +207,7 @@ return [
                 'memory' => 128,
                 'tries' => 1,
                 'timeout' => 100,
+                'sleep' => 40,
                 'nice' => 0,
                 'throttle' => 20,
             ],
@@ -213,7 +215,8 @@ return [
 
         'local' => [
             'supervisor-1' => [
-                'maxProcesses' => 3,
+                'maxProcesses' => 1,
+                'sleep' => 40,
             ],
         ],
     ],
