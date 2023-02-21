@@ -44,6 +44,6 @@ class SendMailJob implements ShouldQueue
 
     public function retryUntil()
     {
-        return now()->addSeconds(200);
+        return now()->addSeconds(20);
     }
 }
