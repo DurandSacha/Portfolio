@@ -42,8 +42,10 @@ class SendMailJob implements ShouldQueue
         Mail::to($this->recipient)->send(new Mailing($this->subject, $this->recipient, $this->message));
     }
 
+    /*
     public function retryUntil()
     {
         return now()->addSeconds(20);
     }
+    */
 }
