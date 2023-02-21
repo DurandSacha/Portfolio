@@ -15,12 +15,7 @@ class ListController extends Controller
 
     public function update(Request $request, Lists $list)
     {
-        $request->validate([
-            'name' => 'required',
-            'origin' => 'required',
-            'lang' => 'required',
-        ]);
-        
+        $list = Lists::where('id',$request->id)->first();
         $list->fill($request->post())->save();
 
         return redirect()->back()->with('success','Liste mis a jour');

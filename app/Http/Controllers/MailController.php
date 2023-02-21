@@ -28,15 +28,27 @@ class MailController extends Controller
         $subject = $request->input('subject'); //  ⚡
         $message = $request->input('message');
         $mode = $request->input('mode');
-
+        $list_id = $request->input('addList');
+        $sent_to = $request->input('sendToList');
+        
         $recipient_emails = preg_split("/[\s|,]+/", $recipients);
+
+        if($sent_to != 'null'){
+            $recipient_emails = Mails::where('list_id',$sent_to)->get();
+        }
 
         $nb_mail_send = count($recipient_emails);
         foreach ($recipient_emails as $recipient) {
+
             $mail = Mails::firstOrNew([
                 'email'=> $recipient,
             ]);
             $mail->last_send = now();
+
+            
+            if($list_id != 'null'){
+                $mail->list_id = $list_id;
+            }
             $mail->save();
 
             if($mail->blacklisted == false){

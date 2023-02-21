@@ -20,27 +20,68 @@
 
                 <div>
                     <form action="{{ url('sendEmails') }}" method="post">
-                        @csrf
-                        <div class="form-group">
-                           <input type="text" class="w-1/3 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600 m-4" 
-                           id="recipients" name="recipients" placeholder="Entrer les adresses e-mail séparées par une virgule ou un espace">
+                        <div class="grid grid-cols-2 grid-rows-1">
+                            <div class="w-full">
+                                @csrf
+                                <div class="form-group">
+                                <input type="text" class="w-2/3 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-indigo-600 m-4" 
+                                id="recipients" name="recipients" placeholder="Entrer les adresses e-mail séparées par une virgule ou un espace">
+                                </div>
+                                <div class="form-group">
+                                <input type="text" class="w-2/3 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-indigo-600 m-4" 
+                                id="subject" name="subject" placeholder="Objet">
+                                </div>
+                                <div class="form-group">
+                                <textarea class="w-2/3 h-48 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-indigo-600 m-4" 
+                                id="message" name="message" rows="50" placeholder="Message"></textarea>
+                                </div>
+            
+                                <div class="form-group ml-4">
+                                <label for="mode">Mode d'envoi :</label>
+                                <select class="form-control p-2 border-2 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline" id="mode" name="mode">
+                                    <!--<option value="perso">sacha6623@gmail.com</option>-->
+                                    <option class="mx-2" value="pro">sachadurand.fr</option>
+                                </select>
+                                </div>
+
+                                <div class="form-group mt-2 ml-4">
+                                    <label for="addTo">Ajouter les destinataire a la liste :</label>
+                                    <select class="form-control p-2 border-2 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline" id="addList" name="addList">
+                                    <option selected class="mx-2" value="null">Non</option>
+                                    @foreach ($lists as $list)
+                                        <option value="{{$list->id}}">{{$list->name}}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="form-group mt-2 ml-4">
+                                    <label for="sendTo">Envoyer a la liste ( ignore l'entrée To: ) </label>
+                                    <select class="form-control p-2 border-2 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline" id="sendToList" name="sendToList">
+                                    <option selected class="mx-2" value="null">Non</option>
+                                    @foreach ($lists as $list)
+                                        <option value="{{$list->id}}">{{$list->name}}</option>
+                                    @endforeach
+                                    </select>
+                                </div>
+                                <br/><br/>
+                                <hr class="border-1 border-indigo-600">
+                                <br/>
+                                <!-- TODO -->
+                                <div class="form-group mt-2">
+                                    <input type="checkbox" name="nom_du_champ" value="valeur" id="id_du_champ">
+                                    <label for="id_du_champ" class="text-red-500">TODO :Envoyer a des emails non relancé depuis 20 jours</label>
+                                </div>
+
+                                <div class="form-group mt-2">
+                                    <input type="checkbox" name="nom_du_champf" value="valeurf" id="id_du_champf">
+                                    <label for="id_du_champf" class="text-red-500">TODO : Autre paramètres</label>
+                                </div>
+                                
+                            </div>
                         </div>
-                        <div class="form-group">
-                           <input type="text" class="w-1/3 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600 m-4" 
-                           id="subject" name="subject" placeholder="Objet">
-                        </div>
-                        <div class="form-group">
-                           <textarea class="w-1/3 h-48 bg-gray-900 text-gray-100 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-4 border-indigo-600 m-4" 
-                           id="message" name="message" rows="30" placeholder="Message"></textarea>
-                        </div>
-    
-                        <div class="form-group">
-                           <label for="mode">Mode d'envoi :</label>
-                           <select class="form-control p-2 border-4 border-indigo-600 bg-gray-900 rounded-lg focus:outline-none focus:shadow-outline" id="mode" name="mode">
-                              <!--<option value="perso">sacha6623@gmail.com</option>-->
-                              <option class="mx-2" value="pro">sachadurand.fr</option>
-                           </select>
-                        </div>
+
                         <button type="submit"  id="submit" class="ml-4 p-4 border bg-black text-gray-200 visible rounded-lg mt-8 ">Envoyer</button>
                     </form>
 
@@ -51,9 +92,6 @@
                     @endif
 
                     <br/><br/><br/>
-                    <ul>
-                        <li class="text-red-400 text-sm">TODO: envoi sur une liste précise</li>
-                    </ul>
                 </div>
 
                  <br/><br/>
@@ -63,13 +101,13 @@
                 <h2> Liste email </h2>
 
                 <div class="my-4" id="listCreate">
-                    <a class="align-right p-2 border-2 border-indigo-600" onClick="document.getElementById('addListForm').className += 'visible';"> Créer une liste</a>
+                    <a class="align-right p-2 border-2 border-indigo-600" onClick="document.getElementById('addListForm').className += 'block';"> Créer une liste</a>
                 </div>
                 <script>
                     
                 </script>
 
-                <div id="addListForm" class="invisible">
+                <div id="addListForm" class="hidden">
                     <form action="{{ route('lists.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
@@ -112,36 +150,39 @@
                             </div>
 
                             <button type="submit" class="border-2 border-indigo-600 m-4 p-2">Créer</button>
+                            <span onClick="document.getElementById('addListForm').classList.remove('block'); document.getElementById('addListForm').classList.add('hidden');">Annuler<span>
                         </div>
                     </form>
                 </div>
 
                 <br/>
 
-                <div class="w-full p-2 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-5">
+                <div class="w-full p-2 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-6">
                     <div>Nom</div>
                     <div>Description</div>
                     <div>origine</div>
                     <div>langue</div>
+                    <div>emails</div>
                     <div>Action</div>
                 </div>
 
                 @foreach ($lists as $list)
-                    <div class="w-full p-2 border-2 border-indigo-900 rounded-lg bg-gray-900 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-5">
+                    <div class="w-full p-2 border-2 border-indigo-900 rounded-lg bg-gray-900 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-6">
                         <div class="text-green-400">{{ $list->name}}</div>
 
                         <div class="">{{ $list->description}}</div>
                         <div class="">{{ $list->origin}}</div>
-                        <div class="">Langue : {{ $list->lang}}</div>
-                        <div class="hover:text-white"><a href="{{ route('lists.edit') }}">Editer</a></div>
+                        <div class="">{{ $list->lang}}</div>
+                        <div class="">{{ $list->getEmailNumber() }}</div>
+                        <div class="hover:text-white" onClick="document.getElementById('editListForm').className += 'block';"><a>Editer</a></div>
 
-                        <form action="{{ route('lists.edit',$list->id) }}" method="POST" enctype="multipart/form-data" class="">
+                        
+                        <form id="editListForm" action="{{ route('lists.edit',['id' => $list->id]) }}" method="POST" enctype="multipart/form-data" class="hidden">
                             @csrf
-                            <!--@ method('PUT') -->
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                         
-                                    <input type="text" name="name" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->name}}">
+                                    <input type="text" name="name" value="{{$list->name}}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->name}}">
                                     @error('name')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -150,7 +191,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
               
-                                    <input type="text" name="description" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->description}}">
+                                    <input type="text" name="description" value="{{$list->description}}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->description}}">
                                     @error('description')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -159,7 +200,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                
-                                    <input type="text" name="lang" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->lang}}">
+                                    <input type="text" name="lang" value="{{ $list->lang }}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->lang}}">
                                     @error('lang')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -169,7 +210,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                         
-                                    <input type="text" name="origin" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->origin}}">
+                                    <input type="text" name="origin" value="{{$list->origin}}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->origin}}">
                                     @error('origin')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -177,6 +218,7 @@
                             </div>
 
                             <button type="submit" class="border-2 border-indigo-600 m-4 p-2">Mettre a jour</button>
+                            <span onClick="document.getElementById('editListForm').classList.remove('block'); document.getElementById('editListForm').classList.add('hidden');">Annuler<span>
                         </form>
                     </div>
                 @endforeach

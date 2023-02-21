@@ -25,7 +25,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/sendEmails', [MailController::class, 'sendEmails'])->name('dashboard.sendEmails');
 
-    Route::get('/list/edit', [ListController::class, 'edit'])->name('lists.edit');
+    Route::post('/list/edit', [ListController::class, 'update'])->name('lists.edit');
     Route::post('/list/store', [ListController::class, 'store'])->name('lists.store');
 
 });
