@@ -52,7 +52,6 @@
 
                     <br/><br/><br/>
                     <ul>
-                        <li class="text-red-400 text-sm">TODO: envoi doux</li>
                         <li class="text-red-400 text-sm">TODO: envoi sur une liste précise</li>
                     </ul>
                 </div>

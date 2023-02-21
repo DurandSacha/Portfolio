@@ -14,6 +14,7 @@ Route::post('/contact', 'ContactController@send')->name('contact.send');
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/checkLogin', [AuthController::class, 'login'])->name('checkLogin');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/unsubscribe/{mail}', [MailController::class, 'unsubscribe'])->name('unsubscribe');
 
 /** dashboard **/
 Route::middleware(['auth'])->group(function () {

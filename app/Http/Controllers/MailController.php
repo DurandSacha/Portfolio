@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Mail\Mailable;
 //use Illuminate\Mail\Mailables\Envelope;
 use App\Mail\Mailing;
+use App\Mails;
 use App\Jobs\SendMailJob;
 
 
@@ -29,11 +30,32 @@ class MailController extends Controller
         $mode = $request->input('mode');
 
         $recipient_emails = preg_split("/[\s|,]+/", $recipients);
-    
+
+        $nb_mail_send = count($recipient_emails);
         foreach ($recipient_emails as $recipient) {
-            dispatch(new SendMailJob($subject, $recipient, $message))->onQueue('emails');
+            $mail = Mails::firstOrNew([
+                'email'=> $recipient,
+            ]);
+            $mail->last_send = now();
+            $mail->save();
+
+            if($mail->blacklisted == false){
+                dispatch(new SendMailJob($subject, $recipient, $message))->onQueue('emails');
+            }
+            else{
+                $nb_mail_send = $nb_mail_send - 1 ;
+            }
         }
     
-        return redirect()->back()->with('message', count($recipient_emails).' email(s) envoyé avec succès (dans la file d\'attente)');
+        return redirect()->back()->with('message', $nb_mail_send.' email(s) envoyé avec succès (dans la file d\'attente)');
+    }
+
+    public function unsubscribe($email){
+        $mail = Mails::where('email', '=', $email)->first();
+        $mail->blacklisted = true;
+        $mail->save();
+
+        return view('mail.unsubscribe', [
+        ]);
     }
 }
