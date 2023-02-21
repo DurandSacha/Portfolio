@@ -38,7 +38,7 @@ class SendMailJob implements ShouldQueue
      */
     public function handle()
     {
-        // Redis::throttle('my-mailtrap')->allow(2)->every(1)->then(function () {
+        sleep(30);
         Mail::to($this->recipient)->send(new Mailing($this->subject, $this->recipient, $this->message));
     }
 }

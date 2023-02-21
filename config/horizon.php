@@ -191,7 +191,6 @@ return [
             'tries' => 4,
             'timeout' => 250,
             'nice' => 0,
-            'maximum_throughput' => 1/30,
         ],
     ],
 
@@ -208,8 +207,6 @@ return [
                 'tries' => 4,
                 'timeout' => 250,
                 'nice' => 0,
-                'throttle' => 40,
-                'maximum_throughput' => 1/30,
             ],
         ],
 
