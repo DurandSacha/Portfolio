@@ -200,7 +200,7 @@ return [
             'supervisor-1' => [
                 'connection' => 'redis',
                 'queue' => ['default', 'emails'],
-                'balance' => 'simple',
+                'balance' => 'false',
                 'maxProcesses' => 1,
                 'maxTime' => 1500,
                 'maxJobs' => 0,
@@ -208,7 +208,7 @@ return [
                 'tries' => 4,
                 'timeout' => 250,
                 'nice' => 0,
-                'throttle' => 20,
+                'throttle' => 40,
                 'maximum_throughput' => 1/30,
             ],
         ],
