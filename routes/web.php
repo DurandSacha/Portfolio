@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\ListController;
 
 Route::get('/', [HomeController::class, 'show']);
 Route::post('/', [HomeController::class, 'show']);
@@ -23,5 +24,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/stats', [DashboardController::class, 'stats'])->name('dashboard.stats');
 
     Route::post('/sendEmails', [MailController::class, 'sendEmails'])->name('dashboard.sendEmails');
+
+    Route::get('/list/edit', [ListController::class, 'edit'])->name('lists.edit');
+    Route::post('/list/store', [ListController::class, 'store'])->name('lists.store');
 
 });

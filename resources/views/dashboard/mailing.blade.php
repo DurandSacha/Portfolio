@@ -62,10 +62,130 @@
                 <!-- LIST SECTION -->
                 <h2> Liste email </h2>
 
+                <div class="my-4" id="listCreate">
+                    <a class="align-right p-2 border-2 border-indigo-600" onClick="document.getElementById('addListForm').className += 'visible';"> Créer une liste</a>
+                </div>
+                <script>
+                    
+                </script>
+
+                <div id="addListForm" class="invisible">
+                    <form action="{{ route('lists.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                        
+                                    <input type="text" name="name" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="Nom">
+                                    @error('name')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+              
+                                    <input type="text" name="description" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="Description">
+                                    @error('description')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+               
+                                    <input type="text" name="lang" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="Langue">
+                                    @error('lang')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                        
+                                    <input type="text" name="origin" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="origin">
+                                    @error('origin')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <button type="submit" class="border-2 border-indigo-600 m-4 p-2">Créer</button>
+                        </div>
+                    </form>
+                </div>
+
+                <br/>
+
+                <div class="w-full p-2 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-5">
+                    <div>Nom</div>
+                    <div>Description</div>
+                    <div>origine</div>
+                    <div>langue</div>
+                    <div>Action</div>
+                </div>
+
+                @foreach ($lists as $list)
+                    <div class="w-full p-2 border-2 border-indigo-900 rounded-lg bg-gray-900 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-5">
+                        <div class="text-green-400">{{ $list->name}}</div>
+
+                        <div class="">{{ $list->description}}</div>
+                        <div class="">{{ $list->origin}}</div>
+                        <div class="">Langue : {{ $list->lang}}</div>
+                        <div class="hover:text-white"><a href="{{ route('lists.edit') }}">Editer</a></div>
+
+                        <form action="{{ route('lists.edit',$list->id) }}" method="POST" enctype="multipart/form-data" class="">
+                            @csrf
+                            <!--@ method('PUT') -->
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                        
+                                    <input type="text" name="name" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->name}}">
+                                    @error('name')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+              
+                                    <input type="text" name="description" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->description}}">
+                                    @error('description')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+               
+                                    <input type="text" name="lang" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->lang}}">
+                                    @error('lang')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+        
+                            <div class="col-xs-12 col-sm-12 col-md-12">
+                                <div class="form-group">
+                        
+                                    <input type="text" name="origin" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->origin}}">
+                                    @error('origin')
+                                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <button type="submit" class="border-2 border-indigo-600 m-4 p-2">Mettre a jour</button>
+                        </form>
+                    </div>
+                @endforeach
+
+                
+
+                <br/><br/><br/><br/>
                 <ul>
-                    <li class="text-red-400 text-sm">TODO: ajout de liste</li>
                     <li class="text-red-400 text-sm">TODO: ajout de mail sur une liste</li>
-                    <li class="text-red-400 text-sm">TODO: blacklist d'envoi ( désinscription )</li>
                 </ul>
             </div>
             <div class="p-4 bg-gray-800 rounded-md">
