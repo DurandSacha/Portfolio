@@ -39,7 +39,7 @@ class MailController extends Controller
 
         $nb_mail_send = count($recipient_emails);
         foreach ($recipient_emails as $recipient) {
-
+            $recipient = trim($recipient);
             $mail = Mails::firstOrNew([
                 'email'=> $recipient,
             ]);

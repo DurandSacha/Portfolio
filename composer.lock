@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "14746b8a2fb06be6c29a7eab6ae347dd",
+    "content-hash": "1d8b67a4c39dabcf3eb9eb128441b0b6",
     "packages": [
         {
             "name": "brick/math",
@@ -556,6 +556,47 @@
                 }
             ],
             "time": "2022-07-30T15:56:11+00:00"
+        },
+        {
+            "name": "hostbrook/laravel-dkim",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hostbrook/laravel-dkim.git",
+                "reference": "584c0b3c950fe6914c33562e2f98c0907e8918ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hostbrook/laravel-dkim/zipball/584c0b3c950fe6914c33562e2f98c0907e8918ea",
+                "reference": "584c0b3c950fe6914c33562e2f98c0907e8918ea",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^7.0|^8.0|^9.0"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "HostBrook\\LaravelDkim\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "HostBrook",
+                    "email": "support@hostbrook.com",
+                    "homepage": "https://hostbrook.com"
+                }
+            ],
+            "description": "Laravel 8 package to sign emails with DKIM",
+            "support": {
+                "issues": "https://github.com/hostbrook/laravel-dkim/issues",
+                "source": "https://github.com/hostbrook/laravel-dkim/tree/1.2"
+            },
+            "time": "2022-02-26T21:49:46+00:00"
         },
         {
             "name": "laravel/framework",
