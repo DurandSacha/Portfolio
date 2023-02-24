@@ -16,11 +16,12 @@ return [
     |
     */
 
+    //USE OTHER INFO IN PRODUCTION
+    
     'driver' => env('MAIL_DRIVER', 'smtp'),
-
-    'dkim_selector' => 'sacha', // for example: 'Selector123'
-    'dkim_domain' => 'sachadurand.fr',     // for example: 'myblog.com'
-    'dkim_passphrase' => '', // leave empty if you didn’t protect the private key
+    'dkim_selector' => 'sacha',
+    'dkim_domain' => 'sachadurand.fr',    
+    'dkim_passphrase' => '', 
     'dkim_private_key' => '-----BEGIN PRIVATE KEY-----
 MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDLYjDGQ/7gTYop
 2Ikk1YARaAd43FKX5UxN34zYztC6JGIZKfQMxHlJtkYLA4LJ08XPUIck3ZXf/s+P
