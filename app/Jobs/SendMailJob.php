@@ -38,7 +38,7 @@ class SendMailJob implements ShouldQueue
      */
     public function handle()
     {
-        sleep(25);
         Mail::to($this->recipient)->send(new Mailing($this->subject, $this->recipient, $this->message));
+        sleep(45);
     }
 }
