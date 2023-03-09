@@ -38,7 +38,21 @@ class SendMailJob implements ShouldQueue
      */
     public function handle()
     {
-        Mail::to($this->recipient)->send(new Mailing($this->subject, $this->recipient, $this->message));
-        sleep(45);
+        if (filter_var($this->recipient, FILTER_VALIDATE_EMAIL)) {
+
+            $parts = explode('@', $this->recipient);
+            $domain = array_pop($parts);
+
+            if(checkdnsrr($domain)){
+                Mail::to($this->recipient)->send(new Mailing($this->subject, $this->recipient, $this->message));
+                sleep(rand(30,80));
+            }
+            else {
+                throw new \Exception("DNS cible invalide pour " . json_encode($this->recipient));
+            }
+        } 
+        else {
+            throw new \Exception("Adresse email invalide pour " . json_encode($this->recipient));
+        }
     }
 }
