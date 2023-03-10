@@ -6,6 +6,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ListController;
+use App\Http\Controllers\SocialController;
+use App\Http\Controllers\SettingController;
 
 Route::get('/', [HomeController::class, 'show']);
 Route::post('/', [HomeController::class, 'show']);
@@ -20,11 +22,15 @@ Route::get('/unsubscribe/{mail}', [MailController::class, 'unsubscribe'])->name(
 /** dashboard **/
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'welcome'])->name('dashboard.welcome');
-    Route::get('/mailing', [DashboardController::class, 'mailing'])->name('dashboard.mailing');
+
+    Route::get('/mailing', [MailController::class, 'mailing'])->name('dashboard.mailing');
+    Route::get('/list/{id}', [MailController::class, 'showList'])->name('dashboard.showList');
+
     Route::get('/stats', [DashboardController::class, 'stats'])->name('dashboard.stats');
+    Route::get('/social', [SocialController::class, 'index'])->name('dashboard.social');
+    Route::get('/setting', [SettingController::class, 'index'])->name('dashboard.setting');
 
     Route::post('/sendEmails', [MailController::class, 'sendEmails'])->name('dashboard.sendEmails');
-
     Route::post('/list/edit', [ListController::class, 'update'])->name('lists.edit');
     Route::post('/list/store', [ListController::class, 'store'])->name('lists.store');
 

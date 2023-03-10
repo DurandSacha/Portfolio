@@ -12,14 +12,6 @@ class DashboardController extends Controller
         return view('dashboard.welcome');
     }
 
-    public function mailing()
-    {
-        $lists = Lists::get();
-        return view('dashboard.mailing', [
-            "lists" => $lists,
-        ]);
-    }
-
     public function stats()
     {
         return view('dashboard.stats');

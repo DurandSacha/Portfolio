@@ -30,6 +30,10 @@ class Lists extends Model
         return count(Mails::where('list_id', $this->id)->get());
     }
 
+    public function getEmailUnsubscribed(){
+        return count(Mails::where('list_id', $this->id)->where('blacklisted', 'true')->get());
+    }
+
     public function getEmailFromList(){
         return Mails::where('list_id', $this->id)->get();
     }

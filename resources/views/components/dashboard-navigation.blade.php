@@ -3,7 +3,7 @@
       <a href="/dashboard" class="block font-medium py-4 hover:bg-gray-700 p-12">Dashboard</a>
       <a href="/mailing" class="block font-medium py-4 hover:bg-gray-700 p-12">Mailing</a>
       <a href="/stats" class="block font-medium py-4 hover:bg-gray-700 p-12">Stats</a>
-      <a href="#" class="block font-medium py-4 hover:bg-gray-700 p-12 text-red-400">Social</a>
-      <a href="#" class="block font-medium py-4 hover:bg-gray-700 p-12 text-red-400">Paramètre</a>
+      <a href="/social" class="block font-medium py-4 hover:bg-gray-700 p-12">Social</a>
+      <a href="/setting" class="block font-medium py-4 hover:bg-gray-700 p-12">Paramètre</a>
     </nav>
   </div>

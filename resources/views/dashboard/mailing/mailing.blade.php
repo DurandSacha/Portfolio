@@ -157,25 +157,27 @@
 
                 <br/>
 
-                <div class="w-full p-2 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-6">
+                <div class="w-full p-2 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-7">
                     <div>Nom</div>
                     <div>Description</div>
                     <div>origine</div>
                     <div>langue</div>
                     <div>emails</div>
-                    <div>Action</div>
+                    <div class="text-green-400">Action</div>
                 </div>
 
                 @foreach ($lists as $list)
-                    <div class="w-full p-2 border-2 border-indigo-900 rounded-lg bg-gray-900 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-6">
+                    <div class="w-full p-2 border-2 border-indigo-900 rounded-lg bg-gray-900 text-gray-400 py-4 my-2 grid grid-rows-1 grid-cols-7">
                         <div class="text-green-400">{{ $list->name}}</div>
 
                         <div class="">{{ $list->description}}</div>
                         <div class="">{{ $list->origin}}</div>
                         <div class="">{{ $list->lang}}</div>
                         <div class="">{{ $list->getEmailNumber() }}</div>
+                        <div class="hover:text-white"><a href="/list/{{ $list->id }}">Voir</a></div>
                         <div class="hover:text-white" onClick="document.getElementById('editListForm').className += 'block';"><a>Editer</a></div>
 
+                        
                         
                         <form id="editListForm" action="{{ route('lists.edit',['id' => $list->id]) }}" method="POST" enctype="multipart/form-data" class="hidden">
                             @csrf

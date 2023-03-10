@@ -8,12 +8,30 @@ use Illuminate\Mail\Mailable;
 //use Illuminate\Mail\Mailables\Envelope;
 use App\Mail\Mailing;
 use App\Mails;
+use App\Lists;
 use App\Jobs\SendMailJob;
 
 
 class MailController extends Controller
 {
     public function __construct(){
+    }
+
+    public function mailing()
+    {
+        $lists = Lists::get();
+        return view('dashboard..mailing.mailing', [
+            "lists" => $lists,
+        ]);
+    }
+
+    public function showList($id)
+    {
+        $list = Lists::where('id', $id)->first();
+
+        return view('dashboard.mailing.showList', [
+            "list" => $list,
+        ]);
     }
 
     public function sendEmails(Request $request){
