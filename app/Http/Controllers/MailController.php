@@ -20,15 +20,16 @@ class MailController extends Controller
     public function mailing()
     {
         $lists = Lists::get();
+        $stats = $this->getStats();
         return view('dashboard..mailing.mailing', [
             "lists" => $lists,
+            "stats" => $stats,
         ]);
     }
 
     public function showList($id)
     {
         $list = Lists::where('id', $id)->first();
-
         return view('dashboard.mailing.showList', [
             "list" => $list,
         ]);
@@ -87,5 +88,20 @@ class MailController extends Controller
 
         return view('mail.unsubscribe', [
         ]);
+    }
+    public function getStats(){
+        $stats = [];
+
+        $lists = Lists::get();
+        $mail = Mails::get();
+        $blacklistedContact = Mails::where('blacklisted', 'true')->get();
+        $stats = [
+            [ 'label' => 'Nombre de liste', "value" => count(Lists::get())],
+            [ 'label' => 'nombre de contact', "value" => count($mail)],
+            [ 'label' => 'pourcentage de contact désinscrit', "value" => ( count($blacklistedContact) / count($mail) * 100 ).'%'],
+        ];
+
+
+        return $stats;
     }
 }

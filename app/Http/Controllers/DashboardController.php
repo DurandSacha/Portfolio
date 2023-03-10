@@ -11,9 +11,4 @@ class DashboardController extends Controller
     {
         return view('dashboard.welcome');
     }
-
-    public function stats()
-    {
-        return view('dashboard.stats');
-    }
 }

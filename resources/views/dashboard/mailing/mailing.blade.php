@@ -76,6 +76,11 @@
 
                                 <div class="form-group mt-2">
                                     <input type="checkbox" name="nom_du_champf" value="valeurf" id="id_du_champf">
+                                    <label for="id_du_champf" class="text-red-500">TODO : Envoyer à une génération de 100 contacts</label>
+                                </div>
+
+                                <div class="form-group mt-2">
+                                    <input type="checkbox" name="nom_du_champf" value="valeurf" id="id_du_champf">
                                     <label for="id_du_champf" class="text-red-500">TODO : Autre paramètres</label>
                                 </div>
                                 
@@ -174,8 +179,8 @@
                         <div class="">{{ $list->origin}}</div>
                         <div class="">{{ $list->lang}}</div>
                         <div class="">{{ $list->getEmailNumber() }}</div>
-                        <div class="hover:text-white"><a href="/list/{{ $list->id }}">Voir</a></div>
-                        <div class="hover:text-white" onClick="document.getElementById('editListForm').className += 'block';"><a>Editer</a></div>
+                        <div class="hover:text-white"><a href="/list/{{ $list->id }}" class="p-2 bg-indigo-400 text-white rounded-md hover:bg-indigo-600">Voir</a></div>
+                        <div class="hover:text-white" onClick="document.getElementById('editListForm').className += 'block';"><a class="p-2 bg-indigo-400 text-white rounded-md hover:bg-indigo-600">Editer</a></div>
 
                         
                         
@@ -229,21 +234,16 @@
                 
 
                 <br/><br/><br/><br/>
-                <ul>
-                    <li class="text-red-400 text-sm">TODO: ajout de mail sur une liste</li>
-                </ul>
+          
             </div>
             <div class="p-4 bg-gray-800 rounded-md">
                 <!-- STATS SECTION -->
                 <h2> Statistiques </h2>
-
-                <ul>
-                    <li class="text-red-400 text-sm">TODO: nombre de liste</li>
-                    <li class="text-red-400 text-sm">TODO: nombre d'email total par liste</li>
-                    <li class="text-red-400 text-sm">TODO: taux d'ouverture</li>
-                </ul>
+                <br/>
+                @foreach ($stats as $stat)
+                    <p>{{ $stat['label']}} : <span class="text-indigo-600">{{ $stat['value']}}</span></p>
+                @endforeach
             </div>
-            
         </div>
 
 

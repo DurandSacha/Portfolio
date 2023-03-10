@@ -26,7 +26,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mailing', [MailController::class, 'mailing'])->name('dashboard.mailing');
     Route::get('/list/{id}', [MailController::class, 'showList'])->name('dashboard.showList');
 
-    Route::get('/stats', [DashboardController::class, 'stats'])->name('dashboard.stats');
     Route::get('/social', [SocialController::class, 'index'])->name('dashboard.social');
     Route::get('/setting', [SettingController::class, 'index'])->name('dashboard.setting');
 
