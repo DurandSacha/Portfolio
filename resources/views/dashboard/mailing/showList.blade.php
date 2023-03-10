@@ -22,6 +22,7 @@
                 <div class="flex justify-end items-end mt-60">
                   <a class="bg-green-400 p-2 text-white m-2 rounded-md hover:cursor-pointer">TODO: export</a>
                   <a class="bg-green-400 p-2 text-white m-2 rounded-md hover:cursor-pointer">TODO: Nettoyage</a>
+                  <a class="bg-green-400 p-2 text-white m-2 rounded-md hover:cursor-pointer">TODO: Supprimer la liste</a>
                 </div>
             </div>
         </div>

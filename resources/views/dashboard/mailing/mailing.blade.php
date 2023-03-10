@@ -181,10 +181,11 @@
                         
                         <form id="editListForm" action="{{ route('lists.edit',['id' => $list->id]) }}" method="POST" enctype="multipart/form-data" class="hidden">
                             @csrf
+                            <br/>
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                         
-                                    <input type="text" name="name" value="{{$list->name}}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->name}}">
+                                    <input type="text" name="name" value="{{$list->name}}" class="rounded-md border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->name}}">
                                     @error('name')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -193,7 +194,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
               
-                                    <input type="text" name="description" value="{{$list->description}}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->description}}">
+                                    <input type="text" name="description" value="{{$list->description}}" class="rounded-md border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->description}}">
                                     @error('description')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -202,7 +203,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                
-                                    <input type="text" name="lang" value="{{ $list->lang }}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->lang}}">
+                                    <input type="text" name="lang" value="{{ $list->lang }}" class="rounded-md border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->lang}}">
                                     @error('lang')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
@@ -212,7 +213,7 @@
                             <div class="col-xs-12 col-sm-12 col-md-12">
                                 <div class="form-group">
                         
-                                    <input type="text" name="origin" value="{{$list->origin}}" class="border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->origin}}">
+                                    <input type="text" name="origin" value="{{$list->origin}}" class="rounded-md border-2 border-indigo-600 m-2 bg-gray-900 text-gray-100 p-2" placeholder="{{$list->origin}}">
                                     @error('origin')
                                     <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                                     @enderror
