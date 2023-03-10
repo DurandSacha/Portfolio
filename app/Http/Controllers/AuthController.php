@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-//use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -27,11 +26,15 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
+
+        Auth::logout();
+        Auth::logoutOtherDevices($request->password);
+        $request->session()->invalidate();
         if (Auth::attempt($credentials)) {
             return redirect($this->redirectTo);
         }
 
-        return back()->withErrors(['email' => 'Email or password is incorrect']);
+        return back()->withErrors(['error' => 'Email or password is incorrect']);
     }
 
     protected function authenticated(Request $request, $user)

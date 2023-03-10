@@ -52,7 +52,7 @@ class MailController extends Controller
             $mail->save();
 
             if($mail->blacklisted == false){
-                dispatch(new SendMailJob($subject, $recipient, $message))->onQueue('emails');
+                dispatch(new SendMailJob($subject, trim($recipient), $message))->onQueue('emails');
             }
             else{
                 $nb_mail_send = $nb_mail_send - 1 ;

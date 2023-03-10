@@ -18,13 +18,13 @@
     <title>Sacha Durand</title>
 </head>
 
-<body class="">
+<body class="m-0 p-0">
 
 <header>
     
 </header>
 
-<div class="w-full layout-body">
+<div class="w-full layout-body m-0 p-0">
     @yield('content')
 </div>
 
