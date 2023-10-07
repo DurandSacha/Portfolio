@@ -5,12 +5,12 @@
     <div class="bg-black h-full w-full text-white navSection"><!--TODO: #040812 and background image-->
         <div id="background-home">
             <x-navigation/>
-            <div class="grid h-screen place-items-center">
+            <div class="grid lg:h-screen place-items-center">
                 <div class="text-center">
                     <br/><br/><br/><br/><br/><br/>
                     <div class="w-full grid grid-rows-8 grid-flow-col gap-4">
                         <div></div>
-                        <div> 
+                        <div class="hidden lg:block"> 
                             <svg class="text-blue-400" width="48" height="48" viewBox="0 0 24 24"><path fill="currentColor" d="M15.78 15.84S18.64 13 19.61 12c3.07-3 1.54-9.18 1.54-9.18S15 1.29 12 4.36C9.66 6.64 8.14 8.22 8.14 8.22S4.3 7.42 2 9.72L14.25 22c2.3-2.33 1.53-6.16 1.53-6.16zm-1.5-9a2 2 0 0 1 2.83 0a2 2 0 1 1-2.83 0zM3 21a7.81 7.81 0 0 0 5-2l-3-3c-2 1-2 5-2 5z"/></svg>
                         </div>
                         <div></div>
@@ -27,7 +27,7 @@
                     <div></div>
                     <div></div>
                     <div></div>
-                    <div id="socials-icons" class="flex flex-row">
+                    <div id="socials-icons" class="flex flex-row hidden lg:flex">
                         <div class="px-2 hover:text-blue-300">
                             <a href="https://github.com/DurandSacha" target="blank">
                                 <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
@@ -116,7 +116,7 @@
         <div class="pt-20">
             <!--<div><h2 class="text-center text-3xl font-bold"> Contact</h2></div>-->
             <div class="flex flex-row pb-40 justify-center items-center">
-                <div class="w-1/2" >
+                <div class="lg:w-1/2" >
                         <div class="container mx-auto pb-4 px-4 lg:px-20">
                         <form method="POST" action="{{ action('ContactController@send') }}">  <!--  -->
                             <div class="w-full">
@@ -245,6 +245,13 @@
             background: url('/img/projects/armada.jpg');
             width: 100%;
             /*height: 100%;*/
+        }
+
+        @media only screen and (max-width: 767px) {
+        /* Styles spécifiques aux appareils mobiles vont ici */
+        #project {
+            height: auto;
+        }
         }
     </style>
 

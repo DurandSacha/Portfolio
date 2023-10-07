@@ -17,21 +17,26 @@
       <div class="text-sm lg:flex-grow w-3/4">
       </div>
       
-      <div class="nav-nav">
+      <div class="nav-nav lg:block hidden">
         <a class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4 cursor-pointer">
             Projets
           </a>
-          <!--
-          <a href="#skill" class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-            Distinction
-          </a>
-        -->
           <a class="hover:text-blue-300 block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white pr-16 cursor-pointer">
             Contact
           </a>
-
-        <!--<a href="#" class="text-blue-300 inline-block text-sm px-4 py-2 leading-none border-blue-300 rounded hover:text-white
-          hover:text-teal-500 hover:bg-blue-300 mt-4 lg:mt-0">Download</a>-->
       </div>
     </div>
   </nav>
+
+<script>
+  const toggleButton = document.querySelector('.flex.items-center.px-3.py-2.border.rounded.text-teal-200.border-teal-400.hover\\:text-white.hover\\:border-white');
+  const navNav = document.querySelector('.nav-nav');
+
+  toggleButton.addEventListener('click', function() {
+    if (navNav.classList.contains('hidden')) {
+      navNav.classList.remove('hidden');
+    } else {
+      navNav.classList.add('hidden');
+    }
+  });
+</script>

@@ -30,8 +30,10 @@ class AuthController extends Controller
         Auth::logout();
         Auth::logoutOtherDevices($request->password);
         $request->session()->invalidate();
+
         if (Auth::attempt($credentials)) {
-            return redirect($this->redirectTo);
+            return redirect()->intended($this->redirectTo); // ADDED
+            //return redirect($this->redirectTo); // REMOVED FOR FIX LOGIN
         }
 
         return back()->withErrors(['error' => 'Email or password is incorrect']);

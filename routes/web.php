@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\InfrastructureController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\ListController;
 use App\Http\Controllers\SocialController;
@@ -28,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/social', [SocialController::class, 'index'])->name('dashboard.social');
     Route::get('/setting', [SettingController::class, 'index'])->name('dashboard.setting');
+    Route::get('/infrastructure', [InfrastructureController::class, 'index'])->name('dashboard.infrastructure');
 
     Route::post('/sendEmails', [MailController::class, 'sendEmails'])->name('dashboard.sendEmails');
     Route::post('/list/edit', [ListController::class, 'update'])->name('lists.edit');
