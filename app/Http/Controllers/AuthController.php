@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     //use AuthenticatesUsers;
 
-    protected $redirectTo = 'dashboard.welcome';
+    protected $redirectTo = '/dashboard';
 
     public function __construct()
     {
