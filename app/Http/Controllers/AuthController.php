@@ -11,7 +11,7 @@ class AuthController extends Controller
 {
     //use AuthenticatesUsers;
 
-    protected $redirectTo = '/dashboard';
+    protected $redirectTo = 'dashboard.welcome';
 
     public function __construct()
     {
@@ -27,9 +27,9 @@ class AuthController extends Controller
     {
         $credentials = $request->only('email', 'password');
 
-        Auth::logout();
-        Auth::logoutOtherDevices($request->password);
-        $request->session()->invalidate();
+        //Auth::logout();
+        //Auth::logoutOtherDevices($request->password);
+        //$request->session()->invalidate();
 
         if (Auth::attempt($credentials)) {
             return redirect()->intended($this->redirectTo); // ADDED
@@ -41,7 +41,7 @@ class AuthController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        var_dump('authenticated');
+        //var_dump('authenticated');
     }
 
     protected function logout(Request $request)

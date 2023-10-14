@@ -46,6 +46,7 @@
                                             @enderror
                                         </div>
                             
+                                        <!--
                                         <div class="form-group m-2">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -55,6 +56,7 @@
                                                 </label>
                                             </div>
                                         </div>
+                                        -->
                             
                                         <button type="submit" class="color-white bg-blue-400 p-2 rounded-md">Login</button>
                             
