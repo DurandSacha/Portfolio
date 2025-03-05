@@ -1,9 +1,15 @@
-#ONLY FOR DEV : this file is overrided in production mode
-FROM php:7.4-fpm
+# ONLY FOR DEV : this file is overrided in production mode
+FROM php:8.2-fpm
 
 # Arguments defined in docker-compose.yml
 ARG user
 ARG uid
+
+RUN apt-get update && apt-get install -y libxml2-dev \
+    && docker-php-ext-install dom
+
+RUN apt-get update && apt-get install -y libxml2 libxml2-dev
+RUN docker-php-ext-install dom && docker-php-ext-enable dom
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
@@ -14,32 +20,34 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip \
-    npm
-
-# Clear cache
-RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+    npm \
+    libpq-dev \
+    libzip-dev \
+    libicu-dev \
+    libxml2-dev \
+    libxslt1-dev \
+    libjpeg-dev \
+    libfreetype6-dev
 
 # Install PHP extensions
-RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install gd \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath zip intl xsl soap \
+    && docker-php-ext-install pdo pdo_pgsql pgsql dom
 
-RUN apt-get update \
-    && apt-get install -y libpq-dev \
-    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
-    && docker-php-ext-install pdo pdo_pgsql pgsql
+# Installer et activer Redis
+RUN pecl install redis \
+    && docker-php-ext-enable redis
 
-RUN pecl install -o -f redis \
-    &&  rm -rf /tmp/pear \
-    &&  docker-php-ext-enable redis
-
-# Get latest Composer
+# Installer Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# Create system user to run Composer and Artisan Commands
-RUN useradd -G www-data,root -u $uid -d /home/$user $user
-RUN mkdir -p /home/$user/.composer && \
-    chown -R $user:$user /home/$user
+# Créer un utilisateur système
+RUN useradd -G www-data,root -u $uid -d /home/$user $user \
+    && mkdir -p /home/$user/.composer \
+    && chown -R $user:$user /home/$user
 
-# Set working directory
+# Définir le répertoire de travail
 WORKDIR /var/www
 
 USER $user
